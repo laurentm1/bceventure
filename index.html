@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BCE.VENTURES — Operator-led venture building & strategic advisory</title>
+  <meta name="description" content="BCE Ventures advises founders, CEOs, leadership teams, and maisons on how value is structured and protected. Trust, design, durable systems. Sovereignty is the objective." />
+  <meta name="author" content="Alexandra Amrami" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bceventure.com/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/favicon-256.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BCE Ventures" />
+  <meta property="og:title" content="BCE.VENTURES — Operator-led venture building & strategic advisory" />
+  <meta property="og:description" content="Trust, design, durable systems. An operator-led venture practice for founders, CEOs, and maisons. Sovereignty over value." />
+  <meta property="og:url" content="https://bceventure.com/" />
+  <meta property="og:image" content="https://bceventure.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="BCE.VENTURES — Sovereignty over value" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BCE.VENTURES — Operator-led venture practice" />
+  <meta name="twitter:description" content="Trust, design, durable systems. Sovereignty over value." />
+  <meta name="twitter:image" content="https://bceventure.com/assets/og-image.png" />
+
+  <!-- Theme color (for browser chrome) -->
+  <meta name="theme-color" content="#F2EFE9" />
+
+  <!-- JSON-LD: Organization + Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://bceventure.com/#organization",
+        "name": "BCE Ventures",
+        "alternateName": "BCE.VENTURES",
+        "url": "https://bceventure.com/",
+        "logo": "https://bceventure.com/assets/og-image.png",
+        "description": "Operator-led venture building and strategic advisory. Trust, design, durable systems. Sovereignty over value.",
+        "founder": {
+          "@id": "https://bceventure.com/#founder"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "New York",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/alamrami/"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://bceventure.com/#founder",
+        "name": "Alexandra Amrami",
+        "jobTitle": "Founder",
+        "worksFor": { "@id": "https://bceventure.com/#organization" },
+        "url": "https://www.linkedin.com/in/alamrami/",
+        "sameAs": [
+          "https://www.linkedin.com/in/alamrami/"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Serif+Display:ital@0;1&family=Libre+Caslon+Text:ital,wght@0,400;1,400&family=Marcellus&family=Italiana&family=Forum&family=Cinzel:wght@400;500&family=Tenor+Sans&family=Inter+Tight:wght@300;400;500;600&family=Inter:wght@300;400;500&family=DM+Sans:wght@300;400;500&family=Manrope:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css?v=65" />
+
+  <!-- React + Babel (pinned) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Tweaks -->
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+
+  <!-- Components -->
+  <script type="text/babel" src="components/shared.jsx"></script>
+  <script type="text/babel" src="components/hero.jsx"></script>
+  <script type="text/babel" src="components/about.jsx"></script>
+  <script type="text/babel" src="components/sections.jsx"></script>
+
+  <!-- App -->
+  <script type="text/babel" src="app.jsx"></script>
+</body>
+</html>

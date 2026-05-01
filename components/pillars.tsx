@@ -22,8 +22,11 @@ const PILLARS = [
 export default function Pillars() {
   return (
     <section className="section" id="approach" style={{ paddingTop: 0 }}>
-      <div className="approach-band" style={{ background: 'var(--deep)' }}>
-        <div className="container" style={{ paddingTop: 'clamp(40px, 5vw, 64px)', paddingBottom: 'clamp(40px, 5vw, 64px)' }}>
+      <div className="container">
+        <div className="approach-band" style={{
+          margin: '0 calc(-1 * var(--pad-x))',
+          padding: 'clamp(40px, 5vw, 64px) var(--pad-x)',
+        }}>
           <SectionHeader
             num="02 — Approach"
             eyebrow="Three pillars"
@@ -33,9 +36,7 @@ export default function Pillars() {
             oneLine
           />
         </div>
-      </div>
 
-      <div className="container">
         <Reveal stagger className="pillars">
           {PILLARS.map(p => (
             <article className="pillar" key={p.num}>

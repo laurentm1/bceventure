@@ -2090,7 +2090,7 @@ section, .section {
   .display-l  { font-size: clamp(28px, 8vw, 44px); line-height: 1.08; }
   .display-m  { font-size: clamp(22px, 6vw, 34px); line-height: 1.12; }
   /* Hero headline needs explicit override — higher specificity than .display-xl */
-  .hero .display-xl { font-size: clamp(58px, 15vw, 68px); line-height: 0.95; letter-spacing: -0.03em; }
+  .hero .display-xl { font-size: clamp(63px, 16vw, 72px); line-height: 0.95; letter-spacing: -0.03em; }
   /* Extra right padding so iOS Safari glyph metrics don't clip at word boundary */
   .hero-headline .word { padding-right: 0.18em; margin-right: -0.18em; }
 

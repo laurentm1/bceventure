@@ -673,6 +673,9 @@ body {
 }
 
 /* ===== Approach dark band ===== */
+.approach-band {
+  background: var(--deep);
+}
 .approach-band .sec-num {
   color: var(--accent-on-deep) !important;
   border-top-color: var(--accent-on-deep) !important;

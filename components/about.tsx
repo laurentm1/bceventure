@@ -47,7 +47,7 @@ export default function About() {
               </p>
 
               <p className="about-prose">
-                Alexandra Amrami is a strategic operator and former C-suite leader
+                Alexandra is a strategic operator and former C-suite leader
                 who identifies structural shifts early and turns them into
                 commercial advantage. Her career began in hard luxury — advising
                 at the highest levels of natural coloured diamond valuation,

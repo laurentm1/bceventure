@@ -692,14 +692,7 @@ section, .section {
 /* ===== Approach dark band ===== */
 .approach-band {
   background: var(--deep);
-  /* Full-bleed: extend beyond container on both sides */
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  /* Padding keeps content aligned with container at any viewport width */
-  padding-top: clamp(40px, 5vw, 64px);
-  padding-bottom: clamp(40px, 5vw, 64px);
-  padding-left: max(var(--pad-x), calc(50vw - 720px + var(--pad-x)));
-  padding-right: max(var(--pad-x), calc(50vw - 720px + var(--pad-x)));
+  padding: clamp(40px, 5vw, 64px) 0;
 }
 .approach-band .sec-num {
   color: var(--accent-on-deep) !important;

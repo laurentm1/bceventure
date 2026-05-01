@@ -3,7 +3,7 @@ import Reveal from '@/components/reveal'
 export default function Manifesto() {
   return (
     <section className="manifesto" id="manifesto">
-      <div className="manifesto-inner">
+      <div className="container">
         <Reveal>
           <p className="manifesto-text">
             Value is not getting lost.<br />

@@ -672,6 +672,16 @@ body {
   100% { transform: translateX(100%); }
 }
 
+/* ===== Approach dark band ===== */
+.approach-band .sec-num {
+  color: var(--accent-on-deep) !important;
+  border-top-color: var(--accent-on-deep) !important;
+}
+.approach-band h2.display-m,
+.approach-band .eyebrow {
+  color: var(--deep-fg) !important;
+}
+
 /* ===== Section header (numbered) ===== */
 
 .sec-header {

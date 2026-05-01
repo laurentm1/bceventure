@@ -22,11 +22,8 @@ const PILLARS = [
 export default function Pillars() {
   return (
     <section className="section" id="approach" style={{ paddingTop: 0 }}>
-      <div className="approach-band" style={{
-        background: 'var(--deep)',
-        padding: 'clamp(40px, 5vw, 64px) var(--pad-x)',
-      }}>
-        <div style={{ maxWidth: 'var(--maxw)', margin: '0 auto' }}>
+      <div className="approach-band" style={{ background: 'var(--deep)' }}>
+        <div className="container" style={{ paddingTop: 'clamp(40px, 5vw, 64px)', paddingBottom: 'clamp(40px, 5vw, 64px)' }}>
           <SectionHeader
             num="02 — Approach"
             eyebrow="Three pillars"

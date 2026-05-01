@@ -22,7 +22,6 @@ export default function Footer() {
           <h4>Connect</h4>
           <ul>
             <li><a href="#contact">Request a consult</a></li>
-            <li><a href="mailto:hello@bce.ventures">hello@bce.ventures</a></li>
             <li>
               <a href="https://www.linkedin.com/in/alamrami/" target="_blank" rel="noopener noreferrer">
                 LinkedIn

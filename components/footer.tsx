@@ -22,7 +22,7 @@ export default function Footer() {
           <h4>Connect</h4>
           <ul>
             <li><a href="#contact">Request a consult</a></li>
-            <li><a href="mailto:hello@bceventure.com">hello@bceventure.com</a></li>
+            <li><a href="mailto:hello@bce.ventures">hello@bce.ventures</a></li>
             <li>
               <a href="https://www.linkedin.com/in/alamrami/" target="_blank" rel="noopener noreferrer">
                 LinkedIn
@@ -45,7 +45,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <span>© 2026 BCE Ventures · All rights reserved</span>
-        <span>A practice, not a platform</span>
+        <span>A practice, not a platform &nbsp;·&nbsp; <span style={{ letterSpacing: '0.08em' }}>BS&quot;D</span></span>
       </div>
     </footer>
   )

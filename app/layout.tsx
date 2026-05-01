@@ -87,7 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Serif+Display:ital@0;1&family=Libre+Caslon+Text:ital,wght@0,400;1,400&family=Marcellus&family=Italiana&family=Forum&family=Cinzel:wght@400;500&family=Tenor+Sans&family=Inter+Tight:wght@300;400;500;600&family=Inter:wght@300;400;500&family=DM+Sans:wght@300;400;500&family=Manrope:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Serif+Display:ital@0;1&family=Libre+Caslon+Text:ital,wght@0,400;1,400&family=Marcellus&family=Italiana&family=Forum&family=Cinzel:wght@400;500&family=Tenor+Sans&family=Inter+Tight:wght@300;400;500;600&family=Inter:wght@300;400;500&family=DM+Sans:wght@300;400;500&family=Manrope:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
         <script

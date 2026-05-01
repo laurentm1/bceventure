@@ -25,7 +25,7 @@ export default function Pillars() {
       <div className="container">
         <SectionHeader
           num="02 — Approach"
-          eyebrow="Three vectors"
+          eyebrow="Three pillars"
           title="The brand,"
           italic="not the market,"
           titleSuffix=" sets the terms."

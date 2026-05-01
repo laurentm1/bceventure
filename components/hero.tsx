@@ -11,53 +11,57 @@ export default function Hero() {
   return (
     <header className="hero" id="top">
       <div className="hero-meta">
-        <span className="eyebrow">BCE.VENTURES · EST. 2026 · NEW YORK</span>
-        <span className="eyebrow">No. 001 / Operator-led advisory</span>
-      </div>
-
-      <div className="hero-mark-large">
-        BCE<span className="dot">.</span>VENTURES
+        <span className="eyebrow hero-eyebrow-accent">BCE.VENTURES · EST. 2026 · NEW YORK</span>
       </div>
 
       <div className="hero-grid">
-        {/* All 3 headline variants rendered; CSS shows only [data-headline="x"] */}
-        {HEADLINES.map(({ key, lines, italic }) => (
-          <h1
-            key={key}
-            className={`hero-headline display-xl hero-headline--${key}`}
-            aria-hidden={key !== 'sovereignty' ? 'true' : undefined}
-          >
-            {lines.map((line, i) => (
-              <Fragment key={i}>
-                {i === italic ? (
-                  <span className="serif italic">
+        {/* Row 1: headline */}
+        <div className="hero-left-head">
+          {HEADLINES.map(({ key, lines, italic }) => (
+            <h1
+              key={key}
+              className={`hero-headline display-xl hero-headline--${key}`}
+              aria-hidden={key !== 'sovereignty' ? 'true' : undefined}
+            >
+              {lines.map((line, i) => (
+                <Fragment key={i}>
+                  {i === italic ? (
+                    <span className="serif italic">
+                      <SplitHeadline text={line} delayBase={i * 0.2} />
+                    </span>
+                  ) : (
                     <SplitHeadline text={line} delayBase={i * 0.2} />
-                  </span>
-                ) : (
-                  <SplitHeadline text={line} delayBase={i * 0.2} />
-                )}
-                {i < lines.length - 1 && <br />}
-              </Fragment>
-            ))}
-          </h1>
-        ))}
+                  )}
+                  {i < lines.length - 1 && <br />}
+                </Fragment>
+              ))}
+            </h1>
+          ))}
+        </div>
 
-        <p className="hero-thesis hero-thesis--under">
-          For maisons protecting craft, and emerging categories building it.
-          <span className="serif italic"> the secondary market, designed as a sovereignty system.</span>
-        </p>
+        {/* Row 2: full-width hairline spanning both columns */}
+        <div className="hero-divider" />
 
+        {/* Row 3 left: problem statement + objective */}
+        <div className="hero-left-sub">
+          <p className="hero-problem">
+            Luxury brands spend decades building value. Increasingly, that value is interpreted in secondary markets they do not control.
+          </p>
+        </div>
+
+        {/* Row 3 right: body — level with problem statement */}
         <div className="hero-right">
-          <p className="hero-tagline">
-            Trust, design, durable systems.
-            an operator-led venture practice for
-            founders, CEOs, and maisons.
-          </p>
-          <p className="body-l" style={{ color: 'var(--ink-2)' }}>
-            Advising leadership teams on how value is structured
-            and protected. The brand, not the market, <em>should</em> set the terms of value
-            as products circulate and scale.
-          </p>
+          <div className="hero-body-stack">
+            <p>
+              BCE Ventures works with luxury houses and premium technology brands to design
+              the standards, infrastructure, and governance that determine how products are
+              authenticated, graded, priced, and trusted over time.
+            </p>
+            <p>
+              This work builds on operating experience behind global trade-in and secondary
+              market programs with Amazon, Google, and PCS Wireless.
+            </p>
+          </div>
         </div>
       </div>
 

@@ -5,7 +5,7 @@ const CAPABILITIES = [
   {
     num: 'Capability 01',
     title: 'Secondary-Market & Brand Sovereignty',
-    lede: 'For maisons and emerging-category platforms turning the secondary market into a strategic lever, not an afterthought.',
+    lede: 'For maisons and emerging categories turning the secondary market into a strategic lever, not an afterthought.',
     body: 'Authenticity, grading, valuation, and trade-in architecture engineered so the brand sets the terms as products circulate across heritage maisons, device ecosystems, and emerging categories where secondary-market design is a brand-protection imperative from day one.',
     ideal: 'Luxury maisons & hard-luxury · Wearables, VR, and emerging device categories · Connected-luxury & smart-home · Fortune 100 retailers · Tech platforms with circular ambitions',
   },
@@ -14,7 +14,7 @@ const CAPABILITIES = [
     title: 'Leadership & Transformation',
     lede: 'For founders, CEOs, and boards at moments of inflection when the next move has to be both operationally sound and strategically right.',
     body: 'Executive structure, governance, and operating cadence paired with one-on-one coaching for founders and senior leaders. Strategy and execution calibrated to reinforce one another.',
-    ideal: 'Founder-led businesses at scale · Boards in transition · Senior operators stepping up · Leadership teams post-investment',
+    ideal: 'Founder-led businesses at scale · Boards in transition · Senior operators stepping up · Leadership teams pre & post-investment',
   },
 ]
 

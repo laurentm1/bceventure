@@ -20,7 +20,7 @@ export default function Contact() {
               transition, and market inflection. Most engagements begin through introduction or a direct note.
             </p>
             <p className="body-l" style={{ color: 'var(--ink-2)', maxWidth: 460, marginTop: 12 }}>
-              Tell us briefly the shape of the work. We respond personally within five business days.
+              Tell us the shape of your work, we respond personally.
             </p>
           </div>
 
@@ -28,9 +28,9 @@ export default function Contact() {
             <ContactForm />
 
             <div className="contact-after">
-              <span>Or write directly: </span>
-              <a href="mailto:hello@bceventure.com?subject=Inquiry%20%E2%80%94%20BCE%20Ventures">
-                hello@bceventure.com
+              <span>Or write directly:</span>
+              <a href="mailto:hello@bce.ventures?subject=Inquiry%20%E2%80%94%20BCE%20Ventures">
+                hello@bce.ventures
               </a>
               <span className="dot-sep">·</span>
               <a href="https://www.linkedin.com/in/alamrami/" target="_blank" rel="noopener noreferrer">
@@ -42,10 +42,6 @@ export default function Contact() {
               <div className="contact-meta-row">
                 <dt>Office</dt>
                 <dd>New York · By appointment</dd>
-              </div>
-              <div className="contact-meta-row">
-                <dt>Cadence</dt>
-                <dd>A few engagements each year</dd>
               </div>
             </dl>
           </div>

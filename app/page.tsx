@@ -3,7 +3,6 @@ import Hero from '@/components/hero'
 import Marquee from '@/components/marquee'
 import Manifesto from '@/components/manifesto'
 import About from '@/components/about'
-import SelectedExperience from '@/components/experience'
 import Pillars from '@/components/pillars'
 import Engagements from '@/components/engagements'
 import Insights from '@/components/insights'
@@ -19,7 +18,6 @@ export default function HomePage() {
       <Marquee />
       <Manifesto />
       <About />
-      <SelectedExperience />
       <Pillars />
       <Engagements />
       <Insights />

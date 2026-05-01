@@ -86,7 +86,7 @@ export default function ContactForm() {
     return (
       <div className="form-success">
         <p className="form-success-title">Note received.</p>
-        <p className="form-success-body">A reply, personally, within five business days.</p>
+        <p className="form-success-body">Merci, we will be in touch in the coming days.</p>
         <button type="button" className="form-success-reset" onClick={reset}>
           Send another →
         </button>
@@ -116,8 +116,7 @@ export default function ContactForm() {
       </div>
 
       <div className="field field--select">
-        <label htmlFor="cf-moment">What brings you here</label>
-        <select id="cf-moment" value={moment} onChange={e => setMoment(e.target.value)}>
+        <select id="cf-moment" value={moment} onChange={e => setMoment(e.target.value)} aria-label="What brings you here">
           {MOMENTS.map(m => (
             <option key={m.value} value={m.value}>{m.label}</option>
           ))}
@@ -125,7 +124,7 @@ export default function ContactForm() {
       </div>
 
       <div className={`field${errors.brief ? ' error' : ''}`}>
-        <label htmlFor="cf-brief">Briefly, the shape of the work</label>
+        <label htmlFor="cf-brief">Tell us briefly about the situation you are navigating.</label>
         <textarea id="cf-brief" rows={4} value={brief} onChange={e => setBrief(e.target.value)} />
         {errors.brief && <span className="field-error">{errors.brief}</span>}
       </div>

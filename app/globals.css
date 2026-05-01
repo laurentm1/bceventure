@@ -564,8 +564,8 @@ section, .section {
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
-  padding: 0.06em 0.08em 0.04em 0.02em;
-  margin: -0.04em -0.08em -0.04em -0.02em;
+  padding: 0.06em 0.08em 0.10em 0.02em;
+  margin: -0.04em -0.08em -0.10em -0.02em;
 }
 
 .hero-headline .word-inner {

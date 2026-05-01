@@ -29,6 +29,7 @@ export default function Pillars() {
           title="The brand,"
           italic="not the market,"
           titleSuffix=" sets the terms."
+          oneLine
         />
 
         <Reveal stagger className="pillars">

@@ -53,7 +53,7 @@ export default function Hero() {
         <div className="hero-right">
           <div className="hero-body-stack">
             <p>
-              BCE Ventures works with luxury houses and premium technology brands to design
+              BCE Ventures works with luxury houses and emerging brands to design
               the standards, infrastructure, and governance that determine how products are
               authenticated, graded, priced, and trusted over time.
             </p>

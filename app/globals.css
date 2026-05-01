@@ -2092,7 +2092,7 @@ section, .section {
   /* Hero headline needs explicit override — higher specificity than .display-xl */
   .hero .display-xl { font-size: clamp(63px, 16vw, 72px); line-height: 0.95; letter-spacing: -0.02em; }
   /* Squeeze only 'Sovereignty' tighter so the y stays in frame */
-  .hero-headline--sovereignty .word:first-child { letter-spacing: -0.06em; }
+  .hero-headline--sovereignty .word:first-child { letter-spacing: -0.085em; }
   /* Extra right padding so iOS Safari glyph metrics don't clip at word boundary */
   .hero-headline .word { padding-right: 0.18em; margin-right: -0.18em; }
 

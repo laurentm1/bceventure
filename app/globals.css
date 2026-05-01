@@ -332,6 +332,11 @@ body {
   position: relative;
 }
 
+/* Offset anchor links so fixed nav doesn't cover section headings */
+section, .section {
+  scroll-margin-top: 190px;
+}
+
 /* ===== Nav ===== */
 
 .nav {
@@ -687,6 +692,14 @@ body {
 /* ===== Approach dark band ===== */
 .approach-band {
   background: var(--deep);
+  /* Full-bleed: extend beyond container on both sides */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  /* Padding keeps content aligned with container at any viewport width */
+  padding-top: clamp(40px, 5vw, 64px);
+  padding-bottom: clamp(40px, 5vw, 64px);
+  padding-left: max(var(--pad-x), calc(50vw - 720px + var(--pad-x)));
+  padding-right: max(var(--pad-x), calc(50vw - 720px + var(--pad-x)));
 }
 .approach-band .sec-num {
   color: var(--accent-on-deep) !important;
@@ -2166,7 +2179,7 @@ body {
   .hero-mark-large { font-size: 11vw; overflow: hidden; white-space: nowrap; max-width: 100%; margin-bottom: 24px; }
 
   /* Reduce section vertical rhythm */
-  section { scroll-margin-top: 60px; }
+  section, .section { scroll-margin-top: 100px; }
 
   /* Fix horizontal overflow globally */
   html, body { overflow-x: hidden; max-width: 100vw; }

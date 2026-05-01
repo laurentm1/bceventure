@@ -23,10 +23,7 @@ export default function Pillars() {
   return (
     <section className="section" id="approach" style={{ paddingTop: 0 }}>
       <div className="container">
-        <div className="approach-band" style={{
-          margin: '0 calc(-1 * var(--pad-x))',
-          padding: 'clamp(40px, 5vw, 64px) var(--pad-x)',
-        }}>
+        <div className="approach-band">
           <SectionHeader
             num="02 — Approach"
             eyebrow="Three pillars"

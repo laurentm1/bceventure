@@ -805,7 +805,7 @@ body {
 }
 
 .manifesto-inner {
-  max-width: 1100px;
+  max-width: var(--maxw);
   margin: 0 auto;
   padding: 0 var(--pad-x);
 }

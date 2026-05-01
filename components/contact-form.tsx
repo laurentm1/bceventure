@@ -124,7 +124,7 @@ export default function ContactForm() {
       </div>
 
       <div className={`field${errors.brief ? ' error' : ''}`}>
-        <label htmlFor="cf-brief">Tell us briefly about the situation you are navigating.</label>
+        <label htmlFor="cf-brief">Tell us briefly about what you are navigating.</label>
         <textarea id="cf-brief" rows={4} value={brief} onChange={e => setBrief(e.target.value)} />
         {errors.brief && <span className="field-error">{errors.brief}</span>}
       </div>

@@ -1692,7 +1692,8 @@ section, .section {
   justify-content: center;
   gap: 32px;
 }
-.nav-mobile-menu button {
+.nav-mobile-menu button,
+.nav-mobile-item {
   background: none;
   border: none;
   font-family: var(--serif);
@@ -1700,6 +1701,7 @@ section, .section {
   color: var(--ink);
   cursor: pointer;
   letter-spacing: 0.02em;
+  text-decoration: none;
 }
 .nav-mobile-cta {
   font-family: var(--sans) !important;

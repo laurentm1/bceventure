@@ -45,6 +45,7 @@ export default function Nav() {
           <button className="nav-link" onClick={scrollTo('engagements')}>Practice</button>
           <button className="nav-link" onClick={scrollTo('insights')}>Insights</button>
           <button className="nav-link" onClick={scrollTo('contact')}>Contact</button>
+          <a href="/clients" className="nav-link">Clients</a>
         </div>
         <button className="nav-cta nav-cta--desktop" onClick={scrollTo('contact')}>
           Request a consult
@@ -68,6 +69,7 @@ export default function Nav() {
           <button onClick={() => navClick('engagements')}>Practice</button>
           <button onClick={() => navClick('insights')}>Insights</button>
           <button onClick={() => navClick('contact')}>Contact</button>
+          <a href="/clients" className="nav-mobile-item" onClick={() => setMenuOpen(false)}>Clients</a>
           <button className="nav-mobile-cta" onClick={() => navClick('contact')}>
             Request a consult
           </button>

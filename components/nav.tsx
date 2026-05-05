@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -45,6 +46,7 @@ export default function Nav() {
           <button className="nav-link" onClick={scrollTo('engagements')}>Practice</button>
           <button className="nav-link" onClick={scrollTo('insights')}>Insights</button>
           <button className="nav-link" onClick={scrollTo('contact')}>Contact</button>
+          <Link href="/clients" className="nav-link nav-link--clients">Clients</Link>
         </div>
         <button className="nav-cta nav-cta--desktop" onClick={scrollTo('contact')}>
           Request a consult
@@ -68,6 +70,7 @@ export default function Nav() {
           <button onClick={() => navClick('engagements')}>Practice</button>
           <button onClick={() => navClick('insights')}>Insights</button>
           <button onClick={() => navClick('contact')}>Contact</button>
+          <Link href="/clients" onClick={() => setMenuOpen(false)}>Clients</Link>
           <button className="nav-mobile-cta" onClick={() => navClick('contact')}>
             Request a consult
           </button>

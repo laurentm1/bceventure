@@ -2230,3 +2230,164 @@ section, .section {
 [data-show-marquee="false"] .marquee { display: none; }
 [data-show-manifesto="false"] .manifesto { display: none; }
 [data-show-system-mark="false"] .system-mark { display: none; }
+
+/* ===== Clients login page ===== */
+.clients-page {
+  min-height: 100vh;
+  background: var(--bone-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+}
+
+.clients-shell {
+  width: 100%;
+  max-width: 540px;
+  position: relative;
+}
+
+.clients-back {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: color 0.2s ease;
+}
+
+.clients-back:hover { color: var(--accent); }
+
+.clients-card {
+  border: 0.5px solid var(--rule-soft);
+  background: var(--bone);
+  padding: 44px 40px;
+}
+
+.clients-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.clients-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin: 0 0 28px;
+}
+
+.clients-title .serif.italic {
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+.clients-lede {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin: 0 0 28px;
+  font-weight: 300;
+}
+
+.clients-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.clients-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.clients-field span {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.clients-field input {
+  font-family: var(--sans);
+  font-size: 14px;
+  padding: 12px 14px;
+  border: 0.5px solid var(--rule-soft);
+  background: var(--bone);
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.clients-field input:focus {
+  border-color: var(--accent);
+}
+
+.clients-error {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  text-transform: uppercase;
+  padding: 8px 0;
+}
+
+.clients-submit {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 14px 18px;
+  border: 0.5px solid var(--deep);
+  background: var(--deep);
+  color: var(--deep-fg);
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.25s ease;
+}
+
+.clients-submit:hover:not(:disabled) {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bone);
+}
+
+.clients-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.clients-footnote {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 0.5px solid var(--rule-soft);
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--ink-2);
+  text-align: center;
+}
+
+.clients-footnote a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.clients-footnote a:hover { color: var(--accent); }
+
+@media (max-width: 600px) {
+  .clients-page { padding: 48px 16px; }
+  .clients-card { padding: 32px 24px; }
+}

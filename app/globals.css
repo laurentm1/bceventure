@@ -451,6 +451,7 @@ section, .section {
 }
 
 .hero-meta,
+.hero-mark-large,
 .hero-grid,
 .hero-foot {
   max-width: var(--maxw);

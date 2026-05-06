@@ -2079,7 +2079,13 @@ section, .section {
   .display-l  { font-size: clamp(28px, 8vw, 44px); line-height: 1.08; }
   .display-m  { font-size: clamp(22px, 6vw, 34px); line-height: 1.12; }
   /* Hero headline needs explicit override — higher specificity than .display-xl */
-  .hero .display-xl { font-size: clamp(63px, 16vw, 72px); line-height: 0.95; letter-spacing: -0.02em; }
+  .hero .display-xl {
+    font-size: clamp(63px, 16vw, 72px);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    font-optical-sizing: none;
+    font-variation-settings: "opsz" 14, "SOFT" 20, "WONK" 1;
+  }
   /* Squeeze only 'Sovereignty' tighter so the y stays in frame */
   .hero-headline--sovereignty .word:first-child { letter-spacing: -0.085em; }
   /* Extra right padding so iOS Safari glyph metrics don't clip at word boundary */

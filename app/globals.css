@@ -470,46 +470,39 @@ section, .section {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 0 5rem;
-  align-items: start;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 3rem 5rem;
+  align-items: end;
+  align-content: end;
   flex: 1;
 }
 
-/* Row 1: headline */
-.hero-left-head {
+/* Left col, row 1: headline */
+.hero-grid .hero-headline {
   grid-column: 1;
   grid-row: 1;
+  min-width: 0;
 }
 
-/* Row 2: full-width hairline */
-.hero-divider {
-  grid-column: 1 / span 2;
-  grid-row: 2;
-  height: 0.5px;
-  background: var(--rule-soft);
-  margin: 1.5rem 0 1rem;
-  width: 60%;
-}
-
-/* Row 3 left: problem + objective */
-.hero-left-sub {
+/* Left col, row 2: thesis text */
+.hero-thesis--under {
   grid-column: 1;
-  grid-row: 3;
+  grid-row: 2;
+  margin: 0;
+  padding-top: 1.5rem;
+  border-top: 0.5px solid var(--rule-soft);
   max-width: 520px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  min-width: 0;
 }
 
-/* Row 3 right: level with problem statement */
+/* Right col, rows 1–2: descriptive text */
 .hero-grid .hero-right {
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 1 / span 2;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 
 /* Three-principle column in hero right */

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import TweaksProvider from '@/components/tweaks/tweaks-provider'
 
 export const metadata: Metadata = {
   title: 'BCE.VENTURES — Operator-led venture building & strategic advisory',
@@ -96,7 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <TweaksProvider>{children}</TweaksProvider>
+        {children}
       </body>
     </html>
   )

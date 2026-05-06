@@ -442,7 +442,7 @@ section, .section {
 
 .hero {
   min-height: 100vh;
-  padding: 160px 0 56px;
+  padding: 160px var(--pad-x) 56px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -451,15 +451,8 @@ section, .section {
 }
 
 .hero-meta,
-.hero-mark-large,
 .hero-grid,
 .hero-foot {
-  max-width: var(--maxw);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--pad-x);
-  padding-right: var(--pad-x);
-  box-sizing: border-box;
   width: 100%;
 }
 

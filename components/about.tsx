@@ -3,7 +3,7 @@ import Reveal from '@/components/reveal'
 const EXPERIENCE = [
   {
     name: 'Amazon',
-    body: 'Designed consumer trade-in programs for phones and wearables. Built the refurbishment and resale infrastructure that became Amazon Renewed — and its premium tier.',
+    body: 'Designed consumer trade-in programs for phones and wearables. Built the refurbishment and resale infrastructure that became Amazon Renewed, including its premium tier.',
   },
   {
     name: 'Google Store',
@@ -19,7 +19,7 @@ const EXPERIENCE = [
   },
   {
     name: 'Graff · Harry Winston · Tiffany & Co.',
-    body: 'Operated at the supplier-to-maison interface in natural colored diamonds — the most trust-intensive corner of hard luxury. Earned and held trusted-supplier relationships with the great houses, and learned how they evaluate provenance, grading, and value by having to meet their standard to enter the room.',
+    body: 'Operated at the supplier-to-maison interface in natural colored diamonds, the most trust-intensive corner of hard luxury. Earned and held trusted-supplier relationships with the great houses, and learned how they evaluate provenance, grading, and value by having to meet their standard to enter the room.',
   },
   {
     name: 'Global Secondary Markets',
@@ -50,7 +50,7 @@ export default function About() {
                 Alexandra is a strategic operator and former C-suite leader
                 who identifies structural shifts early and turns them into
                 commercial advantage. She has sat on every side of the trust
-                chain — as a supplier to the great houses of hard luxury, as
+                chain: as a supplier to the great houses of hard luxury, as
                 the architect of trade-in and refurbishment infrastructure for
                 the world&rsquo;s largest consumer platforms, and as the operator
                 who installed institutional governance at a multi-billion-dollar
@@ -92,13 +92,13 @@ export default function About() {
             <div className="about-exp-col">
               <p className="about-exp-intro">
                 Before founding BCE Ventures, Alexandra built and scaled some of the
-                largest secondary market infrastructures in global consumer electronics —
+                largest secondary market infrastructures in global consumer electronics,
                 and operated at the supplier-to-maison interface in hard luxury.
               </p>
               <p className="about-exp-intro">
                 Architected trade-in and refurbishment programs in partnership with
                 Amazon, Google, Best Buy, Target, and Walmart. Sat at the interface
-                between OEM, retailer, reseller, and consumer — designing the trust
+                between OEM, retailer, reseller, and consumer, designing the trust
                 mechanics, grading standards, and pricing logic that made the programs work.
               </p>
               <div className="exp-tiles">

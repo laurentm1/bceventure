@@ -98,7 +98,7 @@ export default function About() {
               <p className="about-exp-intro">
                 Architected trade-in and refurbishment programs in partnership with
                 Amazon, Google, Best Buy, Target, and Walmart. Sat at the interface
-                between OEM, retailer, reseller, and consumer, designing the trust
+                between OEM, retailer, distributor, reseller, and consumer, designing the trust
                 mechanics, grading standards, and pricing logic that made the programs work.
               </p>
               <div className="exp-tiles">

@@ -7,7 +7,7 @@ const EXPERIENCE = [
   },
   {
     name: 'Google',
-    body: 'Stood up the global Pixel trade-in business in partnership with Google across EMEA and APAC. Designed the contract and partnership architecture and led the program end-to-end, aligning teams across operations, technology, legal, commercial, and HR to deliver lifecycle participation across recovery, grading, and distribution. Built the secondary infrastructure that helped power Pixel\'s primary growth.',
+    body: 'Stood up the global Pixel trade-in business in partnership with Google across EMEA and APAC, leading the cross-functional build: operations, technology, legal, commercial, and HR. Built the secondary infrastructure that helped power Pixel\'s primary growth.',
   },
   {
     name: 'Best Buy · Target · Walmart',

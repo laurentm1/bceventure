@@ -3,23 +3,27 @@ import Reveal from '@/components/reveal'
 const EXPERIENCE = [
   {
     name: 'Amazon',
-    body: 'Designed consumer trade-in programs for phones and wearables. Built the refurbishment and resale infrastructure that became Amazon Renewed, including its premium tier.',
+    body: 'Architected the Amazon mobile device trade-in partnership and helped build the early Amazon Renewed program, including the Renewed Premium tier: the framework that now sets how the consumer electronics secondary market prices, grades, and trusts.',
   },
   {
     name: 'Google',
-    body: 'Built and scaled global trade-in systems supporting Pixel device programs across APAC and EMEA markets in partnership with Google.',
+    body: 'Led global Pixel trade-in programs across EMEA and APAC. Structured participation across the device lifecycle, including recovery, grading, and distribution.',
   },
   {
     name: 'Best Buy · Target · Walmart',
     body: 'Retail recovery and secondary market infrastructure aligning major retailers with global distribution networks.',
   },
   {
-    name: 'PCS Wireless',
-    body: 'Chief Transformation Officer. Led the transition from founder-led to institutional leadership at a multi-billion-dollar global distributor. Supported installation of the incoming CEO.',
+    name: 'PCS Wireless, Chief Transformation Officer',
+    body: 'Recruited by the founder of a multi-billion-dollar global distributor to lead the transition from founder-led to institutional leadership and install the incoming CEO.',
   },
   {
-    name: 'Graff · Harry Winston · Tiffany & Co.',
-    body: 'Operated at the supplier-to-maison interface in natural colored diamonds, the most trust-intensive corner of hard luxury. Earned and held trusted-supplier relationships with the great houses, and learned how they evaluate provenance, grading, and value by having to meet their standard to enter the room.',
+    name: 'TessaB',
+    body: 'Chief Executive Officer of a blockchain-enabled consumer marketplace. Stabilized operations, achieved profitability, and led a structured wind-down preserving IP and capital.',
+  },
+  {
+    name: 'Novel Collection · Geneva',
+    body: 'Operated at the supplier-to-maison interface in rare natural color diamonds, the most trust-intensive corner of hard luxury. Held trusted-supplier relationships with Graff, Harry Winston, Van Cleef & Arpels, and Tiffany & Co., meeting the standard required to enter the room. Expanded the Geneva presence and grew revenue 20%.',
   },
   {
     name: 'Global Secondary Markets',

@@ -2084,7 +2084,7 @@ section, .section {
     line-height: 0.95;
     letter-spacing: -0.02em;
     font-optical-sizing: none;
-    font-variation-settings: "opsz" 14, "SOFT" 20, "WONK" 1;
+    font-variation-settings: "opsz" 9, "wght" 300, "SOFT" 0, "WONK" 1;
   }
   /* Squeeze only 'Sovereignty' tighter so the y stays in frame */
   .hero-headline--sovereignty .word:first-child { letter-spacing: -0.085em; }

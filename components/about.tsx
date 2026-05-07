@@ -78,10 +78,6 @@ export default function About() {
                   <dd>Architecture · Parsons M.Arch</dd>
                 </div>
                 <div>
-                  <dt>Most recently</dt>
-                  <dd>Chief Transformation Officer</dd>
-                </div>
-                <div>
                   <dt>Based</dt>
                   <dd>New York</dd>
                 </div>

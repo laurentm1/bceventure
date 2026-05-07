@@ -99,12 +99,6 @@ export default function About() {
                 largest secondary market infrastructures in global consumer electronics,
                 and operated at the supplier-to-maison interface in hard luxury.
               </p>
-              <p className="about-exp-intro">
-                Architected trade-in and refurbishment programs in partnership with
-                Amazon, Google, Best Buy, Target, and Walmart. Sat at the interface
-                between OEM, retailer, distributor, reseller, and consumer, designing the trust
-                mechanics, grading standards, and pricing logic that made the programs work.
-              </p>
               <div className="exp-tiles">
                 {EXPERIENCE.map((e, i) => (
                   <div className="exp-tile" key={i}>

@@ -2170,7 +2170,7 @@ section, .section {
   .contact-cta { grid-template-columns: 1fr; }
 
   /* System mark — slightly smaller */
-  .hero-mark-large { font-size: 11vw; overflow: hidden; white-space: nowrap; max-width: 100%; margin-bottom: 24px; }
+  .hero-mark-large { font-size: 17vw; overflow: hidden; white-space: nowrap; max-width: 100%; margin-bottom: 24px; }
 
   /* Reduce section vertical rhythm */
   section, .section { scroll-margin-top: 100px; }

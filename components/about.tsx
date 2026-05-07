@@ -81,10 +81,6 @@ export default function About() {
                   <dt>Based</dt>
                   <dd>New York</dd>
                 </div>
-                <div>
-                  <dt>Cadence</dt>
-                  <dd>Selective engagements each year</dd>
-                </div>
               </dl>
             </div>
 

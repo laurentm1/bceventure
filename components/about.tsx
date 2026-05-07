@@ -6,7 +6,7 @@ const EXPERIENCE = [
     body: 'Designed consumer trade-in programs for phones and wearables. Built the refurbishment and resale infrastructure that became Amazon Renewed, including its premium tier.',
   },
   {
-    name: 'Google Store',
+    name: 'Google',
     body: 'Built and scaled global trade-in systems supporting Pixel device programs across APAC and EMEA markets in partnership with Google.',
   },
   {

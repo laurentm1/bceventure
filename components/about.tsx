@@ -14,7 +14,7 @@ const EXPERIENCE = [
     body: 'Retail recovery and secondary market infrastructure aligning major retailers with global distribution networks.',
   },
   {
-    name: 'PCS Wireless, Chief Transformation Officer',
+    name: 'PCS Wireless · Chief Transformation Officer',
     body: 'Recruited by the founder of a multi-billion-dollar global distributor to lead the transition from founder-led to institutional leadership and install the incoming CEO.',
   },
   {

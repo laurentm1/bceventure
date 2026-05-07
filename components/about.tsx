@@ -26,8 +26,8 @@ const EXPERIENCE = [
     body: 'Operated at the supplier-to-maison interface in rare natural color diamonds, the most trust-intensive corner of hard luxury. Held trusted-supplier relationships with Graff, Harry Winston, Van Cleef & Arpels, and Tiffany & Co., meeting the standard required to enter the room. Expanded the Geneva presence and grew revenue 20%.',
   },
   {
-    name: 'Global Secondary Markets',
-    body: '$100M+ in purchasing capital deployed across global markets. Contract design, working capital optimization, grading standards.',
+    name: 'Capital & Contract Architecture',
+    body: '$100M+ in inventory and purchasing capital deployed across global secondary markets over a decade. Contract structures and working-capital terms designed to convert volume into margin and return.',
   },
 ]
 

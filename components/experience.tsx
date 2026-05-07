@@ -25,7 +25,7 @@ const ENTRIES = [
   {
     name: 'Graff · Harry Winston · de Grisogono · Tiffany & Co.',
     body: [
-      'Advised on natural coloured diamond valuation, grading, and provenance.',
+      'Operated at the supplier-to-maison interface in natural colored diamonds — the most trust-intensive corner of hard luxury.',
       'The foundational trust layer of hard luxury.',
     ],
   },

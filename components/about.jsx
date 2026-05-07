@@ -25,7 +25,7 @@ function SelectedExperience() {
     {
       name: 'Graff · Harry Winston · de Grisogono · Tiffany & Co.',
       body: [
-        'Advised on natural coloured diamond valuation, grading, and provenance.',
+        'Operated at the supplier-to-maison interface in natural colored diamonds — the most trust-intensive corner of hard luxury.',
         'The foundational trust layer of hard luxury.',
       ],
     },
@@ -105,9 +105,13 @@ function About() {
             <p>
               Alexandra Amrami is a strategic operator and former C-suite leader
               who identifies structural shifts early and turns them into
-              commercial advantage. Her career began in luxury, advising Graff,
-              Harry Winston, Van Cleef & Arpels, and Tiffany & Co. on natural
-              colored diamonds at the highest levels of product, valuation, and trust.
+              commercial advantage. She has sat on every side of the trust
+              chain — as a supplier to the great houses of hard luxury, as
+              the architect of trade-in and refurbishment infrastructure for
+              the world's largest consumer platforms, and as the operator
+              who installed institutional governance at a multi-billion-dollar
+              global distributor. The question of how value holds when an
+              object changes hands is the through-line of her career.
             </p>
             <p>
               That perspective translated into building trade-in and

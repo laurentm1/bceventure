@@ -28,35 +28,26 @@
 }
 
 [data-theme="atelier"] {
-  /* Atelier — dusty rose / muted burgundy palette */
-  --bone: #F7EDEA;       /* blush near-white */
-  --bone-2: #E8C8C2;     /* dusty rose surface */
-  --ink: #3D0C08;        /* deep burgundy */
-  --ink-2: #4A2020;      /* warm chocolate */
-  --rule: #C9A090;       /* muted mauve hairline */
-  --rule-soft: rgba(61, 12, 8, 0.12);
-  --accent: #3D0C08;     /* deep burgundy accent */
-  --accent-soft: #C9A090; /* muted mauve */
-  --accent-on-deep: #E8C8C2; /* dusty rose on dark */
-  --deep: #3D0C08;       /* deep burgundy for inverted blocks */
-  --deep-fg: #F7EDEA;
-  --muted: #C9A090;
+  --bone: #EFE6DC; --bone-2: #E6D9CB; --ink: #3D2A1B; --ink-2: #5C3A1F;
+  --rule: #C9B49B; --rule-soft: rgba(61, 42, 27, 0.14);
+  --accent: #D67E4F; --accent-soft: #F2A675; --accent-on-deep: #F4C492;
+  --deep: #5B0F00; --deep-fg: #EFE6DC; --muted: #8A7560;
 }
 
 [data-theme="blush"] {
-  /* Blush — soft, powdered pink with desaturated peach */
-  --bone: #FBEFE8;       /* very pale blush paper */
-  --bone-2: #F4DFD3;     /* dusted pink surface */
-  --ink: #6B4435;        /* soft warm chestnut */
-  --ink-2: #8A5C46;      /* terracotta brown */
-  --rule: #ECCFBF;       /* powder hairline */
-  --rule-soft: rgba(107, 68, 53, 0.12);
-  --accent: #D89A82;     /* desaturated peach */
-  --accent-soft: #E8B9A4; /* milk peach */
-  --accent-on-deep: #F0CDB6;
-  --deep: #6B4435;
-  --deep-fg: #FBEFE8;
-  --muted: #A4897A;
+  /* Blush — pale pink paper, deep oxblood ink + manifesto block */
+  --bone: #F5E8E1;       /* pale blush paper */
+  --bone-2: #ECD8CC;     /* deeper blush surface */
+  --ink: #4A1812;        /* deep oxblood */
+  --ink-2: #6B2A20;      /* oxblood secondary */
+  --rule: #D9B9A8;       /* powder rose hairline */
+  --rule-soft: rgba(74, 24, 18, 0.14);
+  --accent: #4A1812;     /* oxblood */
+  --accent-soft: #6B2A20;
+  --accent-on-deep: #E6B8AF; /* warm rose for inverted blocks */
+  --deep: #2E0F0A;       /* near-black oxblood for manifesto bg */
+  --deep-fg: #F5E8E1;
+  --muted: #8A5A50;
 }
 
 [data-theme="mono"] {

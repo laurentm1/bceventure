@@ -7,7 +7,7 @@ export default function Contact() {
     <section className="section" id="contact" style={{ background: 'var(--bone-2)' }}>
       <div className="container">
         <SectionHeader
-          num="05 Contact"
+          num="05. Contact"
           eyebrow="By introduction or direct note"
           title="Selectively"
           italic="engaged."

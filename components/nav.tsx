@@ -41,7 +41,7 @@ export default function Nav() {
         </a>
         <div className="nav-links">
           <button className="nav-link" onClick={scrollTo('about')}>About</button>
-          <button className="nav-link" onClick={scrollTo('approach')}>Approach</button>
+          <button className="nav-link" onClick={scrollTo('practice')}>Practice</button>
           <button className="nav-link" onClick={scrollTo('engagements')}>Practice</button>
           <button className="nav-link" onClick={scrollTo('insights')}>Insights</button>
           <button className="nav-link" onClick={scrollTo('contact')}>Contact</button>
@@ -65,7 +65,7 @@ export default function Nav() {
       {menuOpen && (
         <div className="nav-mobile-menu">
           <button onClick={() => navClick('about')}>About</button>
-          <button onClick={() => navClick('approach')}>Approach</button>
+          <button onClick={() => navClick('practice')}>Practice</button>
           <button onClick={() => navClick('engagements')}>Practice</button>
           <button onClick={() => navClick('insights')}>Insights</button>
           <button onClick={() => navClick('contact')}>Contact</button>

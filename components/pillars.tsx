@@ -5,7 +5,7 @@ const PILLARS = [
   {
     num: '01',
     title: 'Trust',
-    body: 'Standards, grading, and provenance frameworks that hold across handoffs. Authenticity, not arbitrage, is the source of price.',
+    body: 'Standards, grading, and provenance frameworks that hold across handoffs, so authenticity, not arbitrage, is the source of price.',
   },
   {
     num: '02',
@@ -15,22 +15,20 @@ const PILLARS = [
   {
     num: '03',
     title: 'Durable systems',
-    body: 'Infrastructure built for scale and circulation, designed for assets to move, recirculate, and compound value over time.',
+    body: 'Infrastructure built for scale and circulation: designed for assets to move, recirculate, and compound value over time.',
   },
 ]
 
 export default function Pillars() {
   return (
-    <section className="section" id="approach" style={{ paddingTop: 0 }}>
-      {/* Full-bleed dark band — lives outside .container so it spans edge to edge */}
+    <section className="section" id="practice" style={{ paddingTop: 0 }}>
       <div className="approach-band">
         <div className="container">
           <SectionHeader
-            num="02 — Approach"
-            eyebrow="Three pillars"
+            num="02. Practice"
+            eyebrow="Three vectors"
             title="The brand,"
-            italic="not the market,"
-            titleSuffix=" sets the terms."
+            italic="not the market, sets the terms."
             oneLine
           />
         </div>
@@ -40,7 +38,7 @@ export default function Pillars() {
         <Reveal stagger className="pillars">
           {PILLARS.map(p => (
             <article className="pillar" key={p.num}>
-              <span className="pillar-num">— {p.num}</span>
+              <span className="pillar-num">{p.num}</span>
               <h3 className="pillar-title">{p.title}</h3>
               <p className="pillar-body">{p.body}</p>
             </article>

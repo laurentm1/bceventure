@@ -73,8 +73,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      data-theme="atelier"
-      data-font="fraunces"
+      data-theme="blush"
+      data-font="fraunces-tight"
       data-headline="sovereignty"
       data-show-marquee="true"
       data-show-manifesto="true"

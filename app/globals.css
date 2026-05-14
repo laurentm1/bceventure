@@ -2071,7 +2071,7 @@ section, .section {
   .display-m  { font-size: clamp(22px, 6vw, 34px); line-height: 1.12; }
   /* Hero headline needs explicit override — higher specificity than .display-xl */
   .hero .display-xl {
-    font-size: clamp(63px, 16vw, 72px);
+    font-size: clamp(56px, 14vw, 64px);
     line-height: 0.95;
     letter-spacing: -0.02em;
     font-optical-sizing: none;
@@ -2102,9 +2102,11 @@ section, .section {
   }
   .experience-intro { margin-bottom: 32px; }
 
-  /* Previously list — tighter spacing */
-  .previously-list { gap: 12px; }
+  /* Previously list — stacked, no stray separator bullets on wrap */
+  .previously-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .previously-list { flex-direction: column; gap: 8px; }
   .previously-list li { font-size: 14px; padding: 0; border: none; }
+  .previously-list li + li::before { display: none; }
 
   /* Capability — reduce body font size */
   .capability-body p { font-size: 15px; line-height: 1.6; }

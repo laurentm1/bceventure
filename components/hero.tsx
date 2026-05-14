@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <header className="hero" id="top">
       <div className="hero-meta">
-        <span className="eyebrow">BCE.VENTURES · EST. 2026 · NEW YORK</span>
+        <span className="eyebrow">BCE.VENTURES · EST. 2025 · NEW YORK</span>
         <span className="eyebrow">No. 001 / Operator-led advisory</span>
       </div>
 

@@ -22,7 +22,7 @@ const CAPABILITIES = [
     body: 'Executive structure, governance, and operating cadence, paired with one-on-one coaching for founders and senior leaders navigating their next chapter. Strategy and execution, calibrated to reinforce one another, so the move you make is both the right one and the one your organization can actually execute.',
     ideal: 'Founder-led businesses at scale · Boards in transition · Senior operators stepping up · Leadership teams post-investment',
     outcomes: [
-      'Three successful transitions, founder to institutional',
+      'Multiple successful inflections, founder-led to institutional, scale-up, and structured wind-down',
       'Operator-led, board-trusted',
       'Coaching at the founder, CEO & executive level',
     ],

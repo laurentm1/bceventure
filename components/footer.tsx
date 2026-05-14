@@ -28,6 +28,7 @@ export default function Footer() {
                 LinkedIn
               </a>
             </li>
+            <li><a href="/clients">Client Login</a></li>
           </ul>
         </div>
         <div className="footer-col">
@@ -44,7 +45,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <span>© 2026 BCE Ventures · All rights reserved</span>
+        <span>© 2025 BCE Ventures · All rights reserved</span>
         <span>A practice, not a platform</span>
       </div>
     </footer>

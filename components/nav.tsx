@@ -37,12 +37,11 @@ export default function Nav() {
       >
         <a href="#top" className="nav-mark" onClick={scrollTo('top')} aria-label="BCE Ventures — Home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/bce-logo.jpg" alt="BCE Ventures" className="nav-logo" />
+          <img src="/bce-logo.svg" alt="BCE Ventures" className="nav-logo" />
         </a>
         <div className="nav-links">
           <button className="nav-link" onClick={scrollTo('about')}>About</button>
           <button className="nav-link" onClick={scrollTo('practice')}>Practice</button>
-          <button className="nav-link" onClick={scrollTo('engagements')}>Practice</button>
           <button className="nav-link" onClick={scrollTo('insights')}>Insights</button>
           <button className="nav-link" onClick={scrollTo('contact')}>Contact</button>
           <a href="/clients" className="nav-link">Clients</a>
@@ -66,7 +65,6 @@ export default function Nav() {
         <div className="nav-mobile-menu">
           <button onClick={() => navClick('about')}>About</button>
           <button onClick={() => navClick('practice')}>Practice</button>
-          <button onClick={() => navClick('engagements')}>Practice</button>
           <button onClick={() => navClick('insights')}>Insights</button>
           <button onClick={() => navClick('contact')}>Contact</button>
           <a href="/clients" className="nav-mobile-item" onClick={() => setMenuOpen(false)}>Clients</a>

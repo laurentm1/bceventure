@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <header className="hero" id="top">
       <div className="hero-meta">
-        <span className="eyebrow">BCE.VENTURES · EST. 2025 · NEW YORK</span>
+        <span className="eyebrow">BCE.VENTURES · EST. 2026 · NEW YORK</span>
         <span className="eyebrow">No. 001 / Operator-led advisory</span>
       </div>
 
@@ -43,20 +43,25 @@ export default function Hero() {
         ))}
 
         <p className="hero-thesis hero-thesis--under">
-          For maisons protecting craft, and emerging categories building it.
-          <span className="serif italic"> the secondary market, designed as a sovereignty system.</span>
+          An advisory practice for maisons and emerging categories
+          <span className="serif italic"> at the edge of value formation.</span>
         </p>
 
         <div className="hero-right">
-          <p className="hero-tagline">
-            Trust, design, durable systems.
-            an operator-led venture practice for
-            founders, CEOs, and maisons.
+          <p className="hero-problem">
+            Luxury houses built enduring value through craftsmanship,
+            scarcity, and cultural relevance.
           </p>
-          <p className="body-l" style={{ color: 'var(--ink-2)' }}>
-            Advising leadership teams on how value is structured
-            and protected. The brand, not the market, <em>should</em> set the terms of value
-            as products circulate and scale.
+          <p className="hero-problem">
+            Today, that value is increasingly governed by resale platforms,
+            authentication systems, and secondary markets the brands themselves
+            do not control.
+          </p>
+          <p className="hero-problem hero-problem--punchline">
+            <span className="serif italic">
+              The strategic question is no longer whether these markets exist.
+              It is who governs the systems around them.
+            </span>
           </p>
         </div>
       </div>

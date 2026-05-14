@@ -44,7 +44,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <span>© 2025 BCE Ventures · All rights reserved</span>
+        <span>© 2026 BCE Ventures · All rights reserved</span>
         <span>A practice, not a platform</span>
       </div>
     </footer>

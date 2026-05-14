@@ -2102,9 +2102,9 @@ section, .section {
   }
   .experience-intro { margin-bottom: 32px; }
 
-  /* Previously list — stacked, no stray separator bullets on wrap */
-  .previously-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .previously-list { flex-direction: column; gap: 8px; }
+  /* Previously list — keep horizontal flow but hide stray ·
+     separator bullets that appear at the start of wrapped lines */
+  .previously-list { gap: 12px 18px; }
   .previously-list li { font-size: 14px; padding: 0; border: none; }
   .previously-list li + li::before { display: none; }
 

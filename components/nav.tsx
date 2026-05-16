@@ -44,6 +44,7 @@ export default function Nav() {
           <button className="nav-link" onClick={scrollTo('practice')}>Practice</button>
           <button className="nav-link" onClick={scrollTo('insights')}>Insights</button>
           <button className="nav-link" onClick={scrollTo('contact')}>Contact</button>
+          <a href="/framework" className="nav-link">Sovereignty Framework™</a>
           <a href="/clients" className="nav-link">Clients</a>
         </div>
         <button className="nav-cta nav-cta--desktop" onClick={scrollTo('contact')}>
@@ -67,6 +68,7 @@ export default function Nav() {
           <button onClick={() => navClick('practice')}>Practice</button>
           <button onClick={() => navClick('insights')}>Insights</button>
           <button onClick={() => navClick('contact')}>Contact</button>
+          <a href="/framework" className="nav-mobile-item" onClick={() => setMenuOpen(false)}>Sovereignty Framework™</a>
           <a href="/clients" className="nav-mobile-item" onClick={() => setMenuOpen(false)}>Clients</a>
           <button className="nav-mobile-cta" onClick={() => navClick('contact')}>
             Request a consult

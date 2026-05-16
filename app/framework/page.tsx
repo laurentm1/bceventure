@@ -14,7 +14,7 @@ const TABS: { id: TabId; label: string }[] = [
   { id: 'diagnostic', label: 'The diagnostic' },
 ]
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xnjwavzr'
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mzdwpddp'
 
 const FREE_EMAIL_DOMAINS = new Set([
   'gmail.com', 'googlemail.com',

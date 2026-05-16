@@ -35,6 +35,10 @@ const FREE_EMAIL_DOMAINS = new Set([
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
+const EMAIL_ALLOWLIST = new Set([
+  'amrami.alix@gmail.com',
+])
+
 export default function FrameworkPage() {
   const [unlocked, setUnlocked] = useState(false)
   const [activeTab, setActiveTab] = useState<TabId>('market')
@@ -53,7 +57,7 @@ export default function FrameworkPage() {
       e.email = 'Required'
     } else if (!EMAIL_RE.test(trimmedEmail)) {
       e.email = 'Check format'
-    } else {
+    } else if (!EMAIL_ALLOWLIST.has(trimmedEmail)) {
       const domain = trimmedEmail.split('@')[1]
       if (domain && FREE_EMAIL_DOMAINS.has(domain)) {
         e.email = 'Please use a work email'

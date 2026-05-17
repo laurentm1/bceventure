@@ -80,6 +80,7 @@ export default function FrameworkPage() {
           email: email.trim(),
           organisation: org.trim(),
           _subject: `Framework access · ${name.trim()} · ${org.trim()}`,
+          _replyto: email.trim(),
           source: 'The Sovereignty Framework — bce.ventures/framework',
         }),
       })

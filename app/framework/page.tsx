@@ -103,7 +103,7 @@ export default function FrameworkPage() {
         {/* PUBLIC FRAMEWORK */}
         <p className="eyebrow">BCE Ventures · The Sovereignty Framework™</p>
         <h1 className="fw-hero">
-          Sovereignty over long-term value<br />
+          Sovereignty of long-term value<br />
           <em>is the objective.</em>
         </h1>
         <p className="fw-hero-sub">

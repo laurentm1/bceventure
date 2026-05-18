@@ -104,7 +104,7 @@ export default function FrameworkPage() {
         <p className="eyebrow">BCE Ventures · The Sovereignty Framework™</p>
         <h1 className="fw-hero">
           Sovereignty of long-term value<br />
-          <em>is the objective.</em>
+          <em>is the objective</em>
         </h1>
         <p className="fw-hero-sub">
           A strategic model for governing value beyond the first sale. For Maisons that built desirability and intend to govern what happens next.

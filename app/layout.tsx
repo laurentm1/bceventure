@@ -15,21 +15,21 @@ export const metadata: Metadata = {
     siteName: 'BCE Ventures',
     title: 'BCE.VENTURES — Operator-led venture building & strategic advisory',
     description:
-      'Trust, design, durable systems. An operator-led venture practice for founders, CEOs, and maisons. Sovereignty over value.',
+      'Trust, design, durable systems. Sovereignty of long-term value.',
     url: 'https://bce.ventures/',
     images: [
       {
         url: 'https://bce.ventures/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'BCE.VENTURES — Sovereignty over value',
+        alt: 'BCE.VENTURES — Sovereignty of long-term value',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'BCE.VENTURES — Operator-led venture practice',
-    description: 'Trust, design, durable systems. Sovereignty over value.',
+    description: 'Trust, design, durable systems. Sovereignty of long-term value.',
     images: ['https://bce.ventures/og-image.png'],
   },
   other: {
@@ -48,7 +48,7 @@ const JSON_LD = {
       url: 'https://bce.ventures/',
       logo: 'https://bce.ventures/og-image.png',
       description:
-        'Operator-led venture building and strategic advisory. Trust, design, durable systems. Sovereignty over value.',
+        'Operator-led venture building and strategic advisory. Trust, design, durable systems. Sovereignty of long-term value.',
       founder: { '@id': 'https://bce.ventures/#founder' },
       address: {
         '@type': 'PostalAddress',

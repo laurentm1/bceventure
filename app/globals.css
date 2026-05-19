@@ -3122,6 +3122,7 @@ section, .section {
 @media (max-width: 640px) {
   .fw-shell { padding: 2.5rem 1.25rem 4rem; }
   .fw-tier { grid-template-columns: 28px 1fr; }
+  .fw-tier > .fw-tier-body { grid-column: 1 / -1; }
   .fw-tier-brands { display: none; }
   .fw-stat-row,
   .fw-stat-row-2,

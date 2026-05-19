@@ -10,7 +10,7 @@ const MOMENTS = [
   { value: 'Scale', label: 'Scale growth at a new altitude' },
   { value: 'Transition', label: 'Transition leadership, structure, or chapter change' },
   { value: 'Inflection', label: 'Market inflection the rules just changed' },
-  { value: 'Brand', label: 'Brand & pricing power sovereignty over value' },
+  { value: 'Brand', label: 'Brand & pricing power — sovereignty of long-term value' },
   { value: 'Other', label: "Not sure yet let's talk" },
 ]
 

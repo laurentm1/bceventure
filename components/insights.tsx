@@ -11,7 +11,7 @@ const ITEMS = [
   },
   {
     date: '04.20.26',
-    title: 'Sovereignty over value formation',
+    title: 'Sovereignty of value formation',
     kicker: 'Primary luxury is flat. Secondary is growing 3× faster. The maisons that define the standard will own the next decade.',
     tag: 'Markets',
     href: 'https://www.linkedin.com/posts/alamrami_primary-luxury-markets-are-slowing-2025-activity-7443052315906895873-2mcM',

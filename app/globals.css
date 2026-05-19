@@ -2414,6 +2414,15 @@ section, .section {
   padding: 3.5rem 2.5rem 7rem;
 }
 
+.fw-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
 .fw-back {
   display: inline-block;
   font-family: var(--mono);
@@ -2422,11 +2431,18 @@ section, .section {
   text-transform: uppercase;
   color: var(--ink-2);
   text-decoration: none;
-  margin-bottom: 2.5rem;
   transition: color 0.2s ease;
 }
 
 .fw-back:hover { color: var(--accent); }
+
+.fw-confidential {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
 
 /* Tighten existing .eyebrow inside the framework so it carries its own bottom rhythm */
 .fw-page .eyebrow {

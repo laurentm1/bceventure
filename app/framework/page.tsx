@@ -98,7 +98,10 @@ export default function FrameworkPage() {
   return (
     <main className="fw-page" onContextMenu={(e) => e.preventDefault()}>
       <div className="fw-shell">
-        <Link href="/" className="fw-back">← BCE.VENTURES</Link>
+        <div className="fw-topbar">
+          <Link href="/" className="fw-back">← BCE.VENTURES</Link>
+          <span className="fw-confidential">© Confidential · For internal review only · Not for redistribution</span>
+        </div>
 
         {/* PUBLIC FRAMEWORK */}
         <p className="eyebrow">BCE Ventures · The Sovereignty Framework™</p>

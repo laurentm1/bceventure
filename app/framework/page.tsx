@@ -95,8 +95,19 @@ export default function FrameworkPage() {
     }
   }
 
+  const blockCopy = (e: React.ClipboardEvent) => {
+    const t = e.target as HTMLElement | null
+    if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return
+    e.preventDefault()
+  }
+
   return (
-    <main className="fw-page" onContextMenu={(e) => e.preventDefault()}>
+    <main
+      className="fw-page"
+      onContextMenu={(e) => e.preventDefault()}
+      onCopy={blockCopy}
+      onCut={blockCopy}
+    >
       <div className="fw-shell">
         <div className="fw-topbar">
           <Link href="/" className="fw-back">← BCE.VENTURES</Link>

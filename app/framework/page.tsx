@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 
 type TabId = 'market' | 'tiers' | 'cannibal' | 'programs' | 'cases' | 'diagnostic'
@@ -47,7 +47,23 @@ export default function FrameworkPage() {
   const [org, setOrg] = useState('')
   const [errors, setErrors] = useState<{ name?: string; email?: string; org?: string }>({})
   const [submitting, setSubmitting] = useState(false)
+  const [forPrint, setForPrint] = useState(false)
   const researchRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const before = () => setForPrint(true)
+    const after = () => setForPrint(false)
+    window.addEventListener('beforeprint', before)
+    window.addEventListener('afterprint', after)
+    return () => {
+      window.removeEventListener('beforeprint', before)
+      window.removeEventListener('afterprint', after)
+    }
+  }, [])
+
+  const onDownload = () => {
+    window.print()
+  }
 
   const validate = () => {
     const e: { name?: string; email?: string; org?: string } = {}
@@ -96,9 +112,14 @@ export default function FrameworkPage() {
   }
 
   return (
-    <main className="fw-page">
+    <main className="fw-page" onContextMenu={(e) => e.preventDefault()}>
       <div className="fw-shell">
-        <Link href="/" className="fw-back">← BCE.VENTURES</Link>
+        <div className="fw-topbar">
+          <Link href="/" className="fw-back">← BCE.VENTURES</Link>
+          <button type="button" className="fw-download" onClick={onDownload} aria-label="Print or save as PDF">
+            ↓ Save as PDF
+          </button>
+        </div>
 
         {/* PUBLIC FRAMEWORK */}
         <p className="eyebrow">BCE Ventures · The Sovereignty Framework™</p>
@@ -273,7 +294,7 @@ export default function FrameworkPage() {
             </div>
 
             {/* MARKET CONTEXT */}
-            {activeTab === 'market' && (
+            {(forPrint || activeTab === 'market') && (
               <div>
                 <div className="fw-body">Primary luxury is losing velocity. The governance of long-term value is gaining urgency. These are independent trends creating the same pressure point for every Maison: who defines what a luxury object is worth after it leaves the boutique?</div>
                 <div className="fw-body">Primary luxury lost an estimated 20 million buyers in 2025. Most reduced purchase frequency, traded down, or redirected spending elsewhere. The primary market is contracting.</div>
@@ -393,7 +414,7 @@ export default function FrameworkPage() {
             )}
 
             {/* GOVERNANCE TIERS */}
-            {activeTab === 'tiers' && (
+            {(forPrint || activeTab === 'tiers') && (
               <div>
                 <div className="fw-body">Every brand engaging with lifecycle governance sits somewhere on a spectrum from facilitated participation to sovereign authorship. The tier structure maps that spectrum — where luxury fashion currently sits, and where the gap lies.</div>
 
@@ -562,7 +583,7 @@ export default function FrameworkPage() {
             )}
 
             {/* CANNIBALIZATION */}
-            {activeTab === 'cannibal' && (
+            {(forPrint || activeTab === 'cannibal') && (
               <div>
                 <div className="fw-body">The cannibalization fear is the primary reason luxury Maisons have stayed on the sidelines of lifecycle governance. It is consistently unsupported by independent evidence. The question is not whether sovereign lifecycle programs compete with primary sales. The data says they do not. The question is whether the Maison is the author of the buyer&rsquo;s first encounter with the brand.</div>
 
@@ -692,7 +713,7 @@ export default function FrameworkPage() {
             )}
 
             {/* BRAND PROGRAMS */}
-            {activeTab === 'programs' && (
+            {(forPrint || activeTab === 'programs') && (
               <div>
                 <div className="fw-body">Mid-market and adjacent brands have been running lifecycle governance programs for over a decade. Their experience provides the most direct operational intelligence for luxury Maisons — what the infrastructure costs to build, what it returns, and what conditions make it viable. A critical note throughout: the cultural logic of eco-conscious take-back is specific to these brands. The architectural lessons transfer. The narrative does not.</div>
 
@@ -742,7 +763,7 @@ export default function FrameworkPage() {
             )}
 
             {/* CASE STUDIES */}
-            {activeTab === 'cases' && (
+            {(forPrint || activeTab === 'cases') && (
               <div>
                 <div className="fw-body">Three cases. Each proving one specific thing. No single case proves all of it — and anyone who presents one as proof of everything should be pressed on the gaps. Together they make the argument that no individual precedent can make alone.</div>
 
@@ -823,7 +844,7 @@ export default function FrameworkPage() {
             )}
 
             {/* DIAGNOSTIC */}
-            {activeTab === 'diagnostic' && (
+            {(forPrint || activeTab === 'diagnostic') && (
               <div>
                 <div className="fw-body">The Diagnostic is the first engagement BCE Ventures undertakes with any Maison. It is a structured analytical exercise that produces a clear recommendation: whether sovereign lifecycle infrastructure serves this house, what it would require, and what it would be worth. If the answer is that it does not serve this house&rsquo;s primary market position, BCE Ventures says so.</div>
 
@@ -921,6 +942,11 @@ export default function FrameworkPage() {
             <p className="fw-unlock-note">To discuss what this means for your specific house, the conversation begins at bce.ventures.</p>
           </div>
         )}
+
+        <footer className="fw-protect">
+          <p className="fw-protect-mark">BCE.Ventures<span className="fw-protect-tm">™</span> · The Sovereignty Framework<span className="fw-protect-tm">™</span></p>
+          <p className="fw-protect-rights">© 2026 BCE.Ventures. All rights reserved. The Sovereignty Framework™ and its diagnostic methodology are proprietary intellectual property of BCE.Ventures. Confidential — for the recipient&rsquo;s internal review only.</p>
+        </footer>
       </div>
     </main>
   )

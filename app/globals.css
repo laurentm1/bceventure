@@ -1633,6 +1633,16 @@ section, .section {
 
 .footer-mark-large .dot { color: var(--accent); }
 
+.footer-bsd {
+  max-width: var(--maxw);
+  margin: 32px auto 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 /* ===== Hamburger + Mobile Menu ===== */
 .nav-hamburger {
   display: none;
@@ -3185,6 +3195,14 @@ section, .section {
   color: var(--muted);
 }
 
+.fw-protect-bsd {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.45rem;
+}
+
 .fw-protect-mark {
   font-size: 10px;
   letter-spacing: 0.18em;
@@ -3234,6 +3252,13 @@ section, .section {
       font-family: "JetBrains Mono", monospace;
       font-size: 8pt;
       color: #8A5A50;
+    }
+    @bottom-center {
+      content: "BS\"D";
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8pt;
+      color: #8A5A50;
+      letter-spacing: 0.18em;
     }
     @bottom-right {
       content: "Page " counter(page) " / " counter(pages);

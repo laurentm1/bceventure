@@ -124,8 +124,7 @@ export default function FrameworkPage() {
         {/* PUBLIC FRAMEWORK */}
         <p className="eyebrow">BCE Ventures · The Sovereignty Framework™</p>
         <h1 className="fw-hero">
-          Sovereignty of long-term value<br />
-          <em>is the objective</em>
+          Sovereignty <em>is the objective.</em>
         </h1>
         <p className="fw-hero-sub">
           A strategic model for governing value beyond the first sale. For Maisons that built desirability and intend to govern what happens next.
@@ -944,6 +943,7 @@ export default function FrameworkPage() {
         )}
 
         <footer className="fw-protect">
+          <p className="fw-protect-bsd" aria-label="With the help of Heaven">BS&quot;D</p>
           <p className="fw-protect-mark">BCE.Ventures<span className="fw-protect-tm">™</span> · The Sovereignty Framework<span className="fw-protect-tm">™</span></p>
           <p className="fw-protect-rights">© 2026 BCE.Ventures. All rights reserved. The Sovereignty Framework™ and its diagnostic methodology are proprietary intellectual property of BCE.Ventures. Confidential — for the recipient&rsquo;s internal review only.</p>
         </footer>

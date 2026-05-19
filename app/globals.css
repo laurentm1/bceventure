@@ -3175,6 +3175,46 @@ section, .section {
   }
 }
 
+/* Outbound CTA — consult + return to site */
+.fw-cta {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin: 3rem 0 1rem;
+  flex-wrap: wrap;
+}
+
+.fw-cta-btn {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bone);
+  background: var(--accent);
+  padding: 0.95rem 1.5rem;
+  text-decoration: none;
+  border: 0.5px solid var(--accent);
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.fw-cta-btn:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.fw-cta-back {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.fw-cta-back:hover { color: var(--accent); }
+
 /* Ownership / protection footer */
 .fw-protect {
   margin-top: 4rem;

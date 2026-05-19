@@ -931,9 +931,13 @@ export default function FrameworkPage() {
               </div>
             )}
 
-            <p className="fw-unlock-note">To discuss what this means for your specific house, the conversation begins at bce.ventures.</p>
           </div>
         )}
+
+        <div className="fw-cta">
+          <a href="/#contact" className="fw-cta-btn">Request a consult →</a>
+          <Link href="/" className="fw-cta-back">← Return to bce.ventures</Link>
+        </div>
 
         <footer className="fw-protect">
           <p className="fw-protect-mark">BCE.Ventures<span className="fw-protect-tm">™</span> · The Sovereignty Framework<span className="fw-protect-tm">™</span></p>

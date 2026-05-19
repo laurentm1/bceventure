@@ -44,10 +44,8 @@ export default function Footer() {
         BCE<span className="dot">.</span>VENTURES
       </div>
 
-      <div className="footer-bsd" aria-label="With the help of Heaven">BS&quot;D</div>
-
       <div className="footer-bottom">
-        <span>© 2025 BCE Ventures · All rights reserved</span>
+        <span><span aria-label="With the help of Heaven">BS&quot;D</span> · © 2025 BCE Ventures · All rights reserved</span>
         <span>A practice, not a platform</span>
       </div>
     </footer>

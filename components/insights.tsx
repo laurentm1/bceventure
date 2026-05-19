@@ -3,6 +3,13 @@ import SectionHeader from '@/components/section-header'
 
 const ITEMS = [
   {
+    date: '05.19.26',
+    title: 'Counterfeit is the cover story',
+    kicker: 'The real fight is over who certifies, interprets condition, and shapes value once the object changes hands. That is the new infrastructure of luxury.',
+    tag: 'Frameworks',
+    href: 'https://www.linkedin.com/posts/alamrami_chanel-vs-the-realreal-is-not-really-about-share-7462539237830238212-v5kz',
+  },
+  {
     date: '04.26.26',
     title: 'Assets that survive first use become investable',
     kicker: 'Reuse turned rockets into infrastructure. Longevity turned the Birkin into an asset. The mechanism is the same. From Summit at Sea, 2026.',

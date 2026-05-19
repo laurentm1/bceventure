@@ -2511,6 +2511,27 @@ section, .section {
 .fw-sec-label { margin-bottom: 0.85rem; }
 .fw-chart-label { margin-bottom: 1rem; }
 
+/* Inline parenthetical citation — body-m, muted, non-italic */
+.fw-cite {
+  color: var(--muted);
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Sources block — eyebrow label + muted middot-separated list under a thin rule */
+.fw-sources {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+.fw-sources-list {
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 0.75rem;
+}
+
 /* Tabs */
 .fw-tabs {
   display: flex;

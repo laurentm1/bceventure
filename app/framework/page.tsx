@@ -408,11 +408,20 @@ export default function FrameworkPage() {
             {/* GOVERNANCE TIERS */}
             {(activeTab === 'tiers') && (
               <div>
-                <div className="fw-body">Every brand engaging with lifecycle governance sits somewhere on a spectrum from facilitated participation to sovereign authorship. The tier structure maps that spectrum — where luxury fashion currently sits, and where the gap lies.</div>
+                <div className="fw-body"><strong>The Sovereignty Spectrum.</strong> Every brand engaging with lifecycle governance sits somewhere on the spectrum from facilitated participation to sovereign authorship.</div>
+                <div className="fw-body">
+                  There are two variables to sovereignty:
+                  <br />
+                  <strong>The Operations</strong> &mdash; who authenticates, refurbishes, distributes, warranties.
+                  <br />
+                  <strong>The Standard</strong> &mdash; whether the brand has published a grade the broader market is forced to reference.
+                  <br /><br />
+                  A brand can own one without the other; the canon is defined only when the brand owns both.
+                </div>
 
                 {/* Sovereignty Spectrum Visual */}
                 <div className="fw-chart-block--mid">
-                  <span className="fw-chart-label">The authorship spectrum</span>
+                  <span className="fw-chart-label">The Sovereignty Spectrum</span>
                   <svg viewBox="0 0 820 140" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', fontFamily: "'Inter Tight',sans-serif" }}>
                     <defs>
                       <linearGradient id="specGrad" x1="0" y1="0" x2="1" y2="0">
@@ -445,18 +454,20 @@ export default function FrameworkPage() {
                     {/* Sublabels below bar */}
                     <text x="82" y="105" fontSize="11" fill="#8A5A50" textAnchor="middle">Platform logo</text>
                     <text x="246" y="105" fontSize="11" fill="#8A5A50" textAnchor="middle">Values take-back</text>
-                    <text x="410" y="105" fontSize="11" fill="#6B2A20" textAnchor="middle">Recommerce</text>
-                    <text x="574" y="105" fontSize="11" fill="#4A1812" textAnchor="middle">Participation</text>
+                    <text x="410" y="105" fontSize="11" fill="#6B2A20" textAnchor="middle">Participation</text>
+                    <text x="574" y="105" fontSize="11" fill="#4A1812" textAnchor="middle">Operations, no canon</text>
                     <text x="738" y="105" fontSize="11" fill="#4A1812" textAnchor="middle" fontWeight="500">Sovereignty</text>
 
                     {/* Brand names */}
                     <text x="82" y="122" fontSize="9.5" fill="#8A5A50" textAnchor="middle" fontStyle="italic">Zara · H&amp;M</text>
                     <text x="246" y="122" fontSize="9.5" fill="#8A5A50" textAnchor="middle" fontStyle="italic">Patagonia · Eileen Fisher</text>
-                    <text x="410" y="122" fontSize="9.5" fill="#6B2A20" textAnchor="middle" fontStyle="italic">Coach</text>
-                    <text x="574" y="122" fontSize="9.5" fill="#4A1812" textAnchor="middle" fontStyle="italic">Gucci / Vestiaire</text>
+                    <text x="410" y="122" fontSize="9.5" fill="#6B2A20" textAnchor="middle" fontStyle="italic">Gucci · Vestiaire</text>
+                    <text x="574" y="122" fontSize="9.5" fill="#4A1812" textAnchor="middle" fontStyle="italic">Coach</text>
                     <text x="738" y="122" fontSize="9.5" fill="#4A1812" textAnchor="middle" fontStyle="italic">Rolex · Mercedes</text>
                   </svg>
                 </div>
+
+                <div className="fw-pull">Operational ownership is the prerequisite for sovereignty. It is not the only thing.</div>
 
                 <div className="fw-tiers">
                   <div className="fw-tier">
@@ -467,7 +478,7 @@ export default function FrameworkPage() {
                       <p className="fw-tier-brands">Zara · H&amp;M · Inditex</p>
                     </div>
                     <div className="fw-tier-body">
-                      Programs built primarily for regulatory positioning and brand narrative. <strong>Zara Pre-Owned</strong>, launched UK 2022 and US October 2024, now active in 16+ markets, offers repair, peer-to-peer resale, and donation. The brand facilitates but does not authenticate, price, or govern. Presence is real. Authorship is not.
+                      Programs built primarily for regulatory positioning and brand narrative. <strong>Zara Pre-Owned</strong> launched in the UK in November 2022 and the US in October 2024, now active across 16 European markets plus the US. Repair, peer-to-peer resale, donation. The brand facilitates but does not authenticate, price, or govern. Presence is real. Authorship is not.
                       <div>
                         <span className="fw-tier-tag">Brand facilitates</span>
                         <span className="fw-tier-tag">No authentication</span>
@@ -484,11 +495,10 @@ export default function FrameworkPage() {
                       <p className="fw-tier-brands">Eileen Fisher · Patagonia · Levi&rsquo;s</p>
                     </div>
                     <div className="fw-tier-body">
-                      Genuine brand-governed take-back built on values. <strong>Eileen Fisher Renew</strong> since 2009 — 2.3M+ garments, brand governs quality and resale channel. <strong>Patagonia Worn Wear</strong> — $13M revenue FY25 on $1.47B total, 40% higher customer loyalty than industry average. <strong>Levi&rsquo;s Secondhand</strong> — objects resold through brand&rsquo;s own channel, not a third-party marketplace. The architectural lessons transfer to luxury. The cultural and customer logic does not.
+                      Genuine brand-governed take-back built on values. <strong>Eileen Fisher Renew</strong> since 2009, over 2.3M garments resold, donated, or remade. Brand governs quality and resale channel. <strong>Patagonia Worn Wear</strong>, $13M revenue in FY25 on $1.47B total <span className="fw-cite">(Patagonia WIP report, 2025)</span>, roughly 1% of the business. Largest apparel mending facility in the US. The architectural lessons transfer to luxury. The cultural and customer logic does not. These brands govern operations. The standard they apply is internal — durability, repairability, values. Not a market-facing grade.
                       <div>
                         <span className="fw-tier-tag">Brand governs flow</span>
-                        <span className="fw-tier-tag">Values-driven</span>
-                        <span className="fw-tier-tag">~1% of revenue at scale</span>
+                        <span className="fw-tier-tag">Values-driven standard, not market-facing</span>
                         <span className="fw-tier-tag fw-tier-tag--on">Authorship: partial</span>
                       </div>
                     </div>
@@ -497,16 +507,19 @@ export default function FrameworkPage() {
                   <div className="fw-tier">
                     <div className="fw-tier-num">3</div>
                     <div>
-                      <p className="fw-tier-label">Recommerce as strategy</p>
-                      <p className="fw-tier-name">Lifecycle as growth lever</p>
-                      <p className="fw-tier-brands">Coach · The North Face · Lululemon</p>
+                      <p className="fw-tier-label">Participation without authorship</p>
+                      <p className="fw-tier-name">Brand present at intake, platform governs everything after</p>
+                      <p className="fw-tier-brands">Gucci via Vestiaire Collective</p>
                     </div>
                     <div className="fw-tier-body">
-                      Lifecycle governance integrated into brand strategy as a customer acquisition and loyalty mechanism. <strong>Coach (Re)Loved</strong>: trade-in, branded resale with digital IDs for instant verification, 1M+ products refurbished. Tapestry FY2025: record <strong>$7B revenue</strong>, Coach double-digit growth, <strong>6.8M new customers</strong> (~60% Gen Z/Millennials). Lifecycle programs cited as a contributing factor. Causation not isolated in public filings. The digital ID layer is the most sophisticated authorship signal at this tier.
+                      The most common model in luxury fashion, and the most frequently mistaken for progress. <strong>Gucci Preloved</strong> launched March 2023 through Kering&rsquo;s 5% equity stake in Vestiaire Collective. Customers bring select bags to Gucci boutiques in France, Italy, Germany, Spain, Austria, Monaco, and the Benelux. They receive store credit. The bags are then listed and sold on Vestiaire, authenticated by Vestiaire, priced by Vestiaire, on Vestiaire&rsquo;s platform alongside every other brand they carry.
+                      <div className="fw-tier-case">
+                        Gucci touches the object at intake. Vestiaire authors everything that follows. The standard. The price. The buyer relationship. The data. The margin. Gucci led all brands on Vestiaire in pre-loved sales in Q4 2024 and Q1 2025 <span className="fw-cite">(Vestiaire Collective Resale Buying Guide, 2025)</span>, the same period Kering reported a 24% collapse in Gucci&rsquo;s primary revenue <span className="fw-cite">(Kering FY2024 results)</span>. The lifecycle value of Gucci objects is large and accelerating. The governance of that value flows almost entirely to the platform. This is participation. It is not authorship.
+                      </div>
                       <div>
-                        <span className="fw-tier-tag">Brand participates actively</span>
-                        <span className="fw-tier-tag">Digital IDs emerging</span>
-                        <span className="fw-tier-tag fw-tier-tag--on">Authorship: growing</span>
+                        <span className="fw-tier-tag fw-tier-tag--w">Brand at intake only</span>
+                        <span className="fw-tier-tag fw-tier-tag--w">Platform owns operations and standard</span>
+                        <span className="fw-tier-tag fw-tier-tag--w">Authorship: zero post-intake</span>
                       </div>
                     </div>
                   </div>
@@ -514,19 +527,23 @@ export default function FrameworkPage() {
                   <div className="fw-tier">
                     <div className="fw-tier-num">3.5</div>
                     <div>
-                      <p className="fw-tier-label">Participation without authorship</p>
-                      <p className="fw-tier-name">Brand present, platform governs</p>
-                      <p className="fw-tier-brands">Gucci via Vestiaire Collective</p>
+                      <p className="fw-tier-label">The system without the standard</p>
+                      <p className="fw-tier-name">Brand owns the process. The market still sets the grade.</p>
+                      <p className="fw-tier-brands">Coach · The North Face · Lululemon</p>
                     </div>
                     <div className="fw-tier-body">
-                      The most common model in luxury fashion — and the most frequently mistaken for progress. <strong>Gucci Preloved</strong>, launched March 2023 through Kering&rsquo;s equity stake in Vestiaire Collective: customers bring select bags to Gucci boutiques in Europe, receive store credit. The bags are then listed and sold on Vestiaire — authenticated by Vestiaire, priced by Vestiaire, on Vestiaire&rsquo;s platform alongside every other brand they carry.
+                      The hardest tier to read clearly, because the operations look almost identical to sovereignty. <strong>Coach (Re)Loved</strong>, launched April 2021, runs the full lifecycle in-house. Trade-in at retail. In-house authentication. A dedicated workshop in New Jersey. Four lifecycle programs — Upcrafted, Remade, Restored, Vintage. A Craftsperson Apprenticeship Program building internal capability. Coach (Re)Loved Exchange operates across all North America retail stores plus select stores in the UK and Japan.
+                      <br /><br />
+                      Trade-in is widespread. Restoration output is not. More than 45,000 products given a second life through (Re)Loved since 2021 <span className="fw-cite">(Tapestry, 2024)</span>, against more than 260,000 bags repaired globally over the past three years <span className="fw-cite">(Coach Sustainability, 2025)</span>, against a brand selling more than $5.6B annually. Tapestry FY2025 delivered record revenue of <strong>$7B</strong> with Coach growing 10% and acquiring <strong>6.8M new customers</strong>, roughly 60% Gen Z and Millennial <span className="fw-cite">(Tapestry FY2025 Form 8-K, SEC)</span>. The operations are real. The volume is real. The customer acquisition is real. What is absent is the published standard.
+                      <br /><br />
+                      Coach (Re)Loved has one classification — preloved — across all eligible objects. No graded certification. No criteria the broader market is forced to reference. Which means the secondary market for Coach happens <em>around</em> (Re)Loved, not <em>through</em> it. Poshmark, eBay, The RealReal, peer-to-peer — all still set their own terms. (Re)Loved is one channel among many. A well-built one. Not the canon. <strong>The North Face Renewed</strong>, since 2018, runs trade-in across 105 US and Canada stores under one classification. <strong>Lululemon Like New</strong>, US-only since 2022, runs trade-in across 390 stores with two informal product-page categories. Same structural pattern. Wide intake. No published canon.
                       <div className="fw-tier-case">
-                        Gucci touches the object at intake. Vestiaire authors everything that follows: the standard, the price, the buyer relationship, the data, the margin. Gucci led all brands on Vestiaire in pre-loved sales volume in Q4 2024, while Kering&rsquo;s primary business was contracting. The lifecycle value of Gucci objects is large and commercially significant. The governance of that value flows almost entirely to the platform. This is participation. It is not authorship.
+                        Coach owns the operations. Coach has not published the standard. Without a published standard, the secondary market refers to itself, not to the brand. The grade is what converts ownership into authorship. One classification is a category. A published standard is a canon.
                       </div>
                       <div>
-                        <span className="fw-tier-tag fw-tier-tag--w">Brand at intake only</span>
-                        <span className="fw-tier-tag fw-tier-tag--w">Platform authenticates and prices</span>
-                        <span className="fw-tier-tag fw-tier-tag--w">Authorship: zero post-intake</span>
+                        <span className="fw-tier-tag fw-tier-tag--w">Brand owns operations</span>
+                        <span className="fw-tier-tag fw-tier-tag--w">Standard not published</span>
+                        <span className="fw-tier-tag fw-tier-tag--w">Authorship: structurally incomplete</span>
                       </div>
                     </div>
                   </div>
@@ -539,7 +556,7 @@ export default function FrameworkPage() {
                       <p className="fw-tier-brands">Rolex CPO · Mercedes-Benz CPO</p>
                     </div>
                     <div className="fw-tier-body">
-                      The brand authenticates, grades, prices, warranties, and distributes. The object never leaves the canon. <strong>Rolex CPO</strong>: approximately $600M in certified pre-owned sales through the authorised network in 2025, representing 11% of all Rolex secondary market sales — from a standing start in 2022. 7–28% price premium over grey market. Direct margin flows to the retailer network, not the manufacture. Rolex&rsquo;s benefit is strategic: standards enforced, data owned, customer experience governed. <strong>Mercedes-Benz CPO</strong>: 67% of used sales by value through brand-controlled channels, approximately $2,160 average premium over non-certified equivalents. Both programmes operated through pre-existing authorised dealer networks — that infrastructure is load-bearing.
+                      The brand authenticates, grades, prices, warranties, and distributes. The standard is published. The market refers to it whether it participates in it or not. <strong>Rolex CPO</strong> generated approximately $590M in 2025, representing roughly 11% of the $5.6B Rolex secondary market <span className="fw-cite">(EveryWatch 2025 Secondary Market Report)</span>. From a standing start in Q4 2022, growing 204% year-on-year. Watches sold through the program carry a typical 25–30% premium over the non-certified secondary market <span className="fw-cite">(WatchCharts, Q2 2025)</span>. Direct margin flows to the authorised retailer network. Rolex&rsquo;s benefit is strategic: standards enforced, data owned, customer experience governed, primary allocation linked to secondary supply through client trade-ins. <strong>Mercedes-Benz CPO</strong>: roughly 67% of used Mercedes sales by value through brand-controlled channels <span className="fw-cite">(Morgan Stanley / WatchCharts industry benchmark)</span>, with a measurable premium over non-certified equivalents. Both programmes operated through pre-existing authorised dealer networks — that infrastructure is load-bearing.
                       <div>
                         <span className="fw-tier-tag fw-tier-tag--on">Brand sets the standard</span>
                         <span className="fw-tier-tag fw-tier-tag--on">Network economics aligned</span>
@@ -558,19 +575,24 @@ export default function FrameworkPage() {
                     <div className="fw-tier-body">
                       Hermès built its secondary market authority through deliberate refusal. The Birkin holds its value partly because Hermès will not officially price it. That is not passivity. It is an active governance strategy, maintained with as much intentionality as any CPO program.
                       <br /><br />
-                      But sovereign non-participation is a conditional position, not a permanent one. It works when scarcity is absolute and brand authority is unquestioned. That position depends on conditions that few houses can sustain indefinitely. When those conditions soften, the absence of infrastructure becomes the exposure. There is no lever to pull. No system to defend the value. Only the story. And stories reprice.
-                      <br /><br />
-                      Sovereignty is not a static position. It is a system. The Diagnostic determines which system serves each house — and ensures they have one at all.
+                      But sovereign non-participation is a conditional position, not a permanent one. It works when scarcity is absolute and brand authority is unquestioned. Few houses can sustain those conditions indefinitely. When they soften, the absence of infrastructure becomes the exposure. There is no lever to pull. No system to defend the value. Only the story. And stories reprice.
                       <div className="fw-tag-row">
                         <span className="fw-tier-tag fw-tier-tag--on">Deliberate non-participation</span>
-                        <span className="fw-tier-tag fw-tier-tag--on">Scarcity as governance</span>
-                        <span className="fw-tier-tag">Conditional — not permanent</span>
+                        <span className="fw-tier-tag fw-tier-tag--on">Scarcity as the standard</span>
+                        <span className="fw-tier-tag">Conditional, not permanent</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="fw-pull">The tier structure is a map, not a prescription. Every house needs a position. The Diagnostic determines which one — and ensures the architecture exists to hold it.</div>
+                <div className="fw-pull"><em>Sovereignty is not a static position. It is a system.</em></div>
+
+                <div className="fw-sources">
+                  <span className="fw-sec-label">Sources</span>
+                  <div className="fw-sources-list">
+                    Kering FY2024 Annual Results · Tapestry Inc. FY2025 Form 8-K (SEC) · Tapestry Coach (Re)Loved Workshop announcement (2024) · Coach Sustainability (Re)Loved page (2025) · Patagonia Work in Progress report (2025) · Eileen Fisher Renew program disclosures · Vestiaire Collective Resale Buying Guide (Spring/Summer 2025) · EveryWatch 2025 Secondary Market Report · WatchCharts / Morgan Stanley Q2 2025 watch market data · WatchPro reporting on Rolex CPO (2025–26) · Retail TouchPoints · FashionUnited · Hypebeast · FashionDive · Green Retail World · Sustainability Magazine · BusinessWire · Archive Resale case studies.
+                  </div>
+                </div>
               </div>
             )}
 

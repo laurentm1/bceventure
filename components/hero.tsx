@@ -49,11 +49,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-foot">
-        <div className="scroll-hint">
-          <span className="line" />
-          <span>Scroll to enter</span>
-        </div>
-        <div className="eyebrow" style={{ textAlign: 'right' }}>
+        <div className="eyebrow">
           Selectively engaged ·<br />
           Strategy + Governance + Standards
         </div>

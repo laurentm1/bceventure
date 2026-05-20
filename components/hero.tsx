@@ -37,25 +37,17 @@ export default function Hero() {
           </h1>
         ))}
 
-        <p className="hero-thesis hero-thesis--under">
-          An advisory practice for maisons and emerging categories
-          <span className="serif italic"> at the edge of value formation.</span>
-        </p>
-
         <div className="hero-right">
           <p className="hero-problem">
-            Luxury houses built enduring value through craftsmanship,
-            scarcity, and cultural relevance.
+            Luxury built value through craft, scarcity, and meaning.
           </p>
           <p className="hero-problem">
-            Today, that value is increasingly governed by resale platforms,
-            authentication systems, and secondary markets the brands themselves
-            do not control.
+            Today, that value is shaped by platforms the brands do not control.
           </p>
           <p className="hero-problem hero-problem--punchline">
             <span className="serif italic">
-              The strategic question is no longer whether these markets exist.
-              It is who governs the systems around them.
+              The question is no longer whether these markets exist.
+              It is who sets the terms.
             </span>
           </p>
         </div>

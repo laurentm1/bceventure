@@ -456,35 +456,24 @@ section, .section {
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  grid-template-rows: auto auto;
-  gap: 3rem 5rem;
+  grid-template-rows: auto;
+  gap: 0 5rem;
   align-items: end;
   align-content: end;
   flex: 1;
 }
 
-/* Left col, row 1: headline */
+/* Left col: headline */
 .hero-grid .hero-headline {
   grid-column: 1;
   grid-row: 1;
   min-width: 0;
 }
 
-/* Left col, row 2: thesis text */
-.hero-thesis--under {
-  grid-column: 1;
-  grid-row: 2;
-  margin: 0;
-  padding-top: 1.5rem;
-  border-top: 0.5px solid var(--rule-soft);
-  max-width: 520px;
-  min-width: 0;
-}
-
-/* Right col, rows 1–2: descriptive text */
+/* Right col: descriptive text */
 .hero-grid .hero-right {
   grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-row: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

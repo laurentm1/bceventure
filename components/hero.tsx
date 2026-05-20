@@ -11,12 +11,7 @@ export default function Hero() {
   return (
     <header className="hero" id="top">
       <div className="hero-meta">
-        <span className="eyebrow">BCE.VENTURES · EST. 2025 · NEW YORK</span>
         <span className="eyebrow">No. 001 / Operator-led advisory</span>
-      </div>
-
-      <div className="hero-mark-large">
-        BCE<span className="dot">.</span>VENTURES
       </div>
 
       <div className="hero-grid">

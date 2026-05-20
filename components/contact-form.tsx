@@ -10,7 +10,7 @@ const MOMENTS = [
   { value: 'Scale', label: 'Scale growth at a new altitude' },
   { value: 'Transition', label: 'Transition leadership, structure, or chapter change' },
   { value: 'Inflection', label: 'Market inflection the rules just changed' },
-  { value: 'Brand', label: 'Brand & pricing power — sovereignty of long-term value' },
+  { value: 'Brand', label: 'Brand and pricing power, sovereignty of long-term value' },
   { value: 'Other', label: "Not sure yet let's talk" },
 ]
 
@@ -104,7 +104,7 @@ export default function ContactForm() {
 
       <div className="field">
         <label htmlFor="cf-role">
-          Role & company <span className="field-optional">(optional)</span>
+          Role and company <span className="field-optional">(optional)</span>
         </label>
         <input id="cf-role" type="text" value={roleCompany} onChange={e => setRoleCompany(e.target.value)} autoComplete="organization-title" />
       </div>

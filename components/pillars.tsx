@@ -5,17 +5,17 @@ const PILLARS = [
   {
     num: '01',
     title: 'Trust',
-    body: 'Standards, grading, and provenance frameworks that hold across handoffs, so authenticity, not arbitrage, is the source of price.',
+    body: 'The asset the brand built. Standards, grading, and provenance that hold across handoffs, so the source of truth stays with the maison.',
   },
   {
     num: '02',
     title: 'Design',
-    body: 'Operating architecture: governance, incentives, and execution cadence aligned so the brand sets the terms of value, not the market.',
+    body: 'How trust is kept. Governance, incentives, and operating cadence aligned so the brand sets the terms of value, not the market.',
   },
   {
     num: '03',
     title: 'Durable systems',
-    body: 'Infrastructure built for scale and circulation: designed for assets to move, recirculate, and compound value over time.',
+    body: 'How trust travels. Infrastructure built for scale and circulation, so assets move, recirculate, and compound value over time.',
   },
 ]
 

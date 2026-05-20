@@ -11,8 +11,12 @@ export default function Manifesto() {
         </Reveal>
         <Reveal>
           <p className="manifesto-text">
-            Value is not getting lost.<br />
-            <span className="accent">It is getting reassigned.</span><br />
+            Trust is not getting lost.{' '}
+            <span className="accent">It is getting reassigned.</span>
+          </p>
+        </Reveal>
+        <Reveal>
+          <p className="manifesto-text" style={{ marginTop: '1.2em' }}>
             We help brands set the terms.
           </p>
         </Reveal>

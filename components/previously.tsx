@@ -13,7 +13,7 @@ export default function Previously() {
     <section className="previously" aria-label="Previously partnered with">
       <div className="container">
         <div className="previously-inner">
-          <span className="eyebrow">Selected partnerships &amp; credentials</span>
+          <span className="eyebrow">Selected partnerships and credentials</span>
           <ul className="previously-list">
             {CREDENTIALS.map((c, i) => (
               <li key={i}>{c}</li>

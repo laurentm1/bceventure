@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <header className="hero" id="top">
       <div className="hero-meta">
-        <span className="eyebrow">No. 001 / Operator-led advisory</span>
+        <span className="eyebrow">Operator-led advisory</span>
       </div>
 
       <div className="hero-grid">
@@ -40,8 +40,6 @@ export default function Hero() {
         <div className="hero-right">
           <p className="hero-problem">
             Luxury built value through craft, scarcity, and meaning.
-          </p>
-          <p className="hero-problem">
             Today, that value is shaped by platforms the brands do not control.
           </p>
           <p className="hero-problem hero-problem--punchline">
@@ -54,11 +52,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-foot">
-        <div className="scroll-hint">
-          <span className="line" />
-          <span>Scroll to enter</span>
-        </div>
-        <div className="eyebrow" style={{ textAlign: 'right' }}>
+        <div className="eyebrow" style={{ marginLeft: 'auto', textAlign: 'right' }}>
           Selectively engaged ·<br />
           Strategy + Governance + Standards
         </div>

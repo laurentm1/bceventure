@@ -52,7 +52,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-foot">
-        <div className="eyebrow" style={{ marginLeft: 'auto', textAlign: 'right' }}>
+        <div className="eyebrow">
           Selectively engaged ·<br />
           Strategy + Governance + Standards
         </div>

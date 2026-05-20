@@ -1,0 +1,1808 @@
+/* =========================================================================
+   Framework (post-gate) · research zone styles
+   Editorial register. Stat figures behave like dimension numerals on the
+   public page (Fraunces italic, large, set on rules — not in boxes).
+   ========================================================================= */
+
+/* ─── Page hero ─── */
+.fwg-hero {
+  padding: 1rem 0 3rem;
+  border-bottom: 3px double var(--ink);
+  margin-bottom: 0;
+}
+.fwg-hero .eyebrow {
+  color: var(--accent);
+  margin-bottom: 1.1rem;
+}
+.fwg-hero-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5.4vw, 4.2rem);
+  line-height: 1.02;
+  letter-spacing: -0.022em;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
+}
+.fwg-hero-title .italic { font-style: italic; }
+.fwg-hero-sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin: 1.6rem 0 0;
+  max-width: 720px;
+}
+.fwg-hero-sub .serif.italic { color: var(--accent); font-style: italic; }
+
+
+/* ─── Tab bar ─── Sticky at the top of viewport. */
+.fwg-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  margin: 0 -2.5rem;
+  padding: 0 2.5rem;
+  background:
+    linear-gradient(180deg,
+      rgba(245, 232, 225, 0.96) 0%,
+      rgba(245, 232, 225, 0.92) 100%),
+    var(--bone);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 0.7px solid var(--rule);
+  border-bottom: 0.7px solid var(--ink);
+  box-shadow: 0 16px 28px -24px rgba(74, 24, 18, 0.18);
+}
+.fwg-tabs-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+.fwg-tabs-item { display: flex; }
+
+.fwg-tab {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  padding: 0.95rem 0.8rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  position: relative;
+  transition: color 0.25s ease;
+  width: 100%;
+  text-align: left;
+}
+.fwg-tab-label {
+  white-space: normal;
+}
+.fwg-tab:hover { color: var(--ink); }
+.fwg-tab[data-active="true"] { color: var(--ink); font-weight: 500; }
+.fwg-tab[data-active="true"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1.5px;
+  background: var(--ink);
+}
+
+/* Hover behavior matches the canon ribbon / spectrum:
+   hovered tab pops, the others recede. */
+.fwg-tabs-list:has(.fwg-tab:hover) .fwg-tabs-item {
+  opacity: 0.35;
+  transition: opacity 0.25s ease;
+}
+.fwg-tabs-list:has(.fwg-tab:hover) .fwg-tabs-item:has(.fwg-tab:hover) {
+  opacity: 1;
+}
+.fwg-tabs-list:has(.fwg-tab:hover) .fwg-tab:hover .fwg-tab-num {
+  color: var(--accent);
+}
+.fwg-tab-num {
+  font-variant-numeric: tabular-nums;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  color: var(--rule);
+  text-transform: none;
+}
+.fwg-tab:hover .fwg-tab-num,
+.fwg-tab[data-active="true"] .fwg-tab-num { color: var(--accent); }
+.fwg-tab:focus-visible {
+  outline: 1px dashed var(--accent);
+  outline-offset: 3px;
+}
+
+/* ─── Tab pane host ─── */
+.fwg-pane-host { padding-top: 3.5rem; }
+
+.fwg-tab-pane {
+  animation: fwgFadeUp 0.32s ease;
+}
+@keyframes fwgFadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Section rhythm helpers ─── */
+.fwg-tab-pane .fw-body {
+  font-family: var(--sans);
+  font-size: 1.02rem;
+  line-height: 1.95;
+  color: var(--ink);
+  margin: 0 0 1.2rem;
+  max-width: 680px;
+  font-weight: 300;
+  text-wrap: pretty;
+}
+.fwg-tab-pane .fw-body strong { font-weight: 500; color: var(--ink); }
+.fwg-tab-pane .fw-body em { font-style: italic; }
+
+.fwg-tab-pane .fw-pull {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 3.5rem 0;
+  padding: 0;
+  max-width: 720px;
+  border: 0;
+  position: relative;
+  padding-left: 1.4rem;
+}
+.fwg-tab-pane .fw-pull::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  bottom: 0.5em;
+  width: 2px;
+  background: var(--accent);
+}
+
+/* ─── Charts framing ─── */
+.fwg-tab-pane .fw-chart-block,
+.fwg-tab-pane .fw-chart-block--my2 {
+  margin: 3rem 0;
+  padding: 1.8rem 0;
+  border-top: 0.7px solid var(--ink);
+}
+.fwg-tab-pane .fw-chart-label {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 1.4rem;
+}
+
+/* ─── Sec label (eyebrow above clusters) — just an eyebrow, no rule ─── */
+.fwg-page .fw-sec-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin: 4rem 0 1.6rem;
+}
+
+/* ─── Stats — editorial figure register, not boxed ─── */
+.fwg-page .fw-stat-row,
+.fwg-page .fw-stat-row-2 {
+  display: grid;
+  gap: 0;
+  margin-bottom: 3.5rem;
+  border-top: 0.7px solid var(--ink);
+}
+.fwg-page .fw-stat-row { grid-template-columns: 1fr 1fr 1fr; }
+.fwg-page .fw-stat-row-2 { grid-template-columns: 1fr 1fr; }
+
+.fwg-page .fw-stat {
+  background: transparent;
+  border: 0;
+  border-left: 0.5px solid var(--rule);
+  border-radius: 0;
+  padding: 2rem 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.fwg-page .fw-stat-row > .fw-stat:first-child,
+.fwg-page .fw-stat-row-2 > .fw-stat:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+.fwg-page .fw-stat-row > .fw-stat:last-child,
+.fwg-page .fw-stat-row-2 > .fw-stat:last-child {
+  padding-right: 0;
+}
+/* (override rules moved below the base .fw-stat-num color rule so they win) */
+
+.fwg-page .fw-stat .fw-stat-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(58px, 6.4vw, 92px);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+/* Accent the middle figure when there are three — unless it's a deficit */
+.fwg-page .fw-stat-row > .fw-stat:nth-child(2):not(.fw-stat--deficit) .fw-stat-num {
+  color: var(--accent);
+}
+/* Deficit treatment — burnt rust to read as loss */
+.fwg-page .fw-stat--deficit .fw-stat-num {
+  color: #A8451C;
+}
+.fwg-page .fw-stat .fw-stat-label {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink);
+  font-weight: 400;
+  margin: 0;
+  max-width: 32ch;
+  flex: 1 1 auto;
+}
+.fwg-page .fw-stat .fw-stat-label em {
+  font-style: italic;
+  color: var(--ink);
+}
+.fwg-page .fw-stat .fw-stat-src {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: auto 0 0;
+  padding-top: 0.85rem;
+  border-top: 0.5px solid var(--rule);
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* ─── Cards — manifesto pullouts, not bordered boxes ─── */
+.fwg-page .fw-card {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 2.4rem 0 2.4rem 2.4rem;
+  margin: 2rem 0;
+  position: relative;
+  max-width: 760px;
+}
+.fwg-page .fw-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--rule);
+}
+.fwg-page .fw-card--hi {
+  border: 0;
+  background: var(--bone-2);
+  padding: 2.6rem 2.4rem;
+  max-width: none;
+}
+.fwg-page .fw-card--hi::before {
+  background: var(--accent);
+  width: 3px;
+}
+.fwg-page .fw-card--warn { background: var(--bone-2); }
+.fwg-page .fw-card--mt { margin-top: 1rem; }
+.fwg-page .fw-card--mt-2 { margin-top: 2rem; }
+.fwg-page .fw-card--mb { margin-bottom: 2rem; }
+
+.fwg-page .fw-card-eye {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1rem;
+  display: block;
+}
+.fwg-page .fw-card-title {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0 0 0.7rem;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.fwg-page .fw-card-body {
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: var(--ink);
+  font-weight: 300;
+}
+.fwg-page .fw-card-body p { margin: 0 0 0.95rem; }
+.fwg-page .fw-card-body p:last-child { margin-bottom: 0; }
+.fwg-page .fw-card-body em {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink);
+}
+
+/* ─── Tags ─── */
+.fwg-page .fw-tag {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border: 0.5px solid var(--rule);
+  color: var(--muted);
+  display: inline-block;
+  margin: 0.3rem 0.3rem 0 0;
+  border-radius: 0;
+}
+.fwg-page .fw-tag--v { border-color: var(--accent); color: var(--accent); }
+.fwg-page .fw-tag-row { margin-top: 1.2rem; }
+
+/* ─── Mobile ─── */
+@media (max-width: 720px) {
+  .fwg-page .fw-stat-row,
+  .fwg-page .fw-stat-row-2 { grid-template-columns: 1fr; }
+  .fwg-page .fw-stat {
+    border-left: 0;
+    border-top: 0.5px solid var(--rule);
+    padding: 1.8rem 0 1.4rem;
+  }
+  .fwg-page .fw-stat-row > .fw-stat:first-child,
+  .fwg-page .fw-stat-row-2 > .fw-stat:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .fwg-tab { padding: 0.9rem 1rem; font-size: 9.5px; }
+}
+
+/* =========================================================================
+   Governance Tiers — refine in the new editorial register
+   ========================================================================= */
+
+/* The two-variables intro block — keep, slightly elevate */
+.fwg-page .fw-research-twovars {
+  border-top: 0.7px solid var(--ink);
+  padding: 1.8rem 0;
+  margin: 2.4rem 0 3rem;
+}
+.fwg-page .fw-research-twovars-head {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0 0 1.25rem;
+}
+.fwg-page .fw-research-twovars-foot {
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 0;
+  font-weight: 300;
+  max-width: 720px;
+}
+.fwg-page .fw-research-twovars-foot .serif.italic {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* The "operational ownership is the prerequisite" principle line */
+.fwg-page .fw-tier-principle {
+  margin: 3rem 0 2.4rem;
+  padding: 1.6rem 1.8rem;
+  background: var(--bone-2);
+  border: 0.7px solid var(--rule);
+  border-left: 2px solid var(--accent);
+  max-width: 760px;
+}
+.fwg-page .fw-tier-principle-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.1vw, 1.75rem);
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 0;
+  letter-spacing: -0.005em;
+}
+
+/* The tier list */
+.fwg-page .fw-tiers {
+  border-top: 0.7px solid var(--ink);
+  margin: 2.5rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.fwg-page .fw-tiers--mt { margin-top: 2.5rem; }
+
+.fwg-page .fw-tier {
+  display: grid;
+  grid-template-columns: 84px 180px 1fr;
+  gap: 1.6rem;
+  align-items: start;
+  padding: 2.4rem 0;
+  border-bottom: 0.5px solid var(--rule);
+}
+.fwg-page .fw-tier:last-child { border-bottom: 0.7px solid var(--ink); }
+
+.fwg-page .fw-tier-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(48px, 5.6vw, 80px);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+/* Tier 4 (sovereignty) — emphasize in oxblood */
+.fwg-page .fw-tier:nth-last-child(2) .fw-tier-num {
+  color: var(--accent);
+}
+
+.fwg-page .fw-tier-label {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+.fwg-page .fw-tier-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0 0 0.6rem;
+  letter-spacing: -0.005em;
+}
+.fwg-page .fw-tier-brands {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  margin: 0;
+  font-weight: 300;
+}
+.fwg-page .fw-tier-body {
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: var(--ink);
+  font-weight: 300;
+}
+.fwg-page .fw-tier-body strong { color: var(--ink); font-weight: 500; }
+
+.fwg-page .fw-tier-case {
+  margin-top: 1.2rem;
+  padding: 1.3rem 1.4rem;
+  background: var(--bone-2);
+  border-left: 2px solid var(--accent);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.fwg-page .fw-tier-case strong {
+  font-style: normal;
+  font-family: var(--sans);
+  font-weight: 500;
+}
+
+/* Tier tags — match the new gated-page tag treatment */
+.fwg-page .fw-tier-tag {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border: 0.5px solid var(--rule);
+  color: var(--muted);
+  display: inline-block;
+  margin: 0.35rem 0.3rem 0 0;
+  border-radius: 0;
+}
+.fwg-page .fw-tier-tag--on { border-color: var(--accent); color: var(--accent); }
+.fwg-page .fw-tier-tag--w { border-color: var(--ink-2); color: var(--ink-2); }
+
+/* The .fw-cite inline citations — soften */
+.fwg-page .fw-cite {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 0.84em;
+  color: var(--muted);
+  letter-spacing: 0;
+}
+
+/* Sources block at the bottom */
+.fwg-page .fw-sources {
+  margin: 3rem 0 0;
+  padding: 1.8rem 0;
+  border-top: 0.7px solid var(--ink);
+}
+.fwg-page .fw-sources-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+.fwg-page .fw-sources-list {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--ink-2);
+  margin: 0;
+  max-width: 760px;
+}
+
+@media (max-width: 720px) {
+  .fwg-page .fw-tier {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1.8rem 0;
+  }
+  .fwg-page .fw-tier-num {
+    font-size: 48px;
+  }
+}
+
+/* =========================================================================
+   Cannibalization tab — evidence stack, flow diagram, governance gap
+   ========================================================================= */
+
+/* ─── Evidence stack ─── */
+.fwg-page .fw-evidence-stack {
+  display: flex;
+  flex-direction: column;
+  border-top: 0.7px solid var(--ink);
+  margin: 0 0 3rem;
+}
+.fwg-page .fw-evidence {
+  border-bottom: 0.5px solid var(--rule);
+  padding: 1.8rem 0;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.fwg-page .fw-evidence:last-child { border-bottom: 0; }
+
+.fwg-page .fw-ev-source {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  line-height: 1.6;
+}
+.fwg-page .fw-ev-source span {
+  font-family: var(--serif);
+  color: var(--muted);
+  display: block;
+  font-size: 0.86rem;
+  letter-spacing: 0;
+  text-transform: none;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+.fwg-page .fw-ev-body {
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: var(--ink);
+  font-weight: 300;
+}
+.fwg-page .fw-ev-body strong {
+  color: var(--ink);
+  font-weight: 500;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05em;
+}
+
+/* ─── Flow diagram (Cannibalization) — editorial three-stage journey ─── */
+.fwg-page .fw-flow-wrap {
+  margin: 3.5rem 0 3.5rem;
+  padding: 2.4rem 0 1.8rem;
+  border-top: 0.7px solid var(--ink);
+}
+.fwg-page .fw-flow-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 2.4rem;
+}
+
+/* Three stages on a continuous hairline — no boxes, no inversion */
+.fwg-page .fw-flow-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  counter-reset: stage;
+}
+/* The rule that runs through all three stages */
+.fwg-page .fw-flow-grid::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30px;
+  height: 0.7px;
+  background: var(--ink);
+}
+.fwg-page .fw-flow-stage {
+  position: relative;
+  padding: 0 1.6rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-left: 0.5px solid var(--rule);
+}
+.fwg-page .fw-flow-stage:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+.fwg-page .fw-flow-stage:last-child {
+  padding-right: 0;
+}
+/* The station mark on the rule (a small disc) */
+.fwg-page .fw-flow-stage::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 1.6rem;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--bone);
+  border: 1.2px solid var(--ink);
+  box-shadow: 0 0 0 4px var(--bone);
+}
+.fwg-page .fw-flow-stage:first-child::before { left: 0; }
+/* Middle stage — partial fill to show progression i → ii → iii.
+   Uses a mixed solid color rather than opacity so the bone halo
+   keeps masking the rule line through the disc. */
+.fwg-page .fw-flow-stage:nth-child(2)::before {
+  background: color-mix(in srgb, var(--accent) 45%, var(--bone));
+  border-color: var(--accent);
+}
+.fwg-page .fw-flow-stage--apex::before {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+/* Subtle bone-2 screen behind the apex column — highlights without overpowering */
+.fwg-page .fw-flow-stage--apex::after {
+  content: "";
+  position: absolute;
+  top: 44px;
+  left: 0.7rem;
+  right: -0.6rem;
+  bottom: -0.6rem;
+  background: var(--bone-2);
+  z-index: -1;
+  border-radius: 2px;
+}
+.fwg-page .fw-flow-stage--apex { z-index: 0; }
+/* Push content below the rule */
+.fwg-page .fw-flow-stage-num {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-top: 52px;
+  letter-spacing: 0.04em;
+}
+.fwg-page .fw-flow-stage-kicker {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.fwg-page .fw-flow-stage--apex .fw-flow-stage-kicker { color: var(--ink); }
+.fwg-page .fw-flow-stage-name {
+  font-family: var(--serif);
+  font-style: normal;
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  line-height: 1.15;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+  font-weight: 400;
+}
+.fwg-page .fw-flow-stage-name .italic { font-style: italic; }
+.fwg-page .fw-flow-stage--apex .fw-flow-stage-name { color: var(--accent); }
+.fwg-page .fw-flow-stage-sub {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin: 0;
+  font-weight: 300;
+  max-width: 22ch;
+}
+.fwg-page .fw-flow-caption {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-style: normal;
+  color: var(--ink-2);
+  margin: 2.2rem 0 0;
+  text-align: left;
+  line-height: 1.55;
+  max-width: 720px;
+}
+.fwg-page .fw-flow-caption .serif.italic {
+  font-style: italic;
+  color: var(--ink);
+}
+
+/* ─── Governance gap — asymmetry ledger (Cannibalization) ─── */
+.fwg-page .fw-gov-wrap {
+  margin: 4rem 0 3rem;
+}
+.fwg-page .fw-gov-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1.6rem;
+}
+
+.fwg-page .fw-gov-ledger {
+  border-top: 0.7px solid var(--ink);
+  margin: 0 0 1.6rem;
+}
+.fwg-page .fw-gov-ledger-head,
+.fwg-page .fw-gov-ledger-row,
+.fwg-page .fw-gov-ledger-foot {
+  display: grid;
+  grid-template-columns: 1fr 200px 200px;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 0.5px solid var(--rule);
+}
+.fwg-page .fw-gov-ledger-row:last-of-type { border-bottom: 0; }
+.fwg-page .fw-gov-ledger-head {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0.7rem 0;
+  border-bottom: 0.7px solid var(--ink);
+}
+.fwg-page .fw-gov-ledger-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.fwg-page .fw-gov-ledger-head .fw-gov-ledger-name {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.fwg-page .fw-gov-ledger-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The "owned" dot — accent for platform, neutral for Maison */
+.fwg-page .fw-gov-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(74, 24, 18, 0.10);
+}
+.fwg-page .fw-gov-dot--muted {
+  background: var(--ink);
+  box-shadow: 0 0 0 4px rgba(31, 26, 20, 0.08);
+}
+
+/* Tally row at the foot */
+.fwg-page .fw-gov-ledger-foot {
+  border-top: 0.7px solid var(--ink);
+  border-bottom: 0;
+  padding: 1.2rem 0;
+  background: transparent;
+}
+.fwg-page .fw-gov-ledger-foot .fw-gov-ledger-name {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.fwg-page .fw-gov-ledger-foot .fw-gov-ledger-name em {
+  font-family: var(--mono);
+  font-style: normal;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.fwg-page .fw-gov-ledger-tally {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.8rem;
+  color: var(--accent);
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+.fwg-page .fw-gov-ledger-tally--muted {
+  color: var(--muted);
+}
+
+.fwg-page .fw-gov-caption {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin: 1.6rem 0 0;
+  line-height: 1.5;
+  max-width: 720px;
+}
+.fwg-page .fw-gov-caption .serif.italic { font-style: italic; }
+
+@media (max-width: 720px) {
+  .fwg-page .fw-flow-grid {
+    grid-template-columns: 1fr;
+  }
+  .fwg-page .fw-flow-grid::before {
+    top: 0;
+    bottom: 0;
+    left: 6px;
+    right: auto;
+    width: 0.7px;
+    height: auto;
+  }
+  .fwg-page .fw-flow-stage {
+    border-left: 0;
+    padding: 0 0 1.6rem 1.6rem;
+  }
+  .fwg-page .fw-flow-stage::before { left: 0; top: 4px; }
+  .fwg-page .fw-flow-stage-num { margin-top: 0; }
+  .fwg-page .fw-gov-ledger-head,
+  .fwg-page .fw-gov-ledger-row,
+  .fwg-page .fw-gov-ledger-foot {
+    grid-template-columns: 1fr 80px 80px;
+  }
+}
+
+/* =========================================================================
+   Brand Programs tab — program cards
+   ========================================================================= */
+
+.fwg-page .fw-prog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+  margin: 2.6rem 0 3.2rem;
+}
+.fwg-page .fw-prog {
+  background: transparent;
+  border: 0;
+  border-top: 2px solid var(--ink);
+  border-radius: 0;
+  padding: 1.6rem 0 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+/* Highlighted programs (luxury-mid pioneers) — accent rule */
+.fwg-page .fw-prog--hi {
+  border-top-color: var(--accent);
+}
+.fwg-page .fw-prog-eye {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.fwg-page .fw-prog--hi .fw-prog-eye { color: var(--accent); }
+.fwg-page .fw-prog-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+  font-weight: 400;
+  margin: 0;
+}
+.fwg-page .fw-prog-body {
+  font-family: var(--sans);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: var(--ink);
+  font-weight: 300;
+  margin: 0;
+}
+.fwg-page .fw-prog-body strong { font-weight: 500; }
+.fwg-page .fw-prog-lesson {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin: 0.4rem 0 0;
+  padding: 0 0 0 1.1rem;
+  border-left: 2px solid var(--rule);
+  max-width: 60ch;
+}
+.fwg-page .fw-prog--hi .fw-prog-lesson { border-left-color: var(--accent); }
+.fwg-page .fw-prog-data {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.85;
+  margin: 0.8rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 0.5px solid var(--rule);
+}
+.fwg-page .fw-prog-data strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+@media (max-width: 720px) {
+  .fwg-page .fw-prog-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================================================
+   Market context (tab 01) — refined diagrams
+   ========================================================================= */
+
+/* Line chart — let it breathe; the SVG carries the design tokens */
+.fwg-page .fw-mc-chart {
+  padding: 1.6rem 0 0.6rem;
+}
+
+/* Fig M-2 · The void — Maison's share, with the rentier breakdown beside */
+.fwg-page .fw-mc-void-fig {
+  margin: 3rem 0;
+  padding: 2.2rem 0 1rem;
+  border-top: 0.7px solid var(--ink);
+}
+.fwg-page .fw-mc-void-fig .fw-chart-label {
+  margin-bottom: 2.4rem;
+}
+.fwg-page .fw-mc-void-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.5fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+/* The void — visual hero */
+.fwg-page .fw-mc-void {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  padding-right: 2rem;
+  border-right: 0.7px solid var(--rule);
+}
+.fwg-page .fw-mc-void-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(96px, 13vw, 180px);
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  color: var(--accent);
+}
+.fwg-page .fw-mc-void-cap {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0.2rem 0 0;
+  letter-spacing: -0.005em;
+}
+.fwg-page .fw-mc-void-sub {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0.8rem 0 0;
+  line-height: 1.55;
+  max-width: 26ch;
+}
+
+/* The rentier ledger — supporting */
+.fwg-page .fw-mc-rentier {
+  padding-left: 0;
+}
+.fwg-page .fw-mc-rentier-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1.2rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 0.7px solid var(--ink);
+}
+.fwg-page .fw-mc-rentier-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.fwg-page .fw-mc-rentier-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 1.6rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 0.5px solid var(--rule);
+}
+.fwg-page .fw-mc-rentier-row:last-child { border-bottom: 0; }
+
+.fwg-page .fw-mc-rentier-share {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.fwg-page .fw-mc-rentier-row--hero .fw-mc-rentier-share {
+  font-weight: 500;
+}
+
+.fwg-page .fw-mc-rentier-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.fwg-page .fw-mc-rentier-name {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.fwg-page .fw-mc-rentier-row--hero .fw-mc-rentier-name { color: var(--accent); }
+.fwg-page .fw-mc-rentier-note {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+.fwg-page .fw-mc-rentier-source {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 1.2rem 0 0;
+  padding-top: 0.8rem;
+  border-top: 0.5px solid var(--rule);
+}
+
+@media (max-width: 720px) {
+  .fwg-page .fw-mc-void-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .fwg-page .fw-mc-void {
+    border-right: 0;
+    border-bottom: 0.7px solid var(--rule);
+    padding-right: 0;
+    padding-bottom: 1.6rem;
+  }
+}
+.fwg-page .fw-mc-flow .fw-chart-label {
+  margin-bottom: 2.6rem;
+}
+
+/* Single stacked spectrum bar */
+.fwg-page .fw-mc-flow-stack {
+  margin: 0 0 2.4rem;
+}
+.fwg-page .fw-mc-flow-stack-scale {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.6rem;
+}
+.fwg-page .fw-mc-flow-stack-scale span:nth-child(2) {
+  /* mid-mark sits centered */
+  margin-left: -10px;
+}
+.fwg-page .fw-mc-flow-stack-track {
+  display: flex;
+  height: 22px;
+  border: 0.7px solid var(--ink);
+  background: var(--bone);
+  overflow: hidden;
+}
+.fwg-page .fw-mc-flow-stack-seg {
+  height: 100%;
+  position: relative;
+}
+.fwg-page .fw-mc-flow-stack-seg + .fw-mc-flow-stack-seg {
+  border-left: 0.5px solid var(--bone);
+}
+.fwg-page .fw-mc-flow-stack-seg--platform { background: var(--accent); }
+.fwg-page .fw-mc-flow-stack-seg--fees {
+  background: color-mix(in srgb, var(--accent) 60%, var(--bone));
+}
+.fwg-page .fw-mc-flow-stack-seg--seller {
+  background: color-mix(in srgb, var(--accent) 28%, var(--bone));
+}
+.fwg-page .fw-mc-flow-stack-seg--maison {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 3px,
+    var(--accent) 3px,
+    var(--accent) 3.6px
+  );
+}
+
+/* Four aligned columns beneath the bar — widths proportional to the
+   segments so column ↔ segment reads across as one diagram. The Maison
+   column gets a minimum width so its content stays legible. */
+.fwg-page .fw-mc-flow-cols {
+  list-style: none;
+  margin: 0 0 2.4rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 30fr 11fr 50fr 9fr;
+  gap: 0;
+}
+.fwg-page .fw-mc-flow-col {
+  padding: 0 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  border-left: 0.5px solid var(--rule);
+}
+.fwg-page .fw-mc-flow-col:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+.fwg-page .fw-mc-flow-col:last-child { padding-right: 0; }
+
+.fwg-page .fw-mc-flow-tag {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.fwg-page .fw-mc-flow-col--maison .fw-mc-flow-tag { color: var(--accent); }
+
+.fwg-page .fw-mc-flow-val {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(32px, 3.6vw, 52px);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.fwg-page .fw-mc-flow-val--zero {
+  color: var(--accent);
+  font-weight: 500;
+}
+.fwg-page .fw-mc-flow-val--neg {
+  color: #A8451C;
+}
+
+.fwg-page .fw-mc-flow-cap {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.96rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin: 0;
+  max-width: 26ch;
+}
+.fwg-page .fw-mc-flow-col--maison .fw-mc-flow-cap { color: var(--ink); }
+
+/* Scaled scenario — concrete anchor */
+.fwg-page .fw-mc-flow-scenario {
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0;
+  padding: 1.4rem 1.6rem;
+  background: var(--bone-2);
+  border-left: 2px solid var(--accent);
+  font-weight: 300;
+  max-width: 760px;
+}
+.fwg-page .fw-mc-flow-scenario strong {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink);
+  font-size: 1.08em;
+  letter-spacing: -0.005em;
+}
+.fwg-page .fw-mc-flow-scenario-eye {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-block;
+  margin-right: 0.4rem;
+  font-weight: 400;
+}
+.fwg-page .fw-mc-flow-scenario-zero {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 1.15em;
+}
+.fwg-page .fw-mc-flow-scenario-src {
+  display: block;
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.85rem;
+  padding-top: 0.7rem;
+  border-top: 0.5px solid var(--rule);
+  font-weight: 400;
+}
+
+@media (max-width: 720px) {
+  .fwg-page .fw-mc-flow-cols { grid-template-columns: 1fr; gap: 1.8rem; }
+  .fwg-page .fw-mc-flow-col {
+    border-left: 0;
+    border-top: 0.5px solid var(--rule);
+    padding: 1.4rem 0 0;
+  }
+  .fwg-page .fw-mc-flow-col:first-child { border-top: 0; padding-top: 0; }
+}
+
+.fwg-page .fw-spectrum {
+  margin: 2.6rem 0 3.2rem;
+  padding: 2.2rem 0 1.8rem;
+  border-top: 0.7px solid var(--ink);
+}
+.fwg-page .fw-spectrum-label {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1.6rem;
+}
+.fwg-page .fw-spectrum-axis {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 0 0.6rem;
+}
+.fwg-page .fw-spectrum-axis-end {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.fwg-page .fw-spectrum-axis-end--accent { color: var(--accent); }
+
+/* Gradient bar (the metaphor) */
+.fwg-page .fw-spectrum-bar {
+  width: 100%;
+  height: 32px;
+  margin: 0 0 0;
+}
+.fwg-page .fw-spectrum-bar svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Connectors between bar and stations — five hairline ticks with discs */
+.fwg-page .fw-spectrum-ticks {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 0 0 0.4rem;
+}
+.fwg-page .fw-spectrum-tick {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 1rem;
+  position: relative;
+  height: 22px;
+}
+.fwg-page .fw-spectrum-tick:first-child { padding-left: 0; }
+.fwg-page .fw-spectrum-tick:last-child { padding-right: 0; }
+
+.fwg-page .fw-spectrum-tick-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--bone);
+  border: 1.2px solid var(--accent);
+  margin-top: -4px;
+  margin-left: 6px;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  z-index: 1;
+}
+.fwg-page .fw-spectrum-tick-line {
+  width: 0.7px;
+  flex: 1;
+  background: var(--rule);
+  margin-left: 10px;
+  transition: background 0.25s ease, width 0.25s ease;
+}
+
+/* Clickable tier stations beneath the bar */
+.fwg-page .fw-spectrum-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+.fwg-page .fw-spectrum-station {
+  display: flex;
+  border-left: 0.5px solid var(--rule);
+}
+.fwg-page .fw-spectrum-station:first-child { border-left: 0; }
+
+.fwg-page .fw-spectrum-btn {
+  background: none;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  padding: 1rem 1rem 0.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  width: 100%;
+  transition: background 0.2s ease, transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: left top;
+}
+.fwg-page .fw-spectrum-station:first-child .fw-spectrum-btn { padding-left: 0; }
+.fwg-page .fw-spectrum-station:last-child .fw-spectrum-btn { padding-right: 0; }
+
+.fwg-page .fw-spectrum-btn:hover {
+  background: var(--bone-2);
+}
+.fwg-page .fw-spectrum-btn:focus-visible {
+  outline: 1px dashed var(--accent);
+  outline-offset: 2px;
+}
+
+/* Hover dim-others / pop-hovered, matching canon ribbon behavior.
+   Also lights up the matching connector tick above. */
+.fwg-page .fw-spectrum-grid:has(.fw-spectrum-btn:hover) .fw-spectrum-station {
+  opacity: 0.4;
+}
+.fwg-page .fw-spectrum-grid:has(.fw-spectrum-btn:hover) .fw-spectrum-station:has(.fw-spectrum-btn:hover) {
+  opacity: 1;
+  transform: scale(1.02);
+}
+.fwg-page .fw-spectrum-grid:has(.fw-spectrum-btn:hover) .fw-spectrum-station:has(.fw-spectrum-btn:hover) .fw-spectrum-num {
+  color: var(--accent);
+}
+
+/* Light up the matching tick when its station is hovered */
+.fwg-page .fw-spectrum:has(.fw-spectrum-station:nth-child(1) .fw-spectrum-btn:hover) .fw-spectrum-tick:nth-child(1) .fw-spectrum-tick-dot,
+.fwg-page .fw-spectrum:has(.fw-spectrum-station:nth-child(2) .fw-spectrum-btn:hover) .fw-spectrum-tick:nth-child(2) .fw-spectrum-tick-dot,
+.fwg-page .fw-spectrum:has(.fw-spectrum-station:nth-child(3) .fw-spectrum-btn:hover) .fw-spectrum-tick:nth-child(3) .fw-spectrum-tick-dot,
+.fwg-page .fw-spectrum:has(.fw-spectrum-station:nth-child(4) .fw-spectrum-btn:hover) .fw-spectrum-tick:nth-child(4) .fw-spectrum-tick-dot,
+.fwg-page .fw-spectrum:has(.fw-spectrum-station:nth-child(5) .fw-spectrum-btn:hover) .fw-spectrum-tick:nth-child(5) .fw-spectrum-tick-dot {
+  background: var(--accent);
+  transform: scale(1.4);
+  box-shadow: 0 0 0 4px rgba(74, 24, 18, 0.12);
+}
+.fwg-page .fw-spectrum:has(.fw-spectrum-station:nth-child(1) .fw-spectrum-btn:hover) .fw-spectrum-tick:nth-child(1) .fw-spectrum-tick-line,
+.fwg-page .fw-spectrum:has(.fw-spectrum-station:nth-child(2) .fw-spectrum-btn:hover) .fw-spectrum-tick:nth-child(2) .fw-spectrum-tick-line,
+.fwg-page .fw-spectrum:has(.fw-spectrum-station:nth-child(3) .fw-spectrum-btn:hover) .fw-spectrum-tick:nth-child(3) .fw-spectrum-tick-line,
+.fwg-page .fw-spectrum:has(.fw-spectrum-station:nth-child(4) .fw-spectrum-btn:hover) .fw-spectrum-tick:nth-child(4) .fw-spectrum-tick-line,
+.fwg-page .fw-spectrum:has(.fw-spectrum-station:nth-child(5) .fw-spectrum-btn:hover) .fw-spectrum-tick:nth-child(5) .fw-spectrum-tick-line {
+  background: var(--accent);
+  width: 1.4px;
+}
+
+/* The apex tick (Tier 4) is always lit since it's the canonical position */
+.fwg-page .fw-spectrum-tick:nth-child(5) .fw-spectrum-tick-dot {
+  background: var(--accent);
+}
+
+.fwg-page .fw-spectrum-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+.fwg-page .fw-spectrum-station--apex .fw-spectrum-num { color: var(--accent); }
+
+.fwg-page .fw-spectrum-kicker {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.fwg-page .fw-spectrum-station--apex .fw-spectrum-kicker { color: var(--accent); }
+
+.fwg-page .fw-spectrum-stance {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.fwg-page .fw-spectrum-brands {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+@media (max-width: 720px) {
+  .fwg-page .fw-spectrum-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 0;
+  }
+  .fwg-page .fw-spectrum-station { border-left: 0; border-top: 0.5px solid var(--rule); }
+  .fwg-page .fw-spectrum-station:nth-child(-n+2) { border-top: 0; }
+  .fwg-page .fw-spectrum-num { font-size: 34px; }
+}
+
+/* =========================================================================
+   Scroll-to-top rail — fixed on the right edge of the viewport
+   Editorial register: mono caps, vertical, with a hairline accent line
+   ========================================================================= */
+
+.fwg-toprail {
+  position: fixed;
+  right: 1.6rem;
+  bottom: 2.6rem;
+  z-index: 8;
+  background: var(--bone);
+  border: 0.7px solid var(--rule);
+  border-radius: 0;
+  padding: 1rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.fwg-toprail[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.fwg-toprail:hover {
+  border-color: var(--accent);
+}
+.fwg-toprail:hover .fwg-toprail-arrow,
+.fwg-toprail:hover .fwg-toprail-label {
+  color: var(--accent);
+}
+.fwg-toprail:focus-visible {
+  outline: 1px dashed var(--accent);
+  outline-offset: 3px;
+}
+.fwg-toprail-arrow {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--ink);
+  transition: color 0.2s ease;
+}
+.fwg-toprail-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  transition: color 0.2s ease;
+}
+
+@media (max-width: 720px) {
+  .fwg-toprail {
+    right: 0.8rem;
+    bottom: 1.2rem;
+    padding: 0.7rem 0.55rem;
+  }
+}
+
+.fwg-page .fw-proofs {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0;
+  border-top: 0.7px solid var(--ink);
+}
+.fwg-page .fw-proof {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 2.4rem;
+  align-items: start;
+  padding: 2.6rem 0;
+  border-bottom: 0.5px solid var(--rule);
+}
+.fwg-page .fw-proof:last-child { border-bottom: 0.7px solid var(--ink); }
+
+.fwg-page .fw-proof-index {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(54px, 6vw, 84px);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  color: var(--accent);
+}
+
+.fwg-page .fw-proof-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.fwg-page .fw-proof-kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+.fwg-page .fw-proof-pillar {
+  color: var(--accent);
+  font-weight: 500;
+}
+.fwg-page .fw-proof-dims {
+  color: var(--muted);
+  font-weight: 400;
+  position: relative;
+  padding-left: 0.9rem;
+}
+.fwg-page .fw-proof-dims::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--rule);
+}
+.fwg-page .fw-proof-pillar-line {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin: 0;
+  max-width: 60ch;
+  padding: 0 0 0 1.1rem;
+  border-left: 1.5px solid var(--rule);
+}
+.fwg-page .fw-proof-claim {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+  margin: 0;
+  max-width: 32ch;
+}
+.fwg-page .fw-proof-recap {
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--ink);
+  font-weight: 300;
+  margin: 0;
+  max-width: 60ch;
+}
+
+/* Anchor case inset — bone-2 wash with accent rail */
+.fwg-page .fw-proof-anchor {
+  background: var(--bone-2);
+  border-left: 2px solid var(--accent);
+  padding: 1.3rem 1.5rem;
+  margin: 0.4rem 0 0;
+}
+.fwg-page .fw-proof-anchor-eye {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.3rem;
+}
+.fwg-page .fw-proof-anchor-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin: 0 0 0.7rem;
+}
+.fwg-page .fw-proof-anchor-body {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--ink);
+  font-weight: 300;
+  margin: 0;
+  max-width: 60ch;
+}
+
+.fwg-page .fw-proof-implication {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0.5rem 0 0;
+  max-width: 60ch;
+}
+.fwg-page .fw-proof-implication-label {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.fwg-page .fw-proof-sources {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0.4rem 0 0;
+  padding-top: 0.8rem;
+  border-top: 0.5px solid var(--rule);
+}
+
+@media (max-width: 720px) {
+  .fwg-page .fw-proof {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 2rem 0;
+  }
+  .fwg-page .fw-proof-index { font-size: 54px; }
+}
+
+/* =========================================================================
+   Tier intel — program data folded into each tier card.
+   Reads as a benchmarked footnote underneath the main tier argument.
+   ========================================================================= */
+
+.fwg-page .fw-tier-intel {
+  margin: 1.6rem 0 0;
+  padding: 1.4rem 0 0;
+  border-top: 0.5px solid var(--rule);
+}
+.fwg-page .fw-tier-intel + .fw-tier-intel {
+  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 0.5px dashed var(--rule);
+}
+.fwg-page .fw-tier-intel-eye {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.4rem;
+}
+.fwg-page .fw-tier-intel-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  margin: 0 0 0.55rem;
+}
+.fwg-page .fw-tier-intel-lesson {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0;
+  padding: 0 0 0 0.9rem;
+  border-left: 1.5px solid var(--rule);
+  max-width: 62ch;
+}
+.fwg-page .fw-tier-intel-data {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.85;
+  margin: 0.85rem 0 0;
+}
+.fwg-page .fw-tier-intel-data strong {
+  color: var(--ink);
+  font-weight: 500;
+}

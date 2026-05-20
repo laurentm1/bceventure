@@ -68,7 +68,9 @@ export default function Nav() {
           <button onClick={() => navClick('practice')}>Practice</button>
           <button onClick={() => navClick('insights')}>Insights</button>
           <button onClick={() => navClick('contact')}>Contact</button>
-          <a href="/framework" className="nav-mobile-item" onClick={() => setMenuOpen(false)}>Sovereignty Framework™</a>
+          <a href="/framework" className="nav-mobile-item" onClick={() => setMenuOpen(false)}>
+            Sovereignty<br />Framework™
+          </a>
           <a href="/clients" className="nav-mobile-item" onClick={() => setMenuOpen(false)}>Clients</a>
           <button className="nav-mobile-cta" onClick={() => navClick('contact')}>
             Request a consult

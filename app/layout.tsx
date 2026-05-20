@@ -1,5 +1,21 @@
 import type { Metadata } from 'next'
+import { Fraunces, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  weight: ['400', '500'],
+  variable: '--font-fraunces',
+  display: 'swap',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'BCE.VENTURES — Operator-led venture building & strategic advisory',
@@ -73,6 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
+      className={`${fraunces.variable} ${jetbrainsMono.variable}`}
       data-theme="blush"
       data-font="fraunces-tight"
       data-headline="sovereignty"

@@ -20,7 +20,7 @@
   /* Type */
   --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
   --sans: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  --mono: var(--font-jetbrains-mono, 'JetBrains Mono'), 'IBM Plex Mono', ui-monospace, monospace;
   --wordmark: var(--serif);
 
   --maxw: 1440px;
@@ -155,7 +155,7 @@
   --sans: 'Inter', sans-serif;
 }
 [data-font="fraunces-tight"] {
-  --serif: 'Fraunces', Georgia, serif;
+  --serif: var(--font-fraunces, 'Fraunces'), Georgia, serif;
   --sans: 'Inter Tight', sans-serif;
 }
 [data-font="fraunces-caps"] {

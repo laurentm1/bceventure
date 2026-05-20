@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import PublicFramework from './_components/PublicFramework'
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mzdwpddp'
@@ -29,7 +30,7 @@ const EMAIL_ALLOWLIST = new Set(['amrami.alix@gmail.com'])
 type GateErrors = { name?: string; email?: string; org?: string }
 
 export default function FrameworkPage() {
-  const [unlocked, setUnlocked] = useState(false)
+  const router = useRouter()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [org, setOrg] = useState('')
@@ -84,26 +85,8 @@ export default function FrameworkPage() {
       // best-effort
     } finally {
       setSubmitting(false)
-      setUnlocked(true)
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-      }, 100)
+      router.push('/framework/research')
     }
-  }
-
-  if (unlocked) {
-    // Gated research zone will be built in Commit 2.
-    return (
-      <main className="fw-page">
-        <div className="fw-shell">
-          <p className="eyebrow">The Research</p>
-          <h1 className="fw-hero">Coming next: <em>the research zone.</em></h1>
-          <p className="fw-hero-sub">
-            The tabbed research zone (Market context · Market study · Cannibalization · Three vectors · The diagnostic) is being ported in a follow-up commit on this PR.
-          </p>
-        </div>
-      </main>
-    )
   }
 
   const gateForm = (

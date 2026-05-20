@@ -213,10 +213,11 @@
   margin-bottom: 3.5rem;
   border-top: 0.7px solid var(--ink);
 }
-.fwg-page .fw-stat-row { grid-template-columns: 1fr 1fr 1fr; }
-.fwg-page .fw-stat-row-2 { grid-template-columns: 1fr 1fr; }
+.fwg-page .fw-stat-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); }
+.fwg-page .fw-stat-row-2 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 
 .fwg-page .fw-stat {
+  min-width: 0;
   background: transparent;
   border: 0;
   border-left: 0.5px solid var(--rule);
@@ -444,11 +445,12 @@
 
 .fwg-page .fw-tier {
   display: grid;
-  grid-template-columns: 84px 180px 1fr;
+  grid-template-columns: 84px minmax(0, 180px) minmax(0, 1fr);
   gap: 1.6rem;
   align-items: start;
   padding: 2.4rem 0;
   border-bottom: 0.5px solid var(--rule);
+  min-width: 0;
 }
 .fwg-page .fw-tier:last-child { border-bottom: 0.7px solid var(--ink); }
 
@@ -1018,7 +1020,9 @@
   grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.5fr);
   gap: 3rem;
   align-items: start;
+  min-width: 0;
 }
+.fwg-page .fw-mc-void-grid > * { min-width: 0; }
 
 /* The void — visual hero */
 .fwg-page .fw-mc-void {
@@ -1597,11 +1601,12 @@
 }
 .fwg-page .fw-proof {
   display: grid;
-  grid-template-columns: 90px 1fr;
+  grid-template-columns: 90px minmax(0, 1fr);
   gap: 2.4rem;
   align-items: start;
   padding: 2.6rem 0;
   border-bottom: 0.5px solid var(--rule);
+  min-width: 0;
 }
 .fwg-page .fw-proof:last-child { border-bottom: 0.7px solid var(--ink); }
 

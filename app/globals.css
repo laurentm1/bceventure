@@ -623,6 +623,10 @@ section, .section {
   flex-wrap: wrap;
 }
 
+.hero-foot .eyebrow {
+  text-align: right;
+}
+
 .scroll-hint {
   display: flex;
   align-items: center;

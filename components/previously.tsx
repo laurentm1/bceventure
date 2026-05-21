@@ -9,16 +9,16 @@ const GROUPS = [
   },
   {
     label: 'Recognition',
-    names: 'Founding Member CHIEF, Executive Panelist Transformation 2025, Parsons M.Arch',
+    names: 'Master of Architecture - Parsons School of Design, CHIEF Founding Member',
   },
 ]
 
 export default function Previously() {
   return (
-    <section className="previously" aria-label="Selected partnerships and credentials">
+    <section className="previously" aria-label="Selected partnerships and affiliations">
       <div className="container">
         <div className="previously-inner">
-          <span className="eyebrow previously-heading">Selected partnerships and credentials</span>
+          <span className="eyebrow previously-heading">Selected partnerships and affiliations</span>
           <div className="credentials-groups">
             {GROUPS.map((g) => (
               <div className="credentials-group" key={g.label}>

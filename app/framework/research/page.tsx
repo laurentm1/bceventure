@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import Link from 'next/link'
 import GatedResearch from '../_components/GatedResearch'
 
 export default function FrameworkResearchPage() {
@@ -39,6 +40,21 @@ export default function FrameworkResearchPage() {
         </header>
 
         <GatedResearch />
+
+        <aside className="fwg-contact">
+          <div className="fwg-contact-row">
+            <div>
+              <p className="fwg-contact-eye">Continue the conversation</p>
+              <p className="fwg-contact-line">
+                The Diagnostic is the first engagement BCE Ventures undertakes with any Maison.
+              </p>
+            </div>
+            <Link href="/#diagnostic" className="fwg-contact-cta">
+              <span>Request a consult</span>
+              <span className="fwg-contact-cta-arrow" aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </aside>
 
         <footer className="fw-protect">
           <p className="fw-protect-mark">BCE.Ventures™ · The Sovereignty Framework™ · Research</p>

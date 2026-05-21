@@ -1595,11 +1595,25 @@
    Editorial register: mono caps, vertical, with a hairline accent line
    ========================================================================= */
 
-.fwg-toprail {
+.fwg-scroll-rail {
   position: fixed;
   right: 1.6rem;
   bottom: 2.6rem;
   z-index: 8;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.fwg-scroll-rail[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.fwg-scroll-btn {
   background: var(--bone);
   border: 0.7px solid var(--rule);
   border-radius: 0;
@@ -1609,35 +1623,32 @@
   align-items: center;
   gap: 0.65rem;
   cursor: pointer;
+  transition: opacity 0.25s ease, transform 0.25s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.fwg-scroll-btn[data-hidden="true"] {
   opacity: 0;
-  transform: translateY(8px);
+  transform: scale(0.85);
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.2s ease, color 0.2s ease;
 }
-.fwg-toprail[data-visible="true"] {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-.fwg-toprail:hover {
+.fwg-scroll-btn:hover {
   border-color: var(--accent);
 }
-.fwg-toprail:hover .fwg-toprail-arrow,
-.fwg-toprail:hover .fwg-toprail-label {
+.fwg-scroll-btn:hover .fwg-scroll-btn-arrow,
+.fwg-scroll-btn:hover .fwg-scroll-btn-label {
   color: var(--accent);
 }
-.fwg-toprail:focus-visible {
+.fwg-scroll-btn:focus-visible {
   outline: 1px dashed var(--accent);
   outline-offset: 3px;
 }
-.fwg-toprail-arrow {
+.fwg-scroll-btn-arrow {
   font-family: var(--serif);
   font-size: 1.15rem;
   line-height: 1;
   color: var(--ink);
   transition: color 0.2s ease;
 }
-.fwg-toprail-label {
+.fwg-scroll-btn-label {
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 0.22em;
@@ -1649,9 +1660,12 @@
 }
 
 @media (max-width: 720px) {
-  .fwg-toprail {
+  .fwg-scroll-rail {
     right: 0.8rem;
     bottom: 1.2rem;
+    gap: 0.45rem;
+  }
+  .fwg-scroll-btn {
     padding: 0.7rem 0.55rem;
   }
 }

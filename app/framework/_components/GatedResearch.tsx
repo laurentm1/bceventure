@@ -3,14 +3,13 @@
 import { useEffect, useState } from 'react'
 import AuthorshipSpectrum from './AuthorshipSpectrum'
 
-type TabId = 'market' | 'tiers' | 'cannib' | 'cases' | 'diagnostic'
+type TabId = 'market' | 'tiers' | 'cannib' | 'cases'
 
 const TABS: { id: TabId; label: string }[] = [
   { id: 'market', label: 'Market context' },
   { id: 'tiers', label: 'Market study' },
   { id: 'cannib', label: 'Cannibalization' },
   { id: 'cases', label: 'Three vectors' },
-  { id: 'diagnostic', label: 'The diagnostic' },
 ]
 
 function TabBar({ active, onChange }: { active: TabId; onChange: (id: TabId) => void }) {
@@ -641,20 +640,6 @@ function ThreeVectorsTab() {
   )
 }
 
-function DiagnosticTab() {
-  return (
-    <div className="fwg-tab-pane">
-      <header className="fwg-pane-head">
-        <p className="eyebrow">Section 05 · The diagnostic</p>
-        <h2 className="fwg-pane-title">The diagnostic.</h2>
-      </header>
-      <div className="fwg-section">
-        <p className="fwg-placeholder">[ Content to be authored. ]</p>
-      </div>
-    </div>
-  )
-}
-
 function ScrollTopRail() {
   const [visible, setVisible] = useState(false)
   useEffect(() => {
@@ -710,7 +695,6 @@ export default function GatedResearch() {
     case 'tiers': pane = <GovernanceTiersTab />; break
     case 'cannib': pane = <CannibalizationTab />; break
     case 'cases': pane = <ThreeVectorsTab />; break
-    case 'diagnostic': pane = <DiagnosticTab />; break
   }
 
   return (

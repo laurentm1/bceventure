@@ -23,7 +23,7 @@ export default function FrameworkResearchPage() {
 
         <div className="fw-masthead">
           <span>BCE Ventures · No. 01</span>
-          <span className="fw-masthead-mid">The Research</span>
+          <span className="fw-masthead-mid">The Research · Behind the Framework</span>
           <span className="fw-masthead-right">Confidential · 2026</span>
         </div>
 
@@ -34,7 +34,7 @@ export default function FrameworkResearchPage() {
             <span className="serif italic">and diagnostic architecture.</span>
           </h1>
           <p className="fwg-hero-sub">
-            Value is not getting lost. <span className="serif italic">It is getting reassigned.</span> The five-dimension framework above maps where. This is the evidence.
+            Value is not getting lost. <span className="serif italic">It is getting reassigned.</span> The five-dimension framework above maps where. This research is the evidence behind it.
           </p>
         </header>
 

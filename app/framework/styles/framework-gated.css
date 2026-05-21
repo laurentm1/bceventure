@@ -90,7 +90,7 @@
 }
 .fwg-tab:hover { color: var(--ink); }
 .fwg-tab[data-active="true"] { color: var(--ink); font-weight: 500; }
-.fwg-tab[data-active="true"]::after {
+.fwg-tab:hover::after {
   content: "";
   position: absolute;
   left: 0;

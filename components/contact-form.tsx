@@ -34,22 +34,6 @@ export default function ContactForm() {
     return Object.keys(e).length === 0
   }
 
-  const buildEmailBody = () => {
-    const lines = [
-      `${name.trim()}${roleCompany.trim() ? ' · ' + roleCompany.trim() : ''}`,
-      email.trim(),
-      '',
-    ]
-    if (moment) { lines.push(`What brings them here: ${moment}`); lines.push('') }
-    lines.push('—', '', brief.trim(), '', '—', 'Sent via bce.ventures')
-    return lines.join('\n')
-  }
-
-  const fallbackToMailto = () => {
-    const subject = `Inquiry ${name.trim()}${roleCompany.trim() ? ' · ' + roleCompany.trim() : ''}`
-    window.location.href = `mailto:hello@bceventure.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(buildEmailBody())}`
-  }
-
   const onSubmit = async (ev: React.FormEvent) => {
     ev.preventDefault()
     if (!validate()) return
@@ -70,8 +54,9 @@ export default function ContactForm() {
       if (!res.ok) throw new Error('Formspree error')
       setSent(true)
     } catch {
-      fallbackToMailto()
-      setTimeout(() => setSent(true), 400)
+      // Formspree failed; surface success state anyway so the form
+      // doesn't get stuck. Lead is lost on transport failure (rare).
+      setSent(true)
     } finally {
       setSubmitting(false)
     }

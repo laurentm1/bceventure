@@ -113,9 +113,20 @@ type Props = {
   gateForm: React.ReactNode
 }
 
+const blockCopy = (e: React.ClipboardEvent) => {
+  const t = e.target as HTMLElement | null
+  if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return
+  e.preventDefault()
+}
+
 export default function PublicFramework({ gateForm }: Props) {
   return (
-    <main className="fw-page">
+    <main
+      className="fw-page"
+      onContextMenu={(e) => e.preventDefault()}
+      onCopy={blockCopy}
+      onCut={blockCopy}
+    >
       <div className="fw-shell">
         <div className="fw-topbar">
           <a href="/" className="fw-back">← BCE.VENTURES</a>

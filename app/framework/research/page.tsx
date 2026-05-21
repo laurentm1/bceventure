@@ -5,6 +5,12 @@ import Link from 'next/link'
 import Footer from '@/components/footer'
 import GatedResearch from '../_components/GatedResearch'
 
+const blockCopy = (e: React.ClipboardEvent) => {
+  const t = e.target as HTMLElement | null
+  if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return
+  e.preventDefault()
+}
+
 export default function FrameworkResearchPage() {
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', 'blush')
@@ -16,7 +22,12 @@ export default function FrameworkResearchPage() {
   }, [])
 
   return (
-    <main className="fw-page fwg-page">
+    <main
+      className="fw-page fwg-page"
+      onContextMenu={(e) => e.preventDefault()}
+      onCopy={blockCopy}
+      onCut={blockCopy}
+    >
       <div className="fw-shell">
         <div className="fw-topbar">
           <a href="/framework" className="fw-back">← Framework</a>

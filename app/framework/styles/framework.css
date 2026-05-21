@@ -16,6 +16,16 @@ body {
   color: var(--ink);
   min-height: 100vh;
   position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.fw-page input,
+.fw-page textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
 }
 
 .fw-shell {

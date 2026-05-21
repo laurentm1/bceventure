@@ -383,6 +383,30 @@
   .fwg-tab { padding: 0.9rem 1rem; font-size: 9.5px; }
 }
 
+/* Phone — tab strip scrolls horizontally instead of cramming all 5 into the
+   viewport. Long labels keep their full text; users swipe to see the rest. */
+@media (max-width: 600px) {
+  .fwg-tabs-list {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .fwg-tabs-list::-webkit-scrollbar { display: none; }
+  .fwg-tabs-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+  .fwg-tab {
+    width: auto;
+    white-space: nowrap;
+    padding: 0.85rem 0.9rem;
+  }
+  .fwg-tab-label { white-space: nowrap; }
+}
+
 /* =========================================================================
    Governance Tiers — refine in the new editorial register
    ========================================================================= */
@@ -1668,6 +1692,13 @@
   .fwg-scroll-btn {
     padding: 0.7rem 0.55rem;
   }
+}
+
+/* Hide the floating Top/Bottom rail on small screens — it overlaps
+   content (data tables, dot columns) and is unnecessary on mobile,
+   where native swipe-to-scroll handles the same job. */
+@media (max-width: 600px) {
+  .fwg-scroll-rail { display: none; }
 }
 
 .fwg-page .fw-proofs {

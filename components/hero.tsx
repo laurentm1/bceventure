@@ -10,6 +10,7 @@ export default function Hero() {
     <header className="hero" id="top">
       <div className="hero-meta">
         <span className="eyebrow">No. 001 / Operator-led advisory</span>
+        <span className="eyebrow hero-meta-right">Selectively engaged</span>
       </div>
 
       <div className="hero-grid">
@@ -38,20 +39,11 @@ export default function Hero() {
             Brands built trust with their customers.
           </p>
           <p className="hero-problem">
-            That trust is now being outsourced to the market.
-          </p>
-          <p className="hero-problem hero-problem--punchline">
+            That trust is now being outsourced to the market.{' '}
             <span className="serif italic">
               Sovereignty is the objective.
             </span>
           </p>
-        </div>
-      </div>
-
-      <div className="hero-foot">
-        <div className="eyebrow">
-          Selectively engaged ·<br />
-          Strategy + Governance + Standards
         </div>
       </div>
     </header>

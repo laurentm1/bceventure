@@ -1755,6 +1755,7 @@ section, .section {
 }
 .previously-heading {
   display: block;
+  font-size: 11.5px;
 }
 .credentials-groups {
   display: flex;
@@ -2102,14 +2103,20 @@ section, .section {
   .nav-cta { font-size: 10px; padding: 10px 14px; letter-spacing: 0.08em; }
 
   /* Hero — stack single column on mobile */
-  .hero { padding: 100px var(--pad-x) 48px; min-height: auto; }
+  .hero { padding: 100px var(--pad-x) 24px; min-height: auto; }
   .hero-grid { grid-template-columns: 1fr; grid-template-rows: auto auto auto auto; gap: 0; }
   .hero-left-head { grid-column: 1; grid-row: 1; }
   .hero-divider { grid-column: 1; grid-row: 2; margin: 1.5rem 0 1.25rem; width: 60%; }
   .hero-left-sub { grid-column: 1; grid-row: 3; max-width: 100%; }
   .hero-grid .hero-right { grid-column: 1; grid-row: 4; margin-top: 2rem; }
   .hero-right p { font-size: 14px; line-height: 1.6; }
-  .hero-foot { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .hero-foot { display: none; }
+
+  /* Previously — tighter spacing on mobile */
+  .previously { padding: 20px 0; }
+  .previously-inner { gap: 18px; }
+  .credentials-groups { gap: 16px; }
+  .credentials-group { gap: 4px; }
 
   /* Section header — kill nowrap on oneline variant */
   .sec-header--oneline .display-m {

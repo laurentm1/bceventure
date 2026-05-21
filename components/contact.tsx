@@ -28,9 +28,7 @@ export default function Contact() {
             <ContactForm />
 
             <div className="contact-after">
-              <span>Or write directly,</span>
-              <a href="mailto:hello@bceventure.com?subject=Inquiry%20%E2%80%94%20BCE%20Ventures">hello@bceventure.com</a>
-              <span className="dot-sep">·</span>
+              <span>Or find us on</span>
               <a href="https://www.linkedin.com/in/alamrami/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
 

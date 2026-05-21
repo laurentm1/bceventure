@@ -19,7 +19,7 @@ export default function FrameworkResearchPage() {
     <main className="fw-page fwg-page">
       <div className="fw-shell">
         <div className="fw-topbar">
-          <a href="/framework" className="fw-back">← Public framework</a>
+          <a href="/framework" className="fw-back">← Framework</a>
           <span className="fw-confidential">© Confidential · For internal review only · Not for redistribution</span>
         </div>
 

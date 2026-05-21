@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import Link from 'next/link'
+import Footer from '@/components/footer'
 import GatedResearch from '../_components/GatedResearch'
 
 export default function FrameworkResearchPage() {
@@ -63,6 +64,7 @@ export default function FrameworkResearchPage() {
           </p>
         </footer>
       </div>
+      <Footer />
     </main>
   )
 }

@@ -1,6 +1,8 @@
 'use client'
 
+import Footer from '@/components/footer'
 import LifecycleRibbon from './LifecycleRibbon'
+import ScrollTopRail from './ScrollTopRail'
 import {
   OriginPillars,
   InterpretationAsymmetry,
@@ -172,6 +174,8 @@ export default function PublicFramework({ gateForm }: Props) {
           </p>
         </footer>
       </div>
+      <Footer />
+      <ScrollTopRail />
     </main>
   )
 }

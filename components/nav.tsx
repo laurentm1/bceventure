@@ -43,7 +43,7 @@ export default function Nav() {
           <button className="nav-link" onClick={scrollTo('about')}>About</button>
           <button className="nav-link" onClick={scrollTo('practice')}>Practice</button>
           <button className="nav-link" onClick={scrollTo('insights')}>Insights</button>
-          <a href="/framework" className="nav-link">Sovereignty Framework™</a>
+          <a href="/framework" className="nav-link" target="_blank" rel="noopener noreferrer">Sovereignty Framework™</a>
           <a href="/clients" className="nav-link">Clients</a>
           <button className="nav-link" onClick={scrollTo('contact')}>Contact</button>
         </div>
@@ -67,7 +67,7 @@ export default function Nav() {
           <button onClick={() => navClick('about')}>About</button>
           <button onClick={() => navClick('practice')}>Practice</button>
           <button onClick={() => navClick('insights')}>Insights</button>
-          <a href="/framework" className="nav-mobile-item" onClick={() => setMenuOpen(false)}>Sovereignty Framework™</a>
+          <a href="/framework" className="nav-mobile-item" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Sovereignty Framework™</a>
           <a href="/clients" className="nav-mobile-item" onClick={() => setMenuOpen(false)}>Clients</a>
           <button onClick={() => navClick('contact')}>Contact</button>
           <button className="nav-mobile-cta" onClick={() => navClick('contact')}>

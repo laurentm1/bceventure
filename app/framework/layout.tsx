@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import './styles/framework.css'
+import './styles/framework-gated.css'
 
 export const metadata: Metadata = {
   title: 'The Sovereignty Framework™ — BCE Ventures',

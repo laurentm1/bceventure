@@ -1,0 +1,1276 @@
+/* ============================================================
+   framework.css — preview styles for framework.html
+   Mirrors the relevant rules from app/globals.css so what renders
+   here matches what bce.ventures/framework will render after the
+   Next.js patch is applied.
+   ============================================================ */
+
+/* The framework page uses the blush theme; let body inherit it */
+body {
+  background: var(--bone);
+  color: var(--ink);
+}
+
+.fw-page {
+  background: var(--bone);
+  color: var(--ink);
+  min-height: 100vh;
+  position: relative;
+}
+
+.fw-shell {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3.5rem 2.5rem 7rem;
+}
+
+/* ===== Topbar ===== */
+.fw-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.fw-back {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.fw-back:hover { color: var(--accent); }
+.fw-confidential {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Tighten the .eyebrow inside framework context */
+.fw-page .eyebrow {
+  display: block;
+  margin-bottom: 0.65rem;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ===== Typography ===== */
+.fw-hero {
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+  font-weight: 300;
+  line-height: 1.15;
+  margin: 0 0 0.65rem;
+  color: var(--ink);
+}
+.fw-hero em { font-style: italic; }
+
+.fw-hero-sub {
+  font-size: 1rem;
+  color: var(--ink-2);
+  margin: 0 0 2.5rem;
+  line-height: 1.8;
+  max-width: 620px;
+  font-weight: 300;
+}
+
+.fw-body {
+  font-size: 1rem;
+  line-height: 1.95;
+  color: var(--ink);
+  margin: 0 0 1.1rem;
+  max-width: 640px;
+  font-weight: 300;
+}
+.fw-body em { font-style: italic; }
+
+.fw-pull {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 2rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+  max-width: 640px;
+}
+.fw-pull--inline {
+  margin: 1rem 0 0;
+  font-size: 1.05rem;
+}
+
+/* ===== Tiers ===== */
+.fw-tiers {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--rule);
+  margin-bottom: 2rem;
+}
+.fw-tiers--mt { margin-top: 2rem; }
+
+.fw-tier {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.5rem 0;
+  display: grid;
+  grid-template-columns: 36px 160px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+.fw-tier-num {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--rule);
+  line-height: 1;
+}
+.fw-tier-label {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.3rem;
+}
+.fw-tier-name {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0 0 0.3rem;
+  color: var(--ink);
+}
+.fw-tier-body {
+  font-size: 0.9rem;
+  line-height: 1.88;
+  color: var(--ink-2);
+  font-weight: 300;
+}
+.fw-tier-body strong { color: var(--ink); font-weight: 500; }
+
+/* ===== Chart wrappers (matches the gated zone) ===== */
+.fw-chart-block { margin: 1.75rem 0 2rem; }
+.fw-chart-block--mid { margin: 1.5rem 0 2rem; }
+.fw-chart-block--my2 { margin: 2rem 0; }
+
+.fw-chart-label {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* ===== Masthead chrome (3-double-rule register) ===== */
+.fw-masthead {
+  margin: 1.5rem 0 3rem;
+  padding: 0.85rem 0;
+  border-top: 3px double var(--ink);
+  border-bottom: 3px double var(--ink);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: baseline;
+  gap: 16px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.fw-masthead-mid {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.fw-masthead-right {
+  text-align: right;
+  color: var(--muted);
+}
+
+/* ===== New dimension layout (replaces .fw-tier for the public section) ===== */
+.fw-dims {
+  margin-top: 3rem;
+}
+.fw-dim {
+  padding: 2.5rem 0 3rem;
+  border-top: 2px solid var(--ink);
+}
+.fw-dim-head {
+  display: grid;
+  grid-template-columns: 100px 1fr 220px;
+  gap: 36px;
+  align-items: start;
+  margin-bottom: 1.8rem;
+}
+.fw-dim-num {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(64px, 7vw, 96px);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+.fw-dim-meta { padding-top: 0.4rem; }
+.fw-dim-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+.fw-dim-name {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* Right-rail figure marginalia */
+.fw-dim-margin {
+  border-top: 0.7px solid var(--ink);
+  padding-top: 0.85rem;
+}
+.fw-dim-margin-fig {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(48px, 4.5vw, 72px);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+  margin-bottom: 0.45rem;
+}
+.fw-dim-margin-note {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin: 0;
+}
+
+.fw-dim-body {
+  max-width: 680px;
+  margin-bottom: 1.5rem;
+}
+.fw-dim-body p {
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--ink);
+  margin: 0 0 1rem;
+  font-weight: 300;
+}
+.fw-dim-body p:last-child { margin-bottom: 0; }
+
+.fw-dim-figure {
+  margin-top: 1.5rem;
+}
+
+/* ===== Stat callout + clinical table (Fig. 01, Fig. 02) ===== */
+.fw-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 24px;
+  align-items: start;
+  border-top: 0.7px solid var(--ink);
+  padding-top: 18px;
+}
+.fw-stat-grid--single {
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.fw-stat-callout { padding: 0; }
+.fw-stat-num {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(72px, 9vw, 132px);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.fw-stat-callout--accent .fw-stat-num { color: var(--accent); }
+.fw-stat-cap {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 320px;
+}
+.fw-stat-cap em {
+  font-family: var(--serif);
+  color: var(--ink);
+  font-style: italic;
+}
+
+.fw-stat-table {
+  border-top: 0.5px solid var(--ink);
+}
+.fw-stat-table--compact { border-top: none; }
+.fw-stat-table-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 10px 4px;
+  border-bottom: 0.5px solid var(--ink);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.fw-stat-table-row {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  align-items: baseline;
+  padding: 12px 4px;
+  border-bottom: 0.5px solid var(--rule);
+  gap: 12px;
+}
+.fw-stat-table-row:last-child { border-bottom: 0.5px solid var(--ink); }
+.fw-stat-table-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+.fw-stat-table-name {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--ink);
+  letter-spacing: -0.008em;
+}
+.fw-stat-table-dot {
+  color: var(--accent);
+  font-size: 12px;
+}
+
+/* Comparison bars (Fig. 02) */
+.fw-stat-bar-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 110px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 4px;
+  border-bottom: 0.5px solid var(--rule);
+}
+.fw-stat-bar-row:last-child { border-bottom: none; }
+.fw-stat-bar-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.fw-stat-bar-track {
+  height: 8px;
+  background: var(--bone-2);
+  border: 0.5px solid var(--rule);
+  display: block;
+  position: relative;
+}
+.fw-stat-bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--ink);
+}
+.fw-stat-bar-fill--accent { background: var(--accent); }
+.fw-stat-bar-value {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink);
+  text-align: right;
+}
+.fw-stat-bar-value--accent { color: var(--accent); }
+
+.fw-stat-source {
+  margin-top: 4px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.fw-stat-source em {
+  font-family: var(--serif);
+  text-transform: none;
+  letter-spacing: 0;
+  font-style: italic;
+  color: var(--ink-2);
+}
+
+/* ===== Authorship ladder (Fig. 03) ===== */
+.fw-ladder {
+  border-top: 0.7px solid var(--ink);
+  border-bottom: 0.7px solid var(--ink);
+}
+.fw-ladder-head {
+  display: grid;
+  grid-template-columns: 1fr 140px 140px;
+  padding: 10px 18px;
+  border-bottom: 0.5px solid var(--ink);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.fw-ladder-col { text-align: center; }
+.fw-ladder-row {
+  display: grid;
+  grid-template-columns: 1fr 140px 140px;
+  align-items: baseline;
+  padding: 14px 18px;
+  border-bottom: 0.5px solid var(--rule);
+}
+.fw-ladder-row:last-of-type { border-bottom: 0.5px solid var(--ink); }
+.fw-ladder-name {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink);
+  letter-spacing: -0.008em;
+}
+.fw-ladder-num {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+.fw-ladder-cell {
+  text-align: center;
+  font-size: 14px;
+}
+.fw-ladder-dot--off,
+.fw-ladder-dot--on {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1.2px solid var(--ink-2);
+  background: transparent;
+}
+.fw-ladder-dot--on {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.fw-ladder-foot-key {
+  padding: 12px 18px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-top: 0.5px solid var(--rule);
+}
+.fw-ladder-foot-key .fw-ladder-dot {
+  width: 8px;
+  height: 8px;
+  border-width: 1px;
+  margin: 0 4px;
+}
+.fw-ladder-foot {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 18px;
+}
+.fw-ladder-foot-fig {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--accent);
+  letter-spacing: -0.01em;
+}
+.fw-ladder-foot-cap {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink-2);
+}
+
+/* Top margin variant for ledger when it follows a chart */
+.fw-ledger--mt { margin-top: 1.5rem; }
+
+/* ===== Incentives cascade (Fig. 04) — tabular block ===== */
+.fw-cascade {
+  border-top: 0.7px solid var(--ink);
+  border-bottom: 0.7px solid var(--ink);
+}
+.fw-cascade-head {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: baseline;
+  gap: 16px;
+  padding: 12px 18px;
+  border-bottom: 0.5px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.fw-cascade-head > :last-child { text-align: right; }
+.fw-cascade-arrow {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+.fw-cascade-row {
+  display: grid;
+  grid-template-columns: 36px 1fr 1.4fr;
+  align-items: baseline;
+  padding: 14px 18px;
+  border-bottom: 0.5px solid var(--rule);
+  gap: 16px;
+}
+.fw-cascade-row:last-child {
+  border-bottom: none;
+}
+.fw-cascade-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+.fw-cascade-verb {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--accent);
+  letter-spacing: -0.005em;
+}
+.fw-cascade-label {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+
+/* ===== Verified evidence rows (Fig. 02) — sourced stats only ===== */
+.fw-evidence {
+  border-top: 0.7px solid var(--ink);
+  border-bottom: 0.7px solid var(--ink);
+}
+.fw-evidence-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 28px;
+  padding: 18px 0;
+  border-bottom: 0.5px solid var(--rule);
+  align-items: baseline;
+}
+.fw-evidence-row:last-child { border-bottom: none; }
+.fw-evidence-fig {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+.fw-evidence-body { display: flex; flex-direction: column; gap: 6px; }
+.fw-evidence-cap {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.fw-evidence-src {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Incentives — meta number at top of cell (no verb row) */
+.fw-incentives-meta-top {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.fw-cascade-foot {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+/* ===== Incentives — horizontal 4-cell grid (Fig. 04) ===== */
+.fw-cascade-row-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 0;
+}
+.fw-cascade-source {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.fw-cascade-source em { font-style: italic; }
+
+.fw-incentives-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.fw-incentives-cell {
+  padding: 22px 22px 22px 0;
+  border-right: 0.5px solid var(--rule);
+}
+.fw-incentives-cell:last-child {
+  border-right: none;
+}
+.fw-incentives-cell:not(:first-child) {
+  padding-left: 22px;
+}
+.fw-incentives-verb {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 4px;
+  letter-spacing: -0.005em;
+}
+.fw-incentives-label {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.fw-incentives-rule {
+  width: 28px;
+  height: 0;
+  border-top: 0.5px solid var(--muted);
+  margin-bottom: 10px;
+}
+.fw-incentives-meta {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ===== Compounding ledger (Fig. 05) ===== */
+.fw-ledger {
+  border-top: 0.7px solid var(--ink);
+  border-bottom: 0.7px solid var(--ink);
+}
+.fw-ledger-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 0.5px solid var(--rule);
+}
+.fw-ledger-head > div {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 12px 18px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.fw-ledger-head > div:first-child {
+  border-right: 0.5px solid var(--rule);
+}
+.fw-ledger-rom {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+.fw-ledger-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 0.5px solid var(--rule);
+}
+.fw-ledger-row:last-child {
+  border-bottom: none;
+}
+.fw-ledger-cell {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 18px;
+}
+.fw-ledger-cell:first-child {
+  border-right: 0.5px solid var(--rule);
+}
+.fw-ledger-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+.fw-ledger-item {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+}
+
+/* ===== Preview-only closing block (mimics the gate area) ===== */
+.fw-preview-cta {
+  margin-top: 4rem;
+  padding: 2.25rem 0 0;
+  border-top: 1px solid var(--rule);
+}
+.fw-gate-title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0 0 1rem;
+  max-width: 580px;
+}
+.fw-gate-body {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--ink-2);
+  margin: 0 0 1.25rem;
+  max-width: 620px;
+  font-weight: 300;
+}
+.fw-preview-note {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 1rem 0 0;
+}
+
+/* ===== Footer ===== */
+.fw-protect {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ===== Lifecycle ribbon — Fig. 00 (asymmetric first-sale split) =====
+   The canon panel: lifted off the page with a soft cream wash so it
+   reads as the source the dimensions below are extruded from.
+   Sticks to viewport top as the reader scrolls past, and the station
+   currently being discussed below pops while the others recede. */
+.fw-ribbon {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  margin: 3.5rem -2.5rem 4rem;
+  padding: 1.5rem 2.8rem 1.4rem;
+  background:
+    linear-gradient(180deg,
+      rgba(255, 245, 238, 0.95) 0%,
+      rgba(245, 232, 225, 0.55) 60%,
+      rgba(245, 232, 225, 0.0) 100%),
+    var(--bone);
+  border-top: 3px double var(--ink);
+  border-bottom: 3px double var(--ink);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -24px 40px -28px rgba(74, 24, 18, 0.10),
+    0 18px 30px -28px rgba(74, 24, 18, 0.18);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: padding 0.25s ease;
+}
+/* "the canon" tab — a tiny mono marker pinned to the top edge */
+.fw-ribbon::before {
+  content: "The canon";
+  position: absolute;
+  top: -10px;
+  left: 2.8rem;
+  background: var(--bone);
+  padding: 0 0.55rem;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.fw-ribbon .fw-chart-label {
+  display: none;
+}
+
+/* Three-column split: BEFORE | first sale | AFTER */
+.fw-ribbon-split {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.9fr) auto minmax(0, 3.4fr);
+  align-items: stretch;
+  gap: 0;
+}
+
+.fw-ribbon-side {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 0 0;
+}
+.fw-ribbon-side--after {
+  padding: 0 0 0 2.2rem;
+}
+
+.fw-ribbon-side-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1.1rem;
+}
+.fw-ribbon-side-eyebrow--accent { color: var(--accent); }
+
+/* AFTER — four stations as a row, each a vertical stack */
+.fw-ribbon-after-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.5rem;
+  align-items: end;
+}
+
+/* Station — vertical stack: numeral on top, name below */
+.fw-ribbon-station {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform-origin: left bottom;
+  cursor: pointer;
+  user-select: none;
+}
+.fw-ribbon-station:focus-visible {
+  outline: 1px dashed var(--accent);
+  outline-offset: 6px;
+}
+
+/* Hover mirrors the active-state treatment: hovered station pops
+   (oxblood + bold), the other four recede. */
+.fw-ribbon:has(.fw-ribbon-station:hover) .fw-ribbon-station {
+  opacity: 0.32;
+  transform: scale(0.86);
+}
+.fw-ribbon:has(.fw-ribbon-station:hover) .fw-ribbon-station:hover {
+  opacity: 1;
+  transform: scale(1.04);
+}
+.fw-ribbon:has(.fw-ribbon-station:hover) .fw-ribbon-station .fw-ribbon-num,
+.fw-ribbon:has(.fw-ribbon-station:hover) .fw-ribbon-station .fw-ribbon-name {
+  color: var(--muted);
+}
+.fw-ribbon:has(.fw-ribbon-station:hover) .fw-ribbon-station:hover .fw-ribbon-num {
+  color: var(--accent);
+  font-weight: 500;
+}
+.fw-ribbon:has(.fw-ribbon-station:hover) .fw-ribbon-station:hover .fw-ribbon-name {
+  color: var(--accent);
+}
+
+.fw-ribbon-num {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(46px, 5vw, 72px);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  transition: color 0.35s ease, font-weight 0.35s ease;
+}
+
+.fw-ribbon-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  line-height: 1.1;
+  transition: color 0.35s ease;
+}
+
+/* DIVIDER — vertical "first sale" rule between the two panels */
+.fw-ribbon-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  min-width: 1.2rem;
+}
+.fw-ribbon-divider-rule {
+  flex: 1;
+  width: 0.8px;
+  background-image: linear-gradient(var(--ink) 50%, transparent 50%);
+  background-size: 100% 5px;
+  background-repeat: repeat-y;
+}
+.fw-ribbon-divider-label {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--accent);
+  padding: 0.55rem 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+@media (max-width: 820px) {
+  .fw-ribbon-split {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+  .fw-ribbon-side, .fw-ribbon-side--after {
+    padding: 0;
+  }
+  .fw-ribbon-divider {
+    flex-direction: row;
+    height: 22px;
+    margin: 0;
+  }
+  .fw-ribbon-divider-rule {
+    flex: 1;
+    width: auto;
+    height: 0.8px;
+    background-image: linear-gradient(to right, var(--ink) 50%, transparent 50%);
+    background-size: 5px 100%;
+  }
+  .fw-ribbon-divider-label {
+    writing-mode: horizontal-tb;
+    transform: none;
+    padding: 0 0.7rem;
+  }
+  .fw-ribbon-after-list { grid-template-columns: repeat(2, 1fr); gap: 1.2rem 1rem; }
+  .fw-ribbon-side--before .fw-ribbon-num { font-size: 64px; }
+  .fw-ribbon-side--after .fw-ribbon-num { font-size: 44px; }
+}
+
+/* ===== Research-zone preview — Governance Tiers section ===== */
+.fw-research-preview {
+  margin-top: 5rem;
+  padding: 3rem 0 0;
+  border-top: 2px dashed var(--rule);
+}
+.fw-research-preview-banner {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 2.5rem;
+}
+.fw-research-preview-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 1.2rem;
+}
+.fw-research-preview-title .italic { font-style: italic; }
+.fw-research-preview-lede {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin: 0 0 2.5rem;
+  max-width: 640px;
+}
+
+/* Tier-card chrome lifted from globals.css so the preview renders */
+.fw-tier-brands {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+  font-weight: 300;
+  margin: 0;
+}
+.fw-tier-tag {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.55rem;
+  border: 1px solid var(--rule);
+  color: var(--muted);
+  display: inline-block;
+  margin: 0.35rem 0.2rem 0 0;
+}
+.fw-tier-tag--on { border-color: var(--ink); color: var(--ink); }
+.fw-tier-tag--w  { border-color: var(--ink-2); color: var(--ink-2); }
+.fw-tier-case {
+  margin-top: 0.85rem;
+  padding: 0.9rem;
+  background: var(--bone-2);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  font-size: 0.9rem;
+  line-height: 1.88;
+  color: var(--ink-2);
+  font-weight: 300;
+}
+/* Two-variables intro block */
+.fw-research-twovars {
+  border-top: 0.7px solid var(--ink);
+  border-bottom: 0.7px solid var(--ink);
+  padding: 1.5rem 0;
+  margin: 0 0 2.5rem;
+}
+.fw-research-twovars-head {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0 0 1rem;
+}
+.fw-research-twovars-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2.5rem;
+  margin: 0 0 1.25rem;
+}
+.fw-research-twovars-list > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.fw-research-twovars-list dt {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.fw-research-twovars-list dd {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0;
+}
+.fw-research-twovars-foot {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0;
+  font-weight: 300;
+}
+.fw-research-twovars-foot .serif.italic {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+/* Load-bearing principle — pull between Tier 3.5 and Tier 4 */
+.fw-tier-principle {
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1.5px solid var(--accent);
+  border-bottom: 1.5px solid var(--accent);
+  text-align: center;
+}
+.fw-tier-principle-text {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+  line-height: 1.35;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin: 0;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fw-tier-principle-text .serif.italic {
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+/* Inline citation styling — parenthetical sources in tier prose */
+.fw-cite {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 0.88em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Sources block — foot of the gated section */
+.fw-sources {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 0.5px solid var(--rule);
+}
+.fw-sources-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.6rem;
+}
+.fw-sources-list {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .fw-research-twovars-list { grid-template-columns: 1fr; gap: 1rem; }
+}
+.fw-protect-mark {
+  margin: 0 0 0.5rem;
+  color: var(--ink-2);
+  text-transform: uppercase;
+}
+.fw-protect-rights {
+  margin: 0;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 11px;
+  font-family: var(--sans);
+  max-width: 720px;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 640px) {
+  .fw-shell { padding: 2.5rem 1.25rem 4rem; }
+
+  .fw-incentives-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .fw-incentives-cell {
+    border-bottom: 0.5px solid var(--rule);
+    padding: 16px 14px;
+  }
+  .fw-incentives-cell:nth-child(2n) { border-right: none; }
+  .fw-incentives-cell:nth-last-child(-n+2) { border-bottom: none; }
+  .fw-incentives-label { font-size: 1.2rem; }
+
+  /* Legacy .fw-tier (still used in research zone, not public) */
+  .fw-tier {
+    grid-template-columns: 28px 1fr;
+    gap: 1rem;
+  }
+  .fw-tier > div:nth-child(2) { grid-column: 1 / -1; }
+  .fw-tier > .fw-tier-body { grid-column: 1 / -1; }
+
+  /* New .fw-dim layout */
+  .fw-masthead {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    text-align: center;
+  }
+  .fw-masthead-right { text-align: center; }
+  .fw-dim-head {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .fw-dim-num { font-size: 72px; }
+  .fw-dim-margin {
+    border-top: 0.7px solid var(--ink);
+    padding-top: 0.75rem;
+  }
+  .fw-dim-margin-fig { font-size: 52px; }
+
+  .fw-ledger-head,
+  .fw-ledger-row {
+    grid-template-columns: 1fr;
+  }
+  .fw-ledger-head > div:first-child,
+  .fw-ledger-cell:first-child {
+    border-right: none;
+    border-bottom: 0.5px solid var(--rule);
+  }
+  .fw-cascade-row {
+    grid-template-columns: 28px 1fr 1.4fr;
+    gap: 12px;
+    padding: 12px 14px;
+  }
+  .fw-cascade-head {
+    padding: 10px 14px;
+  }
+  .fw-stat-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .fw-stat-num { font-size: 88px; }
+  .fw-stat-bar-row {
+    grid-template-columns: 80px 1fr 90px;
+    gap: 10px;
+  }
+  .fw-ladder-head,
+  .fw-ladder-row {
+    grid-template-columns: 1fr 80px 80px;
+    padding: 10px 14px;
+  }
+  .fw-ladder-foot { padding: 12px 14px; }
+}

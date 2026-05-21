@@ -63,6 +63,11 @@ body {
   text-transform: uppercase;
   color: var(--accent);
 }
+.fw-confidential-short { display: none; }
+@media (max-width: 600px) {
+  .fw-confidential-full { display: none; }
+  .fw-confidential-short { display: inline; }
+}
 
 /* Tighten the .eyebrow inside framework context */
 .fw-page .eyebrow {
@@ -1019,6 +1024,19 @@ body {
   .fw-ribbon-side--after .fw-ribbon-num { font-size: 44px; }
 }
 
+/* Phone — single vertical column for the post-first-sale stations so
+   01–05 read as one cohesive flow instead of a top-heavy 1 + 2×2 grid. */
+@media (max-width: 600px) {
+  .fw-ribbon-split { gap: 1.1rem; }
+  .fw-ribbon-after-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .fw-ribbon-side--before .fw-ribbon-num { font-size: 52px; }
+  .fw-ribbon-side--after .fw-ribbon-num { font-size: 40px; }
+  .fw-ribbon-divider { margin: 0; }
+}
+
 /* ===== Research-zone preview — Governance Tiers section ===== */
 .fw-research-preview {
   margin-top: 5rem;
@@ -1245,16 +1263,37 @@ body {
     text-align: center;
   }
   .fw-masthead-right { text-align: center; }
+  .fw-dim {
+    padding: 1.75rem 0 2.25rem;
+  }
   .fw-dim-head {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 4px 18px;
+    margin-bottom: 1.2rem;
+    align-items: end;
   }
-  .fw-dim-num { font-size: 72px; }
+  /* Big numeral hugs the eyebrow/name on its right */
+  .fw-dim-num {
+    font-size: 64px;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    line-height: 0.9;
+  }
+  .fw-dim-meta {
+    grid-column: 2;
+    grid-row: 2;
+    padding-top: 0;
+  }
+  /* Right-rail stat block drops below the heading row */
   .fw-dim-margin {
+    grid-column: 1 / -1;
+    grid-row: 3;
     border-top: 0.7px solid var(--ink);
-    padding-top: 0.75rem;
+    padding-top: 0.85rem;
+    margin-top: 0.25rem;
   }
-  .fw-dim-margin-fig { font-size: 52px; }
+  .fw-dim-margin-fig { font-size: 44px; }
 
   .fw-ledger-head,
   .fw-ledger-row {

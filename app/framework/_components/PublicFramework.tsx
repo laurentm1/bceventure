@@ -130,7 +130,10 @@ export default function PublicFramework({ gateForm }: Props) {
       <div className="fw-shell">
         <div className="fw-topbar">
           <a href="/" className="fw-back">← BCE.VENTURES</a>
-          <span className="fw-confidential">© Confidential · For internal review only · Not for redistribution</span>
+          <span className="fw-confidential">
+            <span className="fw-confidential-full">© Confidential · For internal review only · Not for redistribution</span>
+            <span className="fw-confidential-short" aria-hidden="true">© Confidential</span>
+          </span>
         </div>
 
         <div className="fw-masthead">

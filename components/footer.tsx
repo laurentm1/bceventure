@@ -12,16 +12,16 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Practice</h4>
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#approach">Approach</a></li>
-            <li><a href="#engagements">Engagements</a></li>
-            <li><a href="#insights">Insights</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#practice">Practice</a></li>
+            <li><a href="/#engagements">Engagements</a></li>
+            <li><a href="/#insights">Insights</a></li>
           </ul>
         </div>
         <div className="footer-col">
           <h4>Connect</h4>
           <ul>
-            <li><a href="#contact">Request a consult</a></li>
+            <li><a href="/#contact">Request a consult</a></li>
             <li>
               <a href="https://www.linkedin.com/in/alamrami/" target="_blank" rel="noopener noreferrer">
                 LinkedIn

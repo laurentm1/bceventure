@@ -348,7 +348,8 @@ body {
 .fw-stat-table--compact { border-top: none; }
 .fw-stat-table-head {
   display: grid;
-  grid-template-columns: 1fr 200px;
+  grid-template-columns: 36px minmax(0, 1fr) 200px;
+  gap: 12px;
   padding: 10px 4px;
   border-bottom: 0.5px solid var(--ink);
   font-family: var(--mono);
@@ -357,12 +358,13 @@ body {
   text-transform: uppercase;
   color: var(--muted);
 }
+.fw-stat-table-head > :first-child { grid-column: 1 / span 2; }
 .fw-stat-table-head > :last-child {
   text-align: center;
 }
 .fw-stat-table-row {
   display: grid;
-  grid-template-columns: 36px 1fr 200px;
+  grid-template-columns: 36px minmax(0, 1fr) 200px;
   align-items: center;
   padding: 12px 4px;
   border-bottom: 0.5px solid var(--rule);
@@ -719,27 +721,29 @@ body {
 
 /* ===== Compounding ledger (Fig. 05) ===== */
 .fw-ledger {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border-top: 0.7px solid var(--ink);
   border-bottom: 0.7px solid var(--ink);
 }
-.fw-ledger-head {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-bottom: 0.5px solid var(--rule);
+.fw-ledger-col {
+  display: flex;
+  flex-direction: column;
 }
-.fw-ledger-head > div {
+.fw-ledger-col:first-child {
+  border-right: 0.5px solid var(--rule);
+}
+.fw-ledger-col-head {
   display: flex;
   align-items: baseline;
   gap: 14px;
   padding: 12px 18px;
+  border-bottom: 0.5px solid var(--rule);
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--ink);
-}
-.fw-ledger-head > div:first-child {
-  border-right: 0.5px solid var(--rule);
 }
 .fw-ledger-rom {
   font-family: var(--serif);
@@ -749,22 +753,15 @@ body {
   letter-spacing: 0;
   color: var(--muted);
 }
-.fw-ledger-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-bottom: 0.5px solid var(--rule);
-}
-.fw-ledger-row:last-child {
-  border-bottom: none;
-}
 .fw-ledger-cell {
   display: flex;
   align-items: baseline;
   gap: 16px;
   padding: 14px 18px;
+  border-bottom: 0.5px solid var(--rule);
 }
-.fw-ledger-cell:first-child {
-  border-right: 0.5px solid var(--rule);
+.fw-ledger-cell:last-child {
+  border-bottom: none;
 }
 .fw-ledger-num {
   font-family: var(--mono);
@@ -1237,16 +1234,37 @@ body {
 @media (max-width: 640px) {
   .fw-shell { padding: 2.5rem 1.25rem 4rem; }
 
+  /* Lifecycle governance (Fig. 04) on mobile — single vertical column
+     so each effect reads as its own row instead of a cramped 2×2 grid. */
   .fw-incentives-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    border-top: 0.5px solid var(--rule);
   }
   .fw-incentives-cell {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr) auto;
+    column-gap: 14px;
+    align-items: center;
+    border-right: none;
     border-bottom: 0.5px solid var(--rule);
-    padding: 16px 14px;
+    padding: 14px 4px;
   }
-  .fw-incentives-cell:nth-child(2n) { border-right: none; }
-  .fw-incentives-cell:nth-last-child(-n+2) { border-bottom: none; }
-  .fw-incentives-label { font-size: 1.2rem; }
+  .fw-incentives-cell:last-child { border-bottom: none; }
+  .fw-incentives-meta-top {
+    margin: 0;
+  }
+  .fw-incentives-label {
+    font-size: 1.15rem;
+    margin: 0;
+    line-height: 1.2;
+  }
+  .fw-incentives-rule { display: none; }
+  .fw-incentives-meta {
+    margin: 0;
+    text-align: right;
+    font-size: 8.5px;
+    letter-spacing: 0.18em;
+  }
 
   /* Legacy .fw-tier (still used in research zone, not public) */
   .fw-tier {
@@ -1295,14 +1313,15 @@ body {
   }
   .fw-dim-margin-fig { font-size: 44px; }
 
-  .fw-ledger-head,
-  .fw-ledger-row {
+  /* Compounding ledger (Fig. 05) on mobile — stack the two columns into
+     two distinct sections so the Maison list reads top-to-bottom, then
+     the Client list, instead of interleaved 01-Maison / 01-Client / 02… */
+  .fw-ledger {
     grid-template-columns: 1fr;
   }
-  .fw-ledger-head > div:first-child,
-  .fw-ledger-cell:first-child {
+  .fw-ledger-col:first-child {
     border-right: none;
-    border-bottom: 0.5px solid var(--rule);
+    border-bottom: 0.7px solid var(--ink);
   }
   .fw-cascade-row {
     grid-template-columns: 28px 1fr 1.4fr;
@@ -1327,4 +1346,16 @@ body {
     padding: 10px 14px;
   }
   .fw-ladder-foot { padding: 12px 14px; }
+
+  /* Verified evidence rows (Fig. 02, Fig. 05) — bigger stat figure and
+     vertical-center the number against its caption + source on mobile. */
+  .fw-evidence-row {
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+  }
+  .fw-evidence-fig {
+    font-size: clamp(48px, 13vw, 64px);
+    line-height: 0.95;
+  }
 }

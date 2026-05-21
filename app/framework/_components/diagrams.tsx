@@ -128,22 +128,30 @@ export function CompoundingLedger() {
         ))}
       </div>
       <div className="fw-ledger fw-ledger--mt">
-        <div className="fw-ledger-head">
-          <div><span className="fw-ledger-rom">I.</span><span>The Maison gains</span></div>
-          <div><span className="fw-ledger-rom">II.</span><span>The client gains</span></div>
-        </div>
-        {rows.map((r, i) => (
-          <div className="fw-ledger-row" key={i}>
-            <div className="fw-ledger-cell">
+        <div className="fw-ledger-col">
+          <div className="fw-ledger-col-head">
+            <span className="fw-ledger-rom">I.</span>
+            <span>The Maison gains</span>
+          </div>
+          {rows.map((r, i) => (
+            <div className="fw-ledger-cell" key={`m-${i}`}>
               <span className="fw-ledger-num">{String(i + 1).padStart(2, '0')}</span>
               <span className="fw-ledger-item">{r[0]}</span>
             </div>
-            <div className="fw-ledger-cell">
+          ))}
+        </div>
+        <div className="fw-ledger-col">
+          <div className="fw-ledger-col-head">
+            <span className="fw-ledger-rom">II.</span>
+            <span>The client gains</span>
+          </div>
+          {rows.map((r, i) => (
+            <div className="fw-ledger-cell" key={`c-${i}`}>
               <span className="fw-ledger-num">{String(i + 1).padStart(2, '0')}</span>
               <span className="fw-ledger-item">{r[1]}</span>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )

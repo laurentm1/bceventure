@@ -305,8 +305,9 @@
 .fwg-page .fw-card--hi {
   border: 0;
   background: var(--bone-2);
-  padding: 2.6rem 2.4rem;
-  max-width: none;
+  padding: 2.4rem;
+  margin: 2rem 0;
+  max-width: 760px;
 }
 .fwg-page .fw-card--hi::before {
   background: var(--accent);
@@ -1525,6 +1526,70 @@
   .fwg-page .fw-spectrum-station { border-left: 0; border-top: 0.5px solid var(--rule); }
   .fwg-page .fw-spectrum-station:nth-child(-n+2) { border-top: 0; }
   .fwg-page .fw-spectrum-num { font-size: 34px; }
+}
+
+/* =========================================================================
+   Persistent contact footer · renders on every research tab, between the
+   active pane and the page footer. Breaks out to a full-width band via
+   negative horizontal margins matching the .fw-shell inner padding.
+   ========================================================================= */
+
+.fwg-page .fwg-contact {
+  margin: 4rem -2.5rem 2rem;
+  padding: 2.4rem 2.8rem;
+  background: var(--bone-2);
+  border-top: 0.7px solid var(--ink);
+  border-bottom: 0.7px solid var(--ink);
+}
+.fwg-page .fwg-contact-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  max-width: 900px;
+}
+.fwg-page .fwg-contact-eye {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.55rem;
+}
+.fwg-page .fwg-contact-line {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 0;
+  max-width: 38ch;
+  letter-spacing: -0.005em;
+}
+.fwg-page .fwg-contact-cta {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 1.6rem;
+  background: var(--ink);
+  color: var(--bone);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+.fwg-page .fwg-contact-cta:hover { background: var(--accent); }
+.fwg-page .fwg-contact-cta-arrow {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+}
+@media (max-width: 720px) {
+  .fwg-page .fwg-contact-row { grid-template-columns: 1fr; }
 }
 
 /* =========================================================================

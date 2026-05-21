@@ -348,7 +348,8 @@ body {
 .fw-stat-table--compact { border-top: none; }
 .fw-stat-table-head {
   display: grid;
-  grid-template-columns: 1fr 200px;
+  grid-template-columns: 36px minmax(0, 1fr) 200px;
+  gap: 12px;
   padding: 10px 4px;
   border-bottom: 0.5px solid var(--ink);
   font-family: var(--mono);
@@ -357,12 +358,13 @@ body {
   text-transform: uppercase;
   color: var(--muted);
 }
+.fw-stat-table-head > :first-child { grid-column: 1 / span 2; }
 .fw-stat-table-head > :last-child {
   text-align: center;
 }
 .fw-stat-table-row {
   display: grid;
-  grid-template-columns: 36px 1fr 200px;
+  grid-template-columns: 36px minmax(0, 1fr) 200px;
   align-items: center;
   padding: 12px 4px;
   border-bottom: 0.5px solid var(--rule);
@@ -1237,16 +1239,37 @@ body {
 @media (max-width: 640px) {
   .fw-shell { padding: 2.5rem 1.25rem 4rem; }
 
+  /* Lifecycle governance (Fig. 04) on mobile — single vertical column
+     so each effect reads as its own row instead of a cramped 2×2 grid. */
   .fw-incentives-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    border-top: 0.5px solid var(--rule);
   }
   .fw-incentives-cell {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr) auto;
+    column-gap: 14px;
+    align-items: center;
+    border-right: none;
     border-bottom: 0.5px solid var(--rule);
-    padding: 16px 14px;
+    padding: 14px 4px;
   }
-  .fw-incentives-cell:nth-child(2n) { border-right: none; }
-  .fw-incentives-cell:nth-last-child(-n+2) { border-bottom: none; }
-  .fw-incentives-label { font-size: 1.2rem; }
+  .fw-incentives-cell:last-child { border-bottom: none; }
+  .fw-incentives-meta-top {
+    margin: 0;
+  }
+  .fw-incentives-label {
+    font-size: 1.15rem;
+    margin: 0;
+    line-height: 1.2;
+  }
+  .fw-incentives-rule { display: none; }
+  .fw-incentives-meta {
+    margin: 0;
+    text-align: right;
+    font-size: 8.5px;
+    letter-spacing: 0.18em;
+  }
 
   /* Legacy .fw-tier (still used in research zone, not public) */
   .fw-tier {
@@ -1327,4 +1350,16 @@ body {
     padding: 10px 14px;
   }
   .fw-ladder-foot { padding: 12px 14px; }
+
+  /* Verified evidence rows (Fig. 02, Fig. 05) — bigger stat figure and
+     vertical-center the number against its caption + source on mobile. */
+  .fw-evidence-row {
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+  }
+  .fw-evidence-fig {
+    font-size: clamp(48px, 13vw, 64px);
+    line-height: 0.95;
+  }
 }

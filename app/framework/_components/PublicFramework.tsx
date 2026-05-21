@@ -46,7 +46,7 @@ const DIMENSIONS: Dim[] = [
     num: '03',
     label: 'The gap',
     name: 'Authorship',
-    fig: '0',
+    fig: 'Zero',
     note: 'Maison-defined standards held across the broader market today.',
     body: [
       'The market mastered circulation. No one has fully solved authorship.',

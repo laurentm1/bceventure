@@ -721,27 +721,29 @@ body {
 
 /* ===== Compounding ledger (Fig. 05) ===== */
 .fw-ledger {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border-top: 0.7px solid var(--ink);
   border-bottom: 0.7px solid var(--ink);
 }
-.fw-ledger-head {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-bottom: 0.5px solid var(--rule);
+.fw-ledger-col {
+  display: flex;
+  flex-direction: column;
 }
-.fw-ledger-head > div {
+.fw-ledger-col:first-child {
+  border-right: 0.5px solid var(--rule);
+}
+.fw-ledger-col-head {
   display: flex;
   align-items: baseline;
   gap: 14px;
   padding: 12px 18px;
+  border-bottom: 0.5px solid var(--rule);
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--ink);
-}
-.fw-ledger-head > div:first-child {
-  border-right: 0.5px solid var(--rule);
 }
 .fw-ledger-rom {
   font-family: var(--serif);
@@ -751,22 +753,15 @@ body {
   letter-spacing: 0;
   color: var(--muted);
 }
-.fw-ledger-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-bottom: 0.5px solid var(--rule);
-}
-.fw-ledger-row:last-child {
-  border-bottom: none;
-}
 .fw-ledger-cell {
   display: flex;
   align-items: baseline;
   gap: 16px;
   padding: 14px 18px;
+  border-bottom: 0.5px solid var(--rule);
 }
-.fw-ledger-cell:first-child {
-  border-right: 0.5px solid var(--rule);
+.fw-ledger-cell:last-child {
+  border-bottom: none;
 }
 .fw-ledger-num {
   font-family: var(--mono);
@@ -1318,14 +1313,15 @@ body {
   }
   .fw-dim-margin-fig { font-size: 44px; }
 
-  .fw-ledger-head,
-  .fw-ledger-row {
+  /* Compounding ledger (Fig. 05) on mobile — stack the two columns into
+     two distinct sections so the Maison list reads top-to-bottom, then
+     the Client list, instead of interleaved 01-Maison / 01-Client / 02… */
+  .fw-ledger {
     grid-template-columns: 1fr;
   }
-  .fw-ledger-head > div:first-child,
-  .fw-ledger-cell:first-child {
+  .fw-ledger-col:first-child {
     border-right: none;
-    border-bottom: 0.5px solid var(--rule);
+    border-bottom: 0.7px solid var(--ink);
   }
   .fw-cascade-row {
     grid-template-columns: 28px 1fr 1.4fr;

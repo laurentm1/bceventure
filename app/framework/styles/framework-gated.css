@@ -1535,18 +1535,16 @@
    ========================================================================= */
 
 .fwg-page .fwg-contact {
-  margin: 4rem -2.5rem 2rem;
-  padding: 2.4rem 2.8rem;
+  margin: 4rem 0 2rem;
+  padding: 2.4rem;
   background: var(--bone-2);
-  border-top: 0.7px solid var(--ink);
-  border-bottom: 0.7px solid var(--ink);
+  max-width: 760px;
 }
 .fwg-page .fwg-contact-row {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 2rem;
   align-items: center;
-  max-width: 900px;
 }
 .fwg-page .fwg-contact-eye {
   font-family: var(--mono);

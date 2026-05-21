@@ -333,7 +333,7 @@ body {
 .fw-stat-table--compact { border-top: none; }
 .fw-stat-table-head {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 200px;
   padding: 10px 4px;
   border-bottom: 0.5px solid var(--ink);
   font-family: var(--mono);
@@ -342,10 +342,13 @@ body {
   text-transform: uppercase;
   color: var(--muted);
 }
+.fw-stat-table-head > :last-child {
+  text-align: center;
+}
 .fw-stat-table-row {
   display: grid;
-  grid-template-columns: 36px 1fr auto;
-  align-items: baseline;
+  grid-template-columns: 36px 1fr 200px;
+  align-items: center;
   padding: 12px 4px;
   border-bottom: 0.5px solid var(--rule);
   gap: 12px;
@@ -366,7 +369,9 @@ body {
 }
 .fw-stat-table-dot {
   color: var(--accent);
-  font-size: 12px;
+  font-size: 20px;
+  line-height: 1;
+  justify-self: center;
 }
 
 /* Comparison bars (Fig. 02) */

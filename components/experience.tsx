@@ -25,7 +25,7 @@ const ENTRIES = [
   {
     name: 'Graff · Harry Winston · de Grisogono · Tiffany & Co.',
     body: [
-      'Operated at the supplier-to-maison interface in natural colored diamonds — the most trust-intensive corner of hard luxury.',
+      'Operated at the supplier-to-maison interface in natural colored diamonds, the most trust-intensive corner of hard luxury.',
       'The foundational trust layer of hard luxury.',
     ],
   },
@@ -51,7 +51,7 @@ export default function SelectedExperience() {
     <section className="section" id="experience">
       <div className="container">
         <SectionHeader
-          num="01.5 — Selected Experience"
+          num="01.5 · Selected Experience"
           eyebrow="Before BCE Ventures"
           title="Built at scale."
           italic="Applied with precision."

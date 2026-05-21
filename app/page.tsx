@@ -1,7 +1,6 @@
 import Nav from '@/components/nav'
 import Hero from '@/components/hero'
 import Previously from '@/components/previously'
-import Marquee from '@/components/marquee'
 import Manifesto from '@/components/manifesto'
 import About from '@/components/about'
 import Pillars from '@/components/pillars'
@@ -17,7 +16,6 @@ export default function HomePage() {
       <Nav />
       <Hero />
       <Previously />
-      <Marquee />
       <Manifesto />
       <About />
       <Pillars />

@@ -58,7 +58,7 @@ export default function Insights() {
                 <h3 className="insight-title">{it.title}</h3>
                 <p className="insight-kicker">{it.kicker}</p>
               </div>
-              <span className="insight-tag">— {it.tag}</span>
+              <span className="insight-tag">· {it.tag}</span>
               <span className="insight-arrow">→</span>
             </a>
           ))}

@@ -1,24 +1,32 @@
-const CREDENTIALS = [
-  'Amazon',
-  'Google',
-  'Target · Best Buy · Walmart',
-  'Graff · Harry Winston · Van Cleef & Arpels · Tiffany & Co.',
-  'Founding Member, CHIEF',
-  'Executive Panelist, Transformation 2025',
-  'Parsons M.Arch',
+const GROUPS = [
+  {
+    label: 'Retail and Tech',
+    names: 'Amazon, Google, Target, Best Buy, Walmart',
+  },
+  {
+    label: 'Maisons',
+    names: 'Graff, Harry Winston, Van Cleef & Arpels, Tiffany & Co.',
+  },
+  {
+    label: 'Recognition',
+    names: 'Founding Member CHIEF, Executive Panelist Transformation 2025, Parsons M.Arch',
+  },
 ]
 
 export default function Previously() {
   return (
-    <section className="previously" aria-label="Previously partnered with">
+    <section className="previously" aria-label="Selected partnerships and credentials">
       <div className="container">
         <div className="previously-inner">
-          <span className="eyebrow">Selected partnerships &amp; credentials</span>
-          <ul className="previously-list">
-            {CREDENTIALS.map((c, i) => (
-              <li key={i}>{c}</li>
+          <span className="eyebrow previously-heading">Selected partnerships and credentials</span>
+          <div className="credentials-groups">
+            {GROUPS.map((g) => (
+              <div className="credentials-group" key={g.label}>
+                <span className="eyebrow credentials-group-label">{g.label}</span>
+                <p className="credentials-group-names body-l">{g.names}</p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </section>

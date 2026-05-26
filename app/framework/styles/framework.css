@@ -639,84 +639,54 @@ body {
   color: var(--muted);
 }
 
-/* Incentives — meta number at top of cell (no verb row) */
-.fw-incentives-meta-top {
+/* ===== Lifecycle Flywheel (Fig. 04) ===== */
+.fw-fly-svg {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  margin: 1.5rem auto 0;
+  color: var(--ink);
+  overflow: visible;
+}
+.fw-fly-svg text { text-anchor: middle; fill: currentColor; }
+.fw-fly-arc { fill: none; stroke: currentColor; stroke-width: 1.1; }
+.fw-fly-eyebrow {
   font-family: var(--mono);
   font-size: 9px;
-  letter-spacing: 0.18em;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 10px;
+  opacity: 0.55;
 }
-.fw-cascade-foot {
+.fw-fly-hub {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 1.2rem;
-  color: var(--ink);
-  letter-spacing: -0.01em;
+  font-size: 24px;
 }
-
-/* ===== Incentives — horizontal 4-cell grid (Fig. 04) ===== */
-.fw-cascade-row-head {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  padding-bottom: 14px;
-  border-bottom: 2px solid var(--ink);
-  margin-bottom: 0;
-}
-.fw-cascade-source {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 1.2rem;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-}
-.fw-cascade-source em { font-style: italic; }
-
-.fw-incentives-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-}
-.fw-incentives-cell {
-  padding: 22px 22px 22px 0;
-  border-right: 0.5px solid var(--rule);
-}
-.fw-incentives-cell:last-child {
-  border-right: none;
-}
-.fw-incentives-cell:not(:first-child) {
-  padding-left: 22px;
-}
-.fw-incentives-verb {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 1.2rem;
-  color: var(--accent);
-  margin-bottom: 4px;
-  letter-spacing: -0.005em;
-}
-.fw-incentives-label {
-  font-family: var(--serif);
-  font-size: 1.5rem;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-  margin-bottom: 16px;
-}
-.fw-incentives-rule {
-  width: 28px;
-  height: 0;
-  border-top: 0.5px solid var(--muted);
-  margin-bottom: 10px;
-}
-.fw-incentives-meta {
+.fw-fly-verb {
   font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.18em;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  opacity: 0.65;
+}
+.fw-fly-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  opacity: 0.55;
+}
+.fw-fly-label {
+  font-family: var(--serif);
+  font-size: 24px;
+}
+.fw-fly-caption {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--muted);
+  text-align: center;
+  margin: 18px 0 0;
+  opacity: 0.7;
 }
 
 /* ===== Compounding ledger (Fig. 05) ===== */
@@ -1233,38 +1203,6 @@ body {
 /* ===== Mobile ===== */
 @media (max-width: 640px) {
   .fw-shell { padding: 2.5rem 1.25rem 4rem; }
-
-  /* Lifecycle governance (Fig. 04) on mobile — single vertical column
-     so each effect reads as its own row instead of a cramped 2×2 grid. */
-  .fw-incentives-grid {
-    grid-template-columns: 1fr;
-    border-top: 0.5px solid var(--rule);
-  }
-  .fw-incentives-cell {
-    display: grid;
-    grid-template-columns: 32px minmax(0, 1fr) auto;
-    column-gap: 14px;
-    align-items: center;
-    border-right: none;
-    border-bottom: 0.5px solid var(--rule);
-    padding: 14px 4px;
-  }
-  .fw-incentives-cell:last-child { border-bottom: none; }
-  .fw-incentives-meta-top {
-    margin: 0;
-  }
-  .fw-incentives-label {
-    font-size: 1.15rem;
-    margin: 0;
-    line-height: 1.2;
-  }
-  .fw-incentives-rule { display: none; }
-  .fw-incentives-meta {
-    margin: 0;
-    text-align: right;
-    font-size: 8.5px;
-    letter-spacing: 0.18em;
-  }
 
   /* Legacy .fw-tier (still used in research zone, not public) */
   .fw-tier {

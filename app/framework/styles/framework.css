@@ -649,6 +649,13 @@ body {
   overflow: visible;
 }
 .fw-fly-svg text { text-anchor: middle; fill: currentColor; }
+.fw-fly-watermark {
+  font-family: var(--wordmark);
+  font-size: 92px;
+  letter-spacing: 6px;
+  font-weight: 400;
+  opacity: 0.05;
+}
 .fw-fly-arc { fill: none; stroke: currentColor; stroke-width: 1.1; }
 .fw-fly-eyebrow {
   font-family: var(--mono);

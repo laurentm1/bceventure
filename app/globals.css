@@ -432,11 +432,10 @@ section, .section {
 /* ===== Hero ===== */
 
 .hero {
-  min-height: 100vh;
   padding: 160px var(--pad-x) 56px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 64px;
   position: relative;
   overflow: hidden;
 }
@@ -459,8 +458,6 @@ section, .section {
   grid-template-rows: auto;
   gap: 0 5rem;
   align-items: end;
-  align-content: end;
-  flex: 1;
 }
 
 /* Left col: headline */
@@ -468,6 +465,7 @@ section, .section {
   grid-column: 1;
   grid-row: 1;
   min-width: 0;
+  margin-left: max(0px, calc((100vw - var(--maxw)) / 2));
 }
 
 /* Right col: descriptive text */
@@ -614,13 +612,8 @@ section, .section {
   color: var(--ink);
 }
 
-.hero-foot {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-top: 80px;
-  gap: 32px;
-  flex-wrap: wrap;
+.hero-meta-right {
+  text-align: right;
 }
 
 .scroll-hint {

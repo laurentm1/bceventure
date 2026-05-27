@@ -116,6 +116,8 @@ export function LifecycleFlywheel() {
           </marker>
         </defs>
 
+        <text x="360" y="330" className="fw-fly-watermark" aria-hidden="true">BCE.VENTURES</text>
+
         <circle cx="360" cy="310" r="105" fill="url(#fw-fly-hatch)" stroke="currentColor" strokeWidth="0.7" />
         <circle cx="360" cy="310" r="93" fill="none" stroke="currentColor" strokeWidth="0.4" opacity="0.45" />
         <circle cx="360" cy="310" r="2.5" fill="currentColor" opacity="0.7" />

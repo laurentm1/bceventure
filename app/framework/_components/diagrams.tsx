@@ -77,26 +77,77 @@ export function AuthorshipCircles() {
   )
 }
 
-export function IncentivesFan() {
-  const items = ['Upgrade behavior', 'Ownership cycles', 'Pricing confidence', 'Customer relationship']
+export function LifecycleFlywheel() {
   return (
     <div className="fw-chart-block">
       <span className="fw-chart-label">Fig. 04 — Lifecycle governance · effects on the primary business</span>
-      <div className="fw-cascade-row-head">
-        <span className="fw-cascade-source"><em>Lifecycle governance</em></span>
-        <span className="fw-cascade-arrow">→</span>
-        <span className="fw-cascade-foot">shapes the primary market at every point</span>
-      </div>
-      <div className="fw-incentives-grid">
-        {items.map((it, i) => (
-          <div className="fw-incentives-cell" key={it}>
-            <div className="fw-incentives-meta-top">{String(i + 1).padStart(2, '0')}</div>
-            <div className="fw-incentives-label">{it}</div>
-            <div className="fw-incentives-rule"></div>
-            <div className="fw-incentives-meta">primary-market effect</div>
-          </div>
-        ))}
-      </div>
+      <svg
+        className="fw-fly-svg"
+        viewBox="0 0 720 620"
+        role="img"
+        aria-labelledby="fw-fly-title fw-fly-desc"
+      >
+        <title id="fw-fly-title">Lifecycle Governance Flywheel</title>
+        <desc id="fw-fly-desc">
+          Lifecycle governance is the engine driving four self-reinforcing primary-market effects.
+          Upgrade behavior drives ownership cycles, which compound pricing confidence, which deepens
+          customer relationship, which renews upgrade behavior.
+        </desc>
+        <defs>
+          <pattern
+            id="fw-fly-hatch"
+            patternUnits="userSpaceOnUse"
+            width="5"
+            height="5"
+            patternTransform="rotate(45)"
+          >
+            <line x1="0" y1="0" x2="0" y2="5" stroke="currentColor" strokeWidth="0.5" opacity="0.14" />
+          </pattern>
+          <marker
+            id="fw-fly-arrow"
+            viewBox="0 0 10 10"
+            refX="9"
+            refY="5"
+            markerWidth="8"
+            markerHeight="8"
+            orient="auto"
+          >
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
+          </marker>
+        </defs>
+
+        <circle cx="360" cy="310" r="105" fill="url(#fw-fly-hatch)" stroke="currentColor" strokeWidth="0.7" />
+        <circle cx="360" cy="310" r="93" fill="none" stroke="currentColor" strokeWidth="0.4" opacity="0.45" />
+        <circle cx="360" cy="310" r="2.5" fill="currentColor" opacity="0.7" />
+        <text x="360" y="270" className="fw-fly-eyebrow">THE  ENGINE</text>
+        <text x="360" y="308" className="fw-fly-hub">Lifecycle</text>
+        <text x="360" y="338" className="fw-fly-hub">governance</text>
+
+        <path d="M 428 122 A 200 200 0 0 1 548 242" className="fw-fly-arc" markerEnd="url(#fw-fly-arrow)" />
+        <path d="M 548 378 A 200 200 0 0 1 428 498" className="fw-fly-arc" markerEnd="url(#fw-fly-arrow)" />
+        <path d="M 292 498 A 200 200 0 0 1 172 378" className="fw-fly-arc" markerEnd="url(#fw-fly-arrow)" />
+        <path d="M 172 242 A 200 200 0 0 1 292 122" className="fw-fly-arc" markerEnd="url(#fw-fly-arrow)" />
+
+        <text x="538" y="142" className="fw-fly-verb">drives</text>
+        <text x="538" y="492" className="fw-fly-verb">compounds</text>
+        <text x="182" y="492" className="fw-fly-verb">deepens</text>
+        <text x="182" y="142" className="fw-fly-verb">renews</text>
+
+        <text x="360" y="56" className="fw-fly-num">01</text>
+        <text x="360" y="84" className="fw-fly-label">Upgrade behavior</text>
+
+        <text x="617" y="288" className="fw-fly-num">02</text>
+        <text x="617" y="312" className="fw-fly-label">Ownership</text>
+        <text x="617" y="340" className="fw-fly-label">cycles</text>
+
+        <text x="360" y="540" className="fw-fly-num">03</text>
+        <text x="360" y="568" className="fw-fly-label">Pricing confidence</text>
+
+        <text x="103" y="288" className="fw-fly-num">04</text>
+        <text x="103" y="312" className="fw-fly-label">Customer</text>
+        <text x="103" y="340" className="fw-fly-label">relationship</text>
+      </svg>
+      <p className="fw-fly-caption">primary-market effects · the wheel spins</p>
     </div>
   )
 }

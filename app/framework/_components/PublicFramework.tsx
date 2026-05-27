@@ -7,7 +7,7 @@ import {
   OriginPillars,
   InterpretationAsymmetry,
   AuthorshipCircles,
-  IncentivesFan,
+  LifecycleFlywheel,
   CompoundingLedger,
 } from './diagrams'
 
@@ -64,7 +64,7 @@ const DIMENSIONS: Dim[] = [
       'How value is governed beyond first sale shapes upgrade behavior, ownership cycles, and pricing confidence at the primary level. It determines who captures the customer relationship, who builds the trust infrastructure, and who benefits from the loyalty that follows.',
       'The question is who defines the standards through which long-term value is interpreted.',
     ],
-    Diagram: () => <IncentivesFan />,
+    Diagram: () => <LifecycleFlywheel />,
   },
   {
     num: '05',

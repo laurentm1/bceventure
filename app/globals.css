@@ -1663,6 +1663,26 @@ section, .section {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
+.nav-mobile-item--stacked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.05;
+  text-align: center;
+}
+.nav-mobile-framework {
+  position: relative;
+  display: inline-block;
+}
+.nav-mobile-tm {
+  position: absolute;
+  left: 100%;
+  top: 0.1em;
+  font-size: 0.5em;
+  margin-left: 2px;
+  letter-spacing: 0;
+  font-weight: 400;
+}
 .nav-mobile-cta {
   font-family: var(--sans) !important;
   font-size: 11px !important;

@@ -4,8 +4,8 @@ const GROUPS = [
     names: 'Amazon, Google, Target, Best Buy, Walmart',
   },
   {
-    label: 'Maisons',
-    names: 'Graff, Harry Winston, Van Cleef & Arpels, Tiffany & Co.',
+    label: 'Hard Luxury',
+    names: 'Graff, Harry Winston, Van Cleef & Arpels, Tiffany & Co., Private Collectors - HNWI',
   },
   {
     label: 'Recognition',

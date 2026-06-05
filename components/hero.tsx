@@ -39,9 +39,11 @@ export default function Hero() {
             Brands built trust with their customers.
           </p>
           <p className="hero-problem">
-            That trust is now being outsourced to the market.{' '}
+            That trust is now being outsourced to the market.
+          </p>
+          <p className="hero-problem">
             <span className="serif italic">
-              Sovereignty is the objective.
+              Long-term value is the asset.
             </span>
           </p>
         </div>

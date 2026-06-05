@@ -6,7 +6,7 @@ const ENTRIES = [
     name: 'Amazon',
     body: [
       'Designed consumer trade-in programs for phones and wearables in partnership with Amazon.',
-      'Built the refurbishment and resale infrastructure that became Amazon Renewed.',
+      'Built the resale infrastructure that became Amazon Renewed.',
       'Subsequently developed the Tier 1 premium layer, laying the groundwork for Amazon Renewed Premium and its global deployment.',
     ],
   },

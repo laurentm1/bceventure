@@ -9,7 +9,7 @@ const GROUPS = [
   },
   {
     label: 'Recognition',
-    names: 'Master of Architecture - Parsons School of Design, CHIEF Founding Member',
+    names: 'Master of Architecture, Parsons School of Design, CHIEF Founding Member, Executive Panelist & Speaker',
   },
 ]
 

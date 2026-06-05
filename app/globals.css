@@ -744,7 +744,6 @@ section, .section {
   padding: 24px 2rem 0 0;
   border-top: 0.5px solid var(--rule-soft);
   border-right: 0.5px solid var(--rule-soft);
-  transition: border-color 0.4s ease;
   cursor: default;
 }
 
@@ -759,10 +758,6 @@ section, .section {
 .pillar:last-child {
   border-right: none;
   padding-right: 0;
-}
-
-.pillar:hover {
-  border-top-color: var(--accent);
 }
 
 .pillar-num {

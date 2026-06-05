@@ -16,12 +16,7 @@ export default function About() {
           <div
             className="portrait"
             style={{ backgroundImage: 'url(/founder.jpg)', backgroundSize: 'cover', backgroundPosition: 'center center' }}
-          >
-            <div className="portrait-label">
-              Alexandra Amrami · Founder
-              <span className="portrait-credit">CHIEF, Executive panel on transformation, 2025</span>
-            </div>
-          </div>
+          />
 
           <div className="about-body">
             <p className="lead">

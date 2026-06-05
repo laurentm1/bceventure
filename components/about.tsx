@@ -29,8 +29,8 @@ export default function About() {
               who identifies structural shifts early and turns them into
               commercial advantage. She has sat on every side of the trust
               chain: as a supplier to the great houses of hard luxury, as
-              the architect of trade-in and resale infrastructure for
-              the world&rsquo;s largest consumer platforms, and as the operator
+              the architect of the trade-in and resale ecosystem for
+              the world&rsquo;s largest tech and consumer platforms, and as the operator
               who installed institutional governance at a multi-billion-dollar
               global distributor. The question of how value holds when an
               object changes hands is the through-line of her career.

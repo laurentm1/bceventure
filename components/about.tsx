@@ -25,7 +25,7 @@ export default function About() {
               precision so strategy and execution reinforce one another.&rdquo;
             </p>
             <p>
-              Alexandra is a strategic operator and former C-suite leader
+              Alexandra is a strategic operator and C-suite leader
               who identifies structural shifts early and turns them into
               commercial advantage. She has sat on every side of the trust
               chain: as a supplier to the great houses of hard luxury, as

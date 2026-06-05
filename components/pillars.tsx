@@ -5,17 +5,17 @@ const PILLARS = [
   {
     num: '01',
     title: 'Trust',
-    body: 'The asset the brand built. Standards, grading, and provenance that hold across handoffs, so the source of truth stays with the maison.',
+    body: 'Standards, grading, and provenance that hold across handoffs, so the source of truth stays with the maison.',
   },
   {
     num: '02',
     title: 'Design',
-    body: 'How trust is kept. Governance, incentives, and operating cadence aligned so the brand sets the terms of value, not the market.',
+    body: 'Governance, incentives, and operating cadence aligned so the brand sets the terms of value, not the market.',
   },
   {
     num: '03',
     title: 'Durable systems',
-    body: 'How trust travels. Infrastructure built for scale and circulation, so assets move, recirculate, and compound value over time.',
+    body: 'Infrastructure built for scale and circulation, so assets move, recirculate, and compound value over time.',
   },
 ]
 
@@ -35,6 +35,15 @@ export default function Pillars() {
       </div>
 
       <div className="container">
+        <Reveal>
+          <p className="practice-intro">
+            Trust used to be set at first sale. Now it is renegotiated every
+            time an object, a business, or a leadership team changes hands.
+            Most brands are still optimizing for the first moment, leaving the
+            market to define everything that comes after.
+          </p>
+        </Reveal>
+
         <Reveal stagger className="pillars">
           {PILLARS.map(p => (
             <article className="pillar" key={p.num}>

@@ -3,6 +3,20 @@ import SectionHeader from '@/components/section-header'
 
 const ITEMS = [
   {
+    date: '06.08.26',
+    title: "Cartier's Strength, the Lab-Grown Divide, and What It Signals About Asset Value",
+    kicker: "Cartier's strength, gold near highs, and lab-grown diamonds tell one story: a renewed appetite for value that endures independently of the brand.",
+    tag: 'Diamonds',
+    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7465805908627881984',
+  },
+  {
+    date: '06.01.26',
+    title: 'Chanel and Apple: A Lesson in Holding Value',
+    kicker: 'The market judges value continuously now. Chanel holds the line, Ralph Lauren refuses the markdown, Apple manages value across generations. Continuity is the strategy.',
+    tag: 'Markets',
+    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7469765451321888768',
+  },
+  {
     date: '05.19.26',
     title: 'Counterfeit is the cover story',
     kicker: 'The real fight is over who certifies, interprets condition, and shapes value once the object changes hands. That is the new infrastructure of luxury.',

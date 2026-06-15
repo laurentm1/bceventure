@@ -15,7 +15,7 @@ const PILLARS = [
   {
     num: '03',
     title: 'Durable systems',
-    body: 'Infrastructure built for scale and circulation, so assets move, recirculate, and compound value over time.',
+    body: 'Infrastructure built for scale and circularity, so assets move, recirculate, and compound value over time.',
   },
 ]
 

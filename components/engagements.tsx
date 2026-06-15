@@ -9,7 +9,7 @@ const CAPABILITIES = [
     body: 'We rebuild the trust infrastructure, authentication, grading, provenance, so the brand stays the source of truth as products move through the world.',
     ideal: 'Luxury maisons and hard luxury, wearables, VR, and emerging device categories, connected luxury and smart home, Fortune 100 retailers, and tech platforms with circular ambitions.',
     outcomes: [
-      'Built and scaled global trade-in and resale partnerships across retail and tech: Amazon Renewed, Google (EMEA and APAC), Target, Walmart, Best Buy',
+      'Built and scaled global trade-in and circularity partnerships across retail and tech: Amazon Renewed, Google (EMEA and APAC), Target, Walmart, Best Buy',
       'Operated at the supplier-to-maison interface in rare natural color diamonds with Graff, Harry Winston, Van Cleef & Arpels, and Tiffany & Co.',
       'Helped establish the standards now used across the device lifecycle, extensible to wearables, VR, and the next generation of connected products',
       'Led $100M+ in inventory deployment across global markets, shaping purchasing and pricing decisions',

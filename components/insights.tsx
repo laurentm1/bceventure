@@ -6,14 +6,14 @@ const ITEMS = [
     date: '06.08.26',
     title: "Cartier's Strength, the Lab-Grown Divide, and What It Signals About Asset Value",
     kicker: "Cartier's strength, gold near highs, and lab-grown diamonds tell one story: a renewed appetite for value that endures independently of the brand.",
-    tag: 'Diamonds',
+    tag: 'Value',
     href: 'https://www.linkedin.com/feed/update/urn:li:activity:7465805908627881984',
   },
   {
     date: '06.01.26',
     title: 'Chanel and Apple: A Lesson in Holding Value',
     kicker: 'The market judges value continuously now. Chanel holds the line, Ralph Lauren refuses the markdown, Apple manages value across generations. Continuity is the strategy.',
-    tag: 'Markets',
+    tag: ['Markets', 'Frameworks'],
     href: 'https://www.linkedin.com/feed/update/urn:li:activity:7469765451321888768',
   },
   {
@@ -41,7 +41,7 @@ const ITEMS = [
     date: '04.06.26',
     title: 'Provenance is the asset',
     kicker: 'The debate was never about chemistry. It was about whether value holds once the object changes hands.',
-    tag: 'Diamonds',
+    tag: 'Value',
     href: 'https://www.linkedin.com/posts/alamrami_after-my-last-post-on-luxury-markets-slowing-activity-7452022945260105729-GKFS',
   },
   {
@@ -72,7 +72,7 @@ export default function Insights() {
                 <h3 className="insight-title">{it.title}</h3>
                 <p className="insight-kicker">{it.kicker}</p>
               </div>
-              <span className="insight-tag">· {it.tag}</span>
+              <span className="insight-tag">· {Array.isArray(it.tag) ? it.tag.join(' · ') : it.tag}</span>
               <span className="insight-arrow">→</span>
             </a>
           ))}

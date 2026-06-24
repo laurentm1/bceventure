@@ -63,20 +63,30 @@ export default function Nav() {
       </nav>
 
       {menuOpen && (
-        <div className="nav-mobile-menu">
-          <button onClick={() => navClick('about')}>About</button>
-          <button onClick={() => navClick('practice')}>Practice</button>
-          <button onClick={() => navClick('insights')}>Insights</button>
-          <a href="/framework" className="nav-mobile-item nav-mobile-item--stacked" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>
-            <span>Sovereignty</span>
-            <span className="nav-mobile-framework">
-              Framework
-              <span className="nav-mobile-tm" aria-hidden="true">™</span>
-            </span>
-          </a>
-          <a href="/clients" className="nav-mobile-item" onClick={() => setMenuOpen(false)}>Clients</a>
-          <button onClick={() => navClick('contact')}>Contact</button>
-          <button className="nav-mobile-cta" onClick={() => navClick('contact')}>
+        <div className="nav-sheet">
+          <button className="nav-sheet-item" onClick={() => navClick('about')}>About</button>
+
+          <div className="nav-sheet-group">
+            <button className="nav-sheet-head" onClick={() => navClick('practice')}>
+              <span>Practice</span>
+              <span className="nav-sheet-tag">The through-line &#8627;</span>
+            </button>
+            <button className="nav-sheet-sub" onClick={() => navClick('engagement-01')}>
+              <span className="nss-title">Value retention</span>
+              <span className="nss-label">Engagement 01</span>
+            </button>
+            <button className="nav-sheet-sub" onClick={() => navClick('engagement-02')}>
+              <span className="nss-title">Leadership &amp; transformation</span>
+              <span className="nss-label">Engagement 02</span>
+            </button>
+          </div>
+
+          <button className="nav-sheet-item" onClick={() => navClick('insights')}>Insights</button>
+          <a href="/framework" className="nav-sheet-item" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Sovereignty Framework™</a>
+          <a href="/clients" className="nav-sheet-item" onClick={() => setMenuOpen(false)}>Clients</a>
+          <button className="nav-sheet-item" onClick={() => navClick('contact')}>Contact</button>
+
+          <button className="nav-sheet-cta" onClick={() => navClick('contact')}>
             Request a consult
           </button>
         </div>

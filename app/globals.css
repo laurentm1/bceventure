@@ -1754,11 +1754,6 @@ section, .section {
   scroll-margin-top: 110px;
 }
 
-@media (max-width: 600px) {
-  .nav-hamburger { display: flex; }
-  .nav-cta--desktop { display: none; }
-}
-
 /* ===== Selected Experience ===== */
 .experience-intro {
   font-family: var(--serif);
@@ -2057,6 +2052,31 @@ section, .section {
   line-height: 1.5;
   color: var(--muted);
 }
+.eng-deeplink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: clamp(28px, 3.5vw, 44px);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  border: 0.5px solid var(--ink);
+  padding: 13px 22px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.eng-deeplink:hover {
+  background: var(--ink);
+  color: var(--bone);
+}
+.eng-deeplink span {
+  transition: transform 0.2s ease;
+}
+.eng-deeplink:hover span {
+  transform: translateX(3px);
+}
 
 /* Engagement ribbon — closes each engagement, carries the CTA.
    Full-bleed dark band like the manifesto: lives outside .container so it
@@ -2272,6 +2292,10 @@ section, .section {
 
 @media (max-width: 900px) {
   .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .nav-cta--desktop { display: none; }
+  .nav { padding: 16px var(--pad-x); }
+  .nav-logo { height: 64px; }
   .hero-grid,
   .about-grid,
   .contact-grid {

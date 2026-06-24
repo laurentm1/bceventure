@@ -131,6 +131,11 @@ export default function Engagements() {
                   ))}
                 </div>
               </div>
+              {i === 0 && (
+                <a className="eng-deeplink" href="/framework">
+                  Explore the Sovereignty Framework&trade; <span aria-hidden="true">&rarr;</span>
+                </a>
+              )}
             </Reveal>
           </div>
 

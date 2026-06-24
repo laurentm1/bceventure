@@ -36,8 +36,8 @@ const DIMENSIONS: Dim[] = [
     num: '02',
     label: 'Where value is tested',
     name: 'Interpretation',
-    fig: '40–65%',
-    note: 'of first-time luxury buyers make their first brand purchase in the pre-owned market. eBay / McKinsey 2025.',
+    fig: '66%',
+    note: 'of resale buyers say it let them discover or buy a brand for the first time, up from 59% in 2022. BCG / Vestiaire Collective 2025.',
     body: 'Secondary markets do not simply reflect value. They shape it. Pricing, condition grading, liquidity, and market incentives increasingly influence how objects are perceived over time.',
     pull: 'Primary market sets the story. Secondary market tests whether it holds.',
     Diagram: () => <InterpretationAsymmetry />,
@@ -71,7 +71,7 @@ const DIMENSIONS: Dim[] = [
     label: 'The objective',
     name: 'Compounding',
     fig: '11%',
-    note: "Rolex CPO's share of all Rolex secondary-market sales today, from zero in 2022. Lifecycle sovereignty compounds.",
+    note: "Rolex CPO's share of all Rolex secondary-market sales today, from zero in 2022. Lifecycle governance compounds into strategic growth.",
     body: [
       'The most enduring luxury objects were always designed to outlive the transaction itself.',
       'Lifecycle sovereignty compounds value for both the Maison and the client. The brand strengthens pricing authority, trust, and long-term governance. The client gains greater confidence in authenticity, provenance, condition, and enduring value.',
@@ -109,17 +109,13 @@ function Dimension({ d }: { d: Dim }) {
   )
 }
 
-type Props = {
-  gateForm: React.ReactNode
-}
-
 const blockCopy = (e: React.ClipboardEvent) => {
   const t = e.target as HTMLElement | null
   if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return
   e.preventDefault()
 }
 
-export default function PublicFramework({ gateForm }: Props) {
+export default function PublicFramework() {
   return (
     <main
       className="fw-page"
@@ -130,22 +126,18 @@ export default function PublicFramework({ gateForm }: Props) {
       <div className="fw-shell">
         <div className="fw-topbar">
           <a href="/" className="fw-back">← BCE.VENTURES</a>
-          <span className="fw-confidential">
-            <span className="fw-confidential-full">© Confidential · For internal review only · Not for redistribution</span>
-            <span className="fw-confidential-short" aria-hidden="true">© Confidential</span>
-          </span>
         </div>
 
         <div className="fw-masthead">
           <span>BCE Ventures · No. 01</span>
           <span className="fw-masthead-mid">The Sovereignty Framework™</span>
-          <span className="fw-masthead-right">Confidential · 2026</span>
+          <span className="fw-masthead-right">2026</span>
         </div>
 
         <p className="eyebrow">A framework in five dimensions</p>
         <h1 className="fw-hero">Sovereignty <em>is the objective.</em></h1>
         <p className="fw-hero-sub">
-          A strategic model for governing value beyond the first sale. For Maisons that built desirability and intend to govern what happens next.
+          A strategic model for governing value beyond the first sale, turning circularity and customer retention into strategic growth. For Maisons that built desirability and intend to govern what happens next.
         </p>
 
         <div className="fw-body">
@@ -171,13 +163,35 @@ export default function PublicFramework({ gateForm }: Props) {
           The brands that define the standards governing value beyond the first sale will increasingly shape how luxury itself is trusted, interpreted, and preserved over time.
         </div>
 
-        <div className="fw-preview-cta">
-          <p className="eyebrow">Beyond the framework</p>
-          <h3 className="fw-gate-title">Market data, precedent analysis, and diagnostic architecture.</h3>
-          <p className="fw-gate-body">
-            The framework above maps the five dimensions. The research behind it covers the market data, the governance tier structure with precedent cases, the cannibalization evidence, mid-market programs, and the full Diagnostic methodology. Available to Maison leadership and strategy teams.
+        <section className="fw-vectors">
+          <p className="eyebrow">The practice · beneath value retention</p>
+          <h2 className="fw-vectors-title">Three vectors carry the framework into the field.</h2>
+          <p className="fw-vectors-intro">
+            The five dimensions describe where value moves. The three vectors are how we intervene. They are the method beneath value retention, the engagement that keeps an object&rsquo;s value governed by the Maison, not the market.
           </p>
-          {gateForm}
+          <div className="fw-vectors-grid">
+            <article className="fw-vector">
+              <h3 className="fw-vector-name">Trust</h3>
+              <p className="fw-vector-body">Standards, grading, and provenance that hold across handoffs, so the source of truth stays with the Maison.</p>
+            </article>
+            <article className="fw-vector">
+              <h3 className="fw-vector-name">Design</h3>
+              <p className="fw-vector-body">Governance, incentives, and operating cadence aligned so the brand sets the terms of value, not the market.</p>
+            </article>
+            <article className="fw-vector">
+              <h3 className="fw-vector-name">Durable systems</h3>
+              <p className="fw-vector-body">Infrastructure built for scale, circularity, and sustainability, so assets move, recirculate, and compound value over time.</p>
+            </article>
+          </div>
+        </section>
+
+        <div className="fw-preview-cta">
+          <p className="eyebrow">The next step</p>
+          <h3 className="fw-gate-title">The Diagnostic is where the framework meets your house.</h3>
+          <p className="fw-gate-body">
+            The framework above maps the five dimensions. Applying it begins with the Diagnostic, the first engagement BCE Ventures undertakes with any Maison.
+          </p>
+          <a className="fw-gate-btn" href="/#contact">Request a consult</a>
         </div>
 
 

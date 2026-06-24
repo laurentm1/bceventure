@@ -3,14 +3,6 @@ import SectionHeader from '@/components/section-header'
 
 const ITEMS = [
   {
-    date: '06.24.26',
-    title: 'Two houses, the same secondary market, opposite outcomes',
-    kicker: 'Gucci and Rolex faced the same secondary market and got opposite results. The difference was authorship: who governs what an object is worth after the first sale.',
-    tag: ['Markets', 'Frameworks'],
-    href: '/insights/two-houses',
-    internal: true,
-  },
-  {
     date: '06.08.26',
     title: "Cartier's Strength, the Lab-Grown Divide, and What It Signals About Asset Value",
     kicker: "Cartier's strength, gold near highs, and lab-grown diamonds tell one story: a renewed appetite for value that endures independently of the brand.",
@@ -74,13 +66,7 @@ export default function Insights() {
 
         <Reveal stagger className="insights-list">
           {ITEMS.map((it, i) => (
-            <a
-              className="insight"
-              key={i}
-              href={it.href}
-              target={'internal' in it && it.internal ? undefined : '_blank'}
-              rel={'internal' in it && it.internal ? undefined : 'noopener noreferrer'}
-            >
+            <a className="insight" key={i} href={it.href} target="_blank" rel="noopener noreferrer">
               <span className="insight-date">{it.date}</span>
               <div className="insight-body">
                 <h3 className="insight-title">{it.title}</h3>

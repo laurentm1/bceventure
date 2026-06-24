@@ -6,7 +6,7 @@ export default function Footer() {
           <span className="mark">BCE<span className="dot">.</span>VENTURES</span>
           <p>
             Operator-led venture building and strategic advisory.
-            Trust, design, durable systems. Sovereignty is the objective.
+            Sovereignty is the objective.
           </p>
         </div>
         <div className="footer-col">

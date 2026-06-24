@@ -1,5 +1,5 @@
 const ITEMS = [
-  'Trust', 'Design', 'Durable systems', 'Pricing power',
+  'Trust', 'Authorship', 'Value retention', 'Pricing power',
   'Standards', 'Provenance', 'Governance', 'Recirculation',
 ]
 

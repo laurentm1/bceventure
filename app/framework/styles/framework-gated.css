@@ -7,7 +7,7 @@
 /* ─── Page hero ─── */
 .fwg-hero {
   padding: 1rem 0 3rem;
-  border-bottom: 3px double var(--ink);
+  border-bottom: 0.5px solid var(--rule);
   margin-bottom: 0;
 }
 .fwg-hero .eyebrow {
@@ -1918,4 +1918,45 @@
 .fwg-page .fw-tier-intel-data strong {
   color: var(--ink);
   font-weight: 500;
+}
+
+/* ─── Case-study chapters ─── Full extended research read as one narrative.
+   Each chapter opens with a strong rule, a mono eyebrow, a serif title and a
+   short lede; the existing research pane follows beneath. */
+.fw-chapter {
+  border-top: 0.5px solid var(--rule);
+  padding-top: 2.6rem;
+  margin-top: 3.4rem;
+}
+.fw-chapter-head {
+  margin-bottom: 2.4rem;
+  max-width: 760px;
+}
+.fw-chapter-eyebrow {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.fw-chapter-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
+}
+.fw-chapter-lede {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin: 1.2rem 0 0;
+  max-width: 680px;
 }

@@ -20,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'BCE.VENTURES — Operator-led venture building & strategic advisory',
   description:
-    'BCE Ventures advises founders, CEOs, leadership teams, and maisons on how value is structured and protected. Circularity, trust, durable systems. Sovereignty is the objective.',
+    'BCE Ventures advises founders, CEOs, leadership teams, and maisons on how value is structured and protected. Sovereignty is the objective.',
   authors: [{ name: 'Alexandra Amrami' }],
   robots: 'index, follow',
   alternates: {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: 'BCE Ventures',
     title: 'BCE.VENTURES — Operator-led venture building & strategic advisory',
     description:
-      'Circularity, trust, durable systems. Sovereignty is the objective.',
+      'Operator-led venture building and strategic advisory. Sovereignty is the objective.',
     url: 'https://bce.ventures/',
     images: [
       {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'BCE.VENTURES — Operator-led venture practice',
-    description: 'Circularity, trust, durable systems. Sovereignty is the objective.',
+    description: 'Operator-led venture building and strategic advisory. Sovereignty is the objective.',
     images: ['https://bce.ventures/og-image.png'],
   },
   other: {
@@ -64,7 +64,7 @@ const JSON_LD = {
       url: 'https://bce.ventures/',
       logo: 'https://bce.ventures/og-image.png',
       description:
-        'Operator-led venture building and strategic advisory. Trust, design, durable systems. Sovereignty is the objective.',
+        'Operator-led venture building and strategic advisory. Sovereignty is the objective.',
       founder: { '@id': 'https://bce.ventures/#founder' },
       address: {
         '@type': 'PostalAddress',

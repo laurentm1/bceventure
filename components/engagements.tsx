@@ -83,7 +83,7 @@ const ENGAGEMENTS = [
     ribbonEyebrow: 'Engagement 02',
     ribbonLine: 'Change is certain.',
     ribbonItalic: 'What survives is your decision.',
-    ctaLabel: 'Discuss a leadership transition',
+    ctaLabel: 'Discuss a transition',
   },
 ]
 
@@ -108,7 +108,7 @@ export default function Engagements() {
       </div>
 
       {ENGAGEMENTS.map((eng, i) => (
-        <div key={i}>
+        <div key={i} id={`engagement-0${i + 1}`} className="engagement-anchor">
           <div className="container">
             <Reveal stagger className={`eng-block ${i > 0 ? 'eng-block--divide' : ''}`.trim()}>
               <span className="eyebrow eng-eyebrow">{eng.eyebrow}</span>

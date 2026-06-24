@@ -730,6 +730,20 @@ section, .section {
   border-left: 0.5px solid var(--rule);
 }
 
+.practice-handoff {
+  margin: clamp(36px, 4vw, 52px) 0 0;
+  padding-top: clamp(26px, 3vw, 38px);
+  border-top: 0.5px solid var(--rule);
+  max-width: 56ch;
+  font-size: clamp(15px, 1.8vw, 16.5px);
+  color: var(--muted);
+  line-height: 1.6;
+}
+.practice-handoff .serif.italic {
+  color: var(--ink-2);
+  font-size: 1.05em;
+}
+
 .pillars {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1912,6 +1926,190 @@ section, .section {
 @media (max-width: 900px) {
   .capability { grid-template-columns: 1fr; gap: 24px; }
   .capability-meta { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* ===== Engagements — two-engagement bodies ===== */
+.eng-block {
+  display: block;
+  padding-top: clamp(44px, 6vw, 80px);
+}
+.eng-block--divide {
+  border-top: 0.5px solid var(--rule);
+}
+.eng-eyebrow {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--muted);
+}
+.lead-stmt {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  font-size: clamp(30px, 5.2vw, 62px);
+  max-width: 16ch;
+  color: var(--ink);
+  margin: 0;
+}
+.lead-stmt .serif.italic {
+  font-weight: 400;
+}
+.eng-frame {
+  margin-top: clamp(26px, 3.5vw, 40px);
+  max-width: 50ch;
+}
+.frame-strong {
+  font-size: clamp(17px, 2.3vw, 22px);
+  font-weight: 300;
+  line-height: 1.48;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.frame-sub {
+  font-size: clamp(15px, 1.8vw, 16.5px);
+  font-weight: 300;
+  line-height: 1.62;
+  color: var(--muted);
+  margin: 1.1em 0 0;
+}
+.eng-authorship {
+  margin: clamp(24px, 3vw, 34px) 0 0;
+  max-width: 50ch;
+  font-size: clamp(15px, 1.8vw, 16.5px);
+  color: var(--muted);
+  line-height: 1.62;
+}
+.eng-authorship .serif.italic {
+  color: var(--ink-2);
+  font-size: 1.05em;
+}
+.proof-wrap {
+  margin-top: clamp(44px, 5vw, 72px);
+  border-top: 0.5px solid var(--rule);
+  padding-top: clamp(30px, 3.5vw, 42px);
+  max-width: 720px;
+}
+.proof-label {
+  display: block;
+  margin-bottom: clamp(20px, 2.5vw, 26px);
+  color: var(--muted);
+}
+.proof {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 2vw, 22px) clamp(28px, 3vw, 40px);
+}
+.proof-item {
+  display: block;
+}
+.proof-h {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(15px, 1.7vw, 17px);
+  color: var(--ink-2);
+  line-height: 1.2;
+  display: block;
+  margin-bottom: 4px;
+}
+.proof-d {
+  font-size: clamp(13px, 1.5vw, 14px);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* Engagement ribbon — closes each engagement, carries the CTA.
+   Full-bleed dark band like the manifesto: lives outside .container so it
+   spans edge to edge, with an inner max-width wrapper. */
+.ribbon {
+  background: var(--deep);
+  color: var(--deep-fg);
+  margin-top: clamp(40px, 5vw, 68px);
+  padding: clamp(36px, 4.5vw, 56px) var(--pad-x);
+}
+.ribbon .in {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(24px, 4vw, 48px);
+  flex-wrap: wrap;
+}
+.ribbon .left {
+  flex: 1 1 auto;
+  min-width: min(100%, 360px);
+}
+.ribbon .ribbon-eyebrow {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-on-deep);
+  margin-bottom: 14px;
+}
+.ribbon .ribbon-line {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(21px, 2.8vw, 32px);
+  line-height: 1.18;
+  max-width: 22ch;
+  color: var(--deep-fg);
+}
+.ribbon .ribbon-line .italic {
+  font-style: italic;
+  color: var(--accent-on-deep);
+}
+.ribbon .btn {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--bone);
+  color: var(--ink);
+  padding: 15px 26px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 0.5px solid var(--bone);
+  transition: transform 0.15s ease;
+  flex: 0 0 auto;
+}
+.ribbon .btn:hover {
+  transform: translateY(-1px);
+}
+.ribbon .btn .arw {
+  transition: transform 0.2s ease;
+}
+.ribbon .btn:hover .arw {
+  transform: translateX(3px);
+}
+@media (max-width: 720px) {
+  .proof {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .proof-item {
+    padding: 12px 0;
+    border-top: 0.5px solid var(--rule-soft);
+  }
+  .proof-item:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+}
+@media (max-width: 680px) {
+  .ribbon .in {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+  .ribbon .left {
+    min-width: 0;
+  }
 }
 
 .hero-mark-large {

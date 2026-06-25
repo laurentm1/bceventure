@@ -44,10 +44,16 @@ export default function Nav() {
           <div className="nav-dropdown">
             <button className="nav-link" onClick={scrollTo('practice')} aria-haspopup="true">Practice</button>
             <div className="nav-dropdown-menu">
-              <button className="nav-dd-item" onClick={scrollTo('engagement-01')}>
-                <span className="nav-dd-label">Engagement 01</span>
-                <span className="nav-dd-title">Value retention</span>
-              </button>
+              <div className="nav-dd-item nav-dd-item--group">
+                <button className="nav-dd-trigger" onClick={scrollTo('engagement-01')}>
+                  <span className="nav-dd-label">Engagement 01</span>
+                  <span className="nav-dd-title">Value retention</span>
+                </button>
+                <a href="/framework" className="nav-dd-sub">
+                  <span>Sovereignty Framework™</span>
+                  <span className="nav-dd-sub-arrow" aria-hidden="true">&#8594;</span>
+                </a>
+              </div>
               <button className="nav-dd-item" onClick={scrollTo('engagement-02')}>
                 <span className="nav-dd-label">Engagement 02</span>
                 <span className="nav-dd-title">Leadership &amp; transformation</span>
@@ -55,7 +61,6 @@ export default function Nav() {
             </div>
           </div>
           <button className="nav-link" onClick={scrollTo('insights')}>Insights</button>
-          <a href="/framework" className="nav-link" target="_blank" rel="noopener noreferrer">Sovereignty Framework™</a>
           <a href="/clients" className="nav-link">Clients</a>
           <button className="nav-link" onClick={scrollTo('contact')}>Contact</button>
         </div>
@@ -87,6 +92,10 @@ export default function Nav() {
               <span className="nss-title">Value retention</span>
               <span className="nss-label">Engagement 01</span>
             </button>
+            <a href="/framework" className="nav-sheet-sub nav-sheet-sub--nested" onClick={() => setMenuOpen(false)}>
+              <span className="nss-title">Sovereignty Framework™</span>
+              <span className="nss-label">The through-line &#8594;</span>
+            </a>
             <button className="nav-sheet-sub" onClick={() => navClick('engagement-02')}>
               <span className="nss-title">Leadership &amp; transformation</span>
               <span className="nss-label">Engagement 02</span>
@@ -94,7 +103,6 @@ export default function Nav() {
           </div>
 
           <button className="nav-sheet-item" onClick={() => navClick('insights')}>Insights</button>
-          <a href="/framework" className="nav-sheet-item" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Sovereignty Framework™</a>
           <a href="/clients" className="nav-sheet-item" onClick={() => setMenuOpen(false)}>Clients</a>
           <button className="nav-sheet-item" onClick={() => navClick('contact')}>Contact</button>
 

@@ -4,8 +4,8 @@ import SectionHeader from '@/components/section-header'
 const ITEMS = [
   {
     date: '06.24.26',
-    title: 'Two houses, the same secondary market, opposite outcomes',
-    kicker: 'Gucci and Rolex faced the same secondary market and got opposite results. The difference was authorship: who governs what an object is worth after the first sale.',
+    title: 'Two houses, the same resale market, opposite outcomes',
+    kicker: 'Gucci and Rolex faced the same resale market and reached opposite outcomes. The difference was authorship: who governs what an object is worth after the first sale.',
     tag: ['Markets', 'Frameworks'],
     href: '/insights/two-houses',
     internal: true,

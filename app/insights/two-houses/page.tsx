@@ -6,16 +6,16 @@ import '../../framework/styles/framework.css'
 import '../../framework/styles/framework-gated.css'
 
 export const metadata: Metadata = {
-  title: 'Two houses, the same secondary market, opposite outcomes — BCE Ventures',
+  title: 'Two houses, the same resale market, opposite outcomes — BCE Ventures',
   description:
-    'Gucci and Rolex faced the same secondary market and got opposite results. The difference was authorship: who governs what an object is worth after the first sale.',
+    'Gucci and Rolex faced the same resale market and reached opposite outcomes. The difference was authorship: who governs what an object is worth after the first sale.',
   alternates: { canonical: 'https://bce.ventures/insights/two-houses' },
   openGraph: {
     type: 'article',
     siteName: 'BCE Ventures',
-    title: 'Two houses, the same secondary market, opposite outcomes',
+    title: 'Two houses, the same resale market, opposite outcomes',
     description:
-      'Gucci and Rolex faced the same secondary market and got opposite results. The difference was authorship.',
+      'Gucci and Rolex faced the same resale market and reached opposite outcomes. The difference was authorship.',
     url: 'https://bce.ventures/insights/two-houses',
   },
 }
@@ -27,6 +27,15 @@ const GOV_LEDGER: { lever: string; owner: 'platform' | 'maison' }[] = [
   { lever: 'Buyer data', owner: 'platform' },
   { lever: 'Margin', owner: 'platform' },
   { lever: 'The object', owner: 'platform' },
+]
+
+const ROLEX_LEDGER: { lever: string; owner: 'maison' | 'shared' }[] = [
+  { lever: 'Authentication', owner: 'maison' },
+  { lever: 'Pricing', owner: 'maison' },
+  { lever: 'Condition grading', owner: 'maison' },
+  { lever: 'Buyer data', owner: 'shared' },
+  { lever: 'Margin', owner: 'maison' },
+  { lever: 'The object', owner: 'maison' },
 ]
 
 export default function TwoHousesPost() {
@@ -44,11 +53,11 @@ export default function TwoHousesPost() {
         <header className="fwg-hero">
           <p className="eyebrow">Authorship of value</p>
           <h1 className="fwg-hero-title">
-            Two houses, the same secondary market,<br />
+            Two houses, the same resale market,<br />
             <span className="serif italic">opposite outcomes.</span>
           </h1>
           <p className="fwg-hero-sub">
-            Both Gucci and Rolex watched their objects trade briskly on the secondary market. One left that value to be governed elsewhere. The other built the standard the market now refers to. <span className="serif italic">The difference is authorship.</span>
+            Both Gucci and Rolex watched their objects trade briskly on the resale market. One left that value to be governed elsewhere. The other built the standard the market now refers to. <span className="serif italic">The difference is authorship.</span>
           </p>
         </header>
 
@@ -75,6 +84,10 @@ export default function TwoHousesPost() {
               <div className="fw-stat-label">of resale buyers say it let them discover or buy a brand for the first time, up from 59% in 2022</div>
               <div className="fw-stat-src">BCG / Vestiaire Collective, 2025<sup className="fw-fn">2</sup></div>
             </div>
+          </div>
+
+          <div className="fw-body">
+            A year on, the shift has only deepened: half of all luxury shoppers now check the secondhand market before buying anything new, and searches for vintage bags have more than doubled year over year.<sup className="fw-fn">1</sup>
           </div>
 
           <div className="fw-pull">Value is not getting lost. <span className="serif italic">It is getting reassigned.</span></div>
@@ -105,7 +118,7 @@ export default function TwoHousesPost() {
 
                 <p className="fw-proof-implication">
                   <span className="fw-proof-implication-label">Implication&nbsp;·&nbsp;</span>
-                  When the brand does not certify, someone else does. The fight is not over counterfeit. It is over who certifies, prices, and owns the customer once the object changes hands.
+                  When the brand does not certify, someone else does. The fight is not over counterfeit. It is over who certifies, who prices, and who owns the customer once the object changes hands. Gucci participates in all three, and controls none.
                 </p>
                 <p className="fw-proof-sources">Vestiaire Collective, 2025<sup className="fw-fn">3</sup> · Kering FY2024 Annual Results<sup className="fw-fn">4</sup></p>
               </div>
@@ -113,7 +126,7 @@ export default function TwoHousesPost() {
           </div>
 
           <figure className="fw-gov-wrap">
-            <p className="fw-gov-label">Who governed the value after the first sale</p>
+            <p className="fw-gov-label">Who governs the value after the first sale</p>
             <div className="fw-gov-ledger">
               <div className="fw-gov-ledger-head">
                 <span className="fw-gov-ledger-name">Lever</span>
@@ -138,7 +151,7 @@ export default function TwoHousesPost() {
               </div>
             </div>
             <figcaption className="fw-gov-caption">
-              Gucci made the object and the first sale. <span className="serif italic">The standard for everything after is set elsewhere.</span>
+              Gucci made the object and the first sale. <span className="serif italic">The second sale, the price, the buyer, and the margin belong to the platform.</span>
             </figcaption>
           </figure>
         </section>
@@ -160,7 +173,7 @@ export default function TwoHousesPost() {
 
                 <div className="fw-proof-anchor">
                   <p className="fw-proof-anchor-eye">What the standard bought</p>
-                  <p className="fw-proof-anchor-name">A premium of up to ~28%</p>
+                  <p className="fw-proof-anchor-name">A premium of up to 28%</p>
                   <p className="fw-proof-anchor-body">
                     Watches sold through the program carry a premium over the non-certified secondary market that runs as high as roughly 28%, depending on the retailer. Standards enforced, data owned, customer experience governed, and primary allocation linked to secondary supply through client trade-ins. The brand governs the second transaction, and is paid for doing so.
                   </p>
@@ -175,6 +188,37 @@ export default function TwoHousesPost() {
             </article>
           </div>
 
+          <figure className="fw-gov-wrap">
+            <p className="fw-gov-label">Who governs the value after the first sale</p>
+            <div className="fw-gov-ledger">
+              <div className="fw-gov-ledger-head">
+                <span className="fw-gov-ledger-name">Lever</span>
+                <span className="fw-gov-ledger-col">Platform</span>
+                <span className="fw-gov-ledger-col">Maison</span>
+              </div>
+              {ROLEX_LEDGER.map((row) => (
+                <div className="fw-gov-ledger-row" key={row.lever}>
+                  <span className="fw-gov-ledger-name">{row.lever}</span>
+                  <span className="fw-gov-ledger-col">
+                    {row.owner === 'shared' && <span className="fw-gov-dot fw-gov-dot--shared" aria-label="shared" />}
+                  </span>
+                  <span className="fw-gov-ledger-col">
+                    {row.owner === 'maison' && <span className="fw-gov-dot" aria-label="maison owns" />}
+                    {row.owner === 'shared' && <span className="fw-gov-dot fw-gov-dot--shared" aria-label="shared" />}
+                  </span>
+                </div>
+              ))}
+              <div className="fw-gov-ledger-foot">
+                <span className="fw-gov-ledger-name"><em>Authorship of the lifecycle</em></span>
+                <span className="fw-gov-ledger-tally fw-gov-ledger-tally--muted">1 shared</span>
+                <span className="fw-gov-ledger-tally">5 of 6</span>
+              </div>
+            </div>
+            <figcaption className="fw-gov-caption">
+              Rolex made the object and the first sale, and authored the standard for everything after. <span className="serif italic">The same grid, inverted.</span>
+            </figcaption>
+          </figure>
+
           <div className="fw-stat-row">
             <div className="fw-stat">
               <div className="fw-stat-num">~$594M</div>
@@ -187,7 +231,7 @@ export default function TwoHousesPost() {
               <div className="fw-stat-src">EveryWatch 2025 Secondary Market Report<sup className="fw-fn">5</sup></div>
             </div>
             <div className="fw-stat">
-              <div className="fw-stat-num">up to +28%</div>
+              <div className="fw-stat-num"><span className="fw-stat-lead">up to</span>+28%</div>
               <div className="fw-stat-label">premium for certified watches over the broader secondary market, depending on retailer</div>
               <div className="fw-stat-src">WatchCharts, 2025<sup className="fw-fn">6</sup></div>
             </div>
@@ -200,19 +244,24 @@ export default function TwoHousesPost() {
             <p className="fw-card-eye">The read</p>
             <p className="fw-card-title">Same market. Same demand. The variable was authorship.</p>
             <div className="fw-card-body">
-              <p>Both houses had desirable objects circulating in a growing secondary market. Gucci participated, while the standard, the price, and the buyer relationship were set off the brand. Rolex published the standard the market now follows.</p>
-              <p>Whoever defines the standards through which value is interpreted increasingly defines the market itself. That is the question every house now faces, and it is the through-line of how we work: <em>the brand, not the market, sets the terms.</em></p>
+              <p>Participation is the lure. Authorship is the value. Gucci has the first; the second belongs to someone else. It is in the secondary market without control of the standard, the price, or the customer. Rolex published the standard the market now follows, and kept all three.</p>
+              <p>Whoever defines the standards through which value is interpreted increasingly defines the market itself. That is the question every house now faces, and it is the through-line of how we work: <em>the brand, not the market, sets the terms.</em> The secondary market is not the threat. <em>Loss of authorship is.</em></p>
             </div>
           </div>
 
-          <div className="fw-pull">The secondary market is not the threat. <span className="serif italic">Loss of authorship is.</span></div>
+          <div className="fw-close">
+            <p className="fw-close-signal">A published standard is how a house signals it still owns what comes next: the market, the price, the customer. Rolex sends that signal. Gucci has not, yet.</p>
+            <p className="fw-close-q">Who will author the next standard?</p>
+            <p className="fw-close-manifesto">Sovereignty is the objective. <span className="serif italic">Long-term value is the asset.</span></p>
+            <Link href="/framework" className="fw-close-link">The Sovereignty Framework&nbsp;→</Link>
+          </div>
         </section>
 
         {/* SOURCES */}
         <section className="fw-sources">
           <p className="fw-sources-label">Sources</p>
           <ol className="fw-sources-list">
-            <li>Bain &amp; Company / Altagamma, <em>Luxury Goods Worldwide Market Study</em>, November 2025. <a href="https://www.bain.com/insights/finding-a-new-longevity-for-luxury/" target="_blank" rel="noopener noreferrer">bain.com</a></li>
+            <li>Bain &amp; Company / Altagamma, <em>Luxury Goods Worldwide Market Study</em>, November 2025, and 2026 market update. <a href="https://www.bain.com/insights/finding-a-new-longevity-for-luxury/" target="_blank" rel="noopener noreferrer">bain.com</a> · <a href="https://www.bain.com/about/media-center/press-releases/2026/global-luxury-stabilizes-amid-compounding-disruptions-as-brands-race-to-amplify-meaning-and-rebuild-relevance/" target="_blank" rel="noopener noreferrer">2026 release</a></li>
             <li>BCG &amp; Vestiaire Collective, resale market report, 2025 (survey of 7,800 users). <a href="https://www.bcg.com/press/9october2025-new-report-from-bcg-and-vestiaire-collective-reveals-global-trends-reshaping-the-resale-market" target="_blank" rel="noopener noreferrer">bcg.com</a></li>
             <li>Gucci Preloved with Vestiaire Collective, program launch, process, and resale performance. <a href="https://www.theindustry.fashion/gucci-makes-the-move-into-pre-loved-with-vestiaire-collective/" target="_blank" rel="noopener noreferrer">theindustry.fashion</a> · <a href="https://fashionunited.uk/news/business/the-gucci-paradox-while-new-sales-collapse-second-hand-sales-explode/2025041481064" target="_blank" rel="noopener noreferrer">fashionunited.uk</a></li>
             <li>Kering, FY2024 Annual Results, 11 February 2025 (Gucci revenue down 24% in Q4, 23% full year). <a href="https://www.globenewswire.com/news-release/2025/02/11/3023901/0/en/Kering-Press-release-2024-Annual-Results.html" target="_blank" rel="noopener noreferrer">Kering press release</a></li>

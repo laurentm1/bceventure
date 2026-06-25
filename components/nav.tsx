@@ -41,7 +41,19 @@ export default function Nav() {
         </a>
         <div className="nav-links">
           <button className="nav-link" onClick={scrollTo('about')}>About</button>
-          <button className="nav-link" onClick={scrollTo('practice')}>Practice</button>
+          <div className="nav-dropdown">
+            <button className="nav-link" onClick={scrollTo('practice')} aria-haspopup="true">Practice</button>
+            <div className="nav-dropdown-menu">
+              <button className="nav-dd-item" onClick={scrollTo('engagement-01')}>
+                <span className="nav-dd-label">Engagement 01</span>
+                <span className="nav-dd-title">Value retention</span>
+              </button>
+              <button className="nav-dd-item" onClick={scrollTo('engagement-02')}>
+                <span className="nav-dd-label">Engagement 02</span>
+                <span className="nav-dd-title">Leadership &amp; transformation</span>
+              </button>
+            </div>
+          </div>
           <button className="nav-link" onClick={scrollTo('insights')}>Insights</button>
           <a href="/framework" className="nav-link" target="_blank" rel="noopener noreferrer">Sovereignty Framework™</a>
           <a href="/clients" className="nav-link">Clients</a>

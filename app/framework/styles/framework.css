@@ -11,6 +11,14 @@ body {
   color: var(--ink);
 }
 
+/* globals.css sets `overflow-x: hidden` on html/body, which forces overflow-y
+   to `auto` and makes them scroll containers — that breaks `position: sticky`
+   for the topbar. `clip` prevents horizontal overflow without that side effect. */
+html,
+body {
+  overflow-x: clip;
+}
+
 .fw-page {
   background: var(--bone);
   color: var(--ink);
@@ -38,17 +46,25 @@ body {
 
 /* ===== Topbar ===== */
 .fw-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.25rem;
-  margin-bottom: 2.5rem;
+  margin: -3.5rem -2.5rem 2.5rem;
+  padding: 14px 2.5rem;
+  background: color-mix(in srgb, var(--bone) 88%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid var(--rule-soft);
   flex-wrap: wrap;
 }
 .fw-back {
   display: inline-block;
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-2);
@@ -1210,6 +1226,7 @@ body {
 /* ===== Mobile ===== */
 @media (max-width: 640px) {
   .fw-shell { padding: 2.5rem 1.25rem 4rem; }
+  .fw-topbar { margin: -2.5rem -1.25rem 2rem; padding: 12px 1.25rem; }
 
   /* Legacy .fw-tier (still used in research zone, not public) */
   .fw-tier {

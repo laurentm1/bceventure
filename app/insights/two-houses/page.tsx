@@ -20,13 +20,13 @@ export const metadata: Metadata = {
   },
 }
 
-const GOV_LEDGER = [
-  { lever: 'Authentication', owner: 'platform' as const },
-  { lever: 'Pricing', owner: 'platform' as const },
-  { lever: 'Condition grading', owner: 'platform' as const },
-  { lever: 'Buyer data', owner: 'platform' as const },
-  { lever: 'Margin', owner: 'platform' as const },
-  { lever: 'The object', owner: 'maison' as const },
+const GOV_LEDGER: { lever: string; owner: 'platform' | 'maison' }[] = [
+  { lever: 'Authentication', owner: 'platform' },
+  { lever: 'Pricing', owner: 'platform' },
+  { lever: 'Condition grading', owner: 'platform' },
+  { lever: 'Buyer data', owner: 'platform' },
+  { lever: 'Margin', owner: 'platform' },
+  { lever: 'The object', owner: 'platform' },
 ]
 
 export default function TwoHousesPost() {
@@ -42,13 +42,13 @@ export default function TwoHousesPost() {
         </div>
 
         <header className="fwg-hero">
-          <p className="eyebrow">Field note · Authorship of value</p>
+          <p className="eyebrow">Authorship of value</p>
           <h1 className="fwg-hero-title">
             Two houses, the same secondary market,<br />
             <span className="serif italic">opposite outcomes.</span>
           </h1>
           <p className="fwg-hero-sub">
-            Both Gucci and Rolex watched their objects trade briskly on the secondary market. One ceded the governance of that value to a platform. The other built the standard the market now refers to. <span className="serif italic">The difference is authorship.</span>
+            Both Gucci and Rolex watched their objects trade briskly on the secondary market. One left that value to be governed elsewhere. The other built the standard the market now refers to. <span className="serif italic">The difference is authorship.</span>
           </p>
         </header>
 
@@ -90,16 +90,16 @@ export default function TwoHousesPost() {
                   <span className="fw-proof-pillar">Gucci × Vestiaire Collective</span>
                   <span className="fw-proof-dims">Participation without authorship</span>
                 </p>
-                <h3 className="fw-proof-claim">The brand touched the object at intake. The platform authored everything after.</h3>
+                <h3 className="fw-proof-claim">The brand touched the object at intake. Everything after was authored elsewhere.</h3>
                 <p className="fw-proof-recap">
-                  Gucci Preloved launched in March 2023 through Kering&rsquo;s 5% equity stake in Vestiaire Collective. Customers bring select bags to Gucci boutiques and receive Gucci store credit, redeemable on a future purchase. The bags are then listed and sold on Vestiaire, authenticated by Vestiaire, priced by Vestiaire, on Vestiaire&rsquo;s platform, alongside every other brand they carry.
+                  Gucci Preloved launched in March 2023 through Kering&rsquo;s 5% equity stake in Vestiaire Collective. Customers bring select bags to Gucci boutiques and receive Gucci store credit, redeemable on a future purchase. The bags are then authenticated, priced, and sold on Vestiaire&rsquo;s platform, alongside every other brand it carries.
                 </p>
 
                 <div className="fw-proof-anchor">
                   <p className="fw-proof-anchor-eye">The pivotal stretch</p>
                   <p className="fw-proof-anchor-name">2024 to 2025</p>
                   <p className="fw-proof-anchor-body">
-                    Gucci was the best-selling brand on Vestiaire in Q1 2025, even as Kering reported Gucci revenue <strong>down 24% in Q4 2024 and 23% for the full year</strong>. The lifecycle value of Gucci objects was large and accelerating. The governance of that value flowed almost entirely to the platform.
+                    Gucci was the best-selling brand on Vestiaire in Q1 2025, even as Kering reported Gucci revenue <strong>down 24% in Q4 2024 and 23% for the full year</strong>. The lifecycle value of Gucci objects was large and accelerating. The standard governing that value sat almost entirely off the brand.
                   </p>
                 </div>
 
@@ -107,7 +107,7 @@ export default function TwoHousesPost() {
                   <span className="fw-proof-implication-label">Implication&nbsp;·&nbsp;</span>
                   When the brand does not certify, someone else does. The fight is not over counterfeit. It is over who certifies, prices, and owns the customer once the object changes hands.
                 </p>
-                <p className="fw-proof-sources">Kering FY2024 Annual Results<sup className="fw-fn">4</sup> · Vestiaire Collective, 2025<sup className="fw-fn">3</sup></p>
+                <p className="fw-proof-sources">Vestiaire Collective, 2025<sup className="fw-fn">3</sup> · Kering FY2024 Annual Results<sup className="fw-fn">4</sup></p>
               </div>
             </article>
           </div>
@@ -133,12 +133,12 @@ export default function TwoHousesPost() {
               ))}
               <div className="fw-gov-ledger-foot">
                 <span className="fw-gov-ledger-name"><em>Authorship of the lifecycle</em></span>
-                <span className="fw-gov-ledger-tally">5 of 6</span>
-                <span className="fw-gov-ledger-tally fw-gov-ledger-tally--muted">1 of 6</span>
+                <span className="fw-gov-ledger-tally">6 of 6</span>
+                <span className="fw-gov-ledger-tally fw-gov-ledger-tally--muted">0 of 6</span>
               </div>
             </div>
             <figcaption className="fw-gov-caption">
-              Gucci kept the object. <span className="serif italic">Vestiaire kept the authorship.</span>
+              Gucci made the object and the first sale. <span className="serif italic">The standard for everything after is set elsewhere.</span>
             </figcaption>
           </figure>
         </section>
@@ -200,7 +200,7 @@ export default function TwoHousesPost() {
             <p className="fw-card-eye">The read</p>
             <p className="fw-card-title">Same market. Same demand. The variable was authorship.</p>
             <div className="fw-card-body">
-              <p>Both houses had desirable objects circulating in a growing secondary market. Gucci participated and let the platform author the standard, the price, the buyer relationship, and the margin. Rolex published the standard that the market now follows.</p>
+              <p>Both houses had desirable objects circulating in a growing secondary market. Gucci participated, while the standard, the price, and the buyer relationship were set off the brand. Rolex published the standard the market now follows.</p>
               <p>Whoever defines the standards through which value is interpreted increasingly defines the market itself. That is the question every house now faces, and it is the through-line of how we work: <em>the brand, not the market, sets the terms.</em></p>
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function TwoHousesPost() {
             <li>Bain &amp; Company / Altagamma, <em>Luxury Goods Worldwide Market Study</em>, November 2025. <a href="https://www.bain.com/insights/finding-a-new-longevity-for-luxury/" target="_blank" rel="noopener noreferrer">bain.com</a></li>
             <li>BCG &amp; Vestiaire Collective, resale market report, 2025 (survey of 7,800 users). <a href="https://www.bcg.com/press/9october2025-new-report-from-bcg-and-vestiaire-collective-reveals-global-trends-reshaping-the-resale-market" target="_blank" rel="noopener noreferrer">bcg.com</a></li>
             <li>Gucci Preloved with Vestiaire Collective, program launch, process, and resale performance. <a href="https://www.theindustry.fashion/gucci-makes-the-move-into-pre-loved-with-vestiaire-collective/" target="_blank" rel="noopener noreferrer">theindustry.fashion</a> · <a href="https://fashionunited.uk/news/business/the-gucci-paradox-while-new-sales-collapse-second-hand-sales-explode/2025041481064" target="_blank" rel="noopener noreferrer">fashionunited.uk</a></li>
-            <li>Kering, FY2024 Annual Results (Gucci revenue down 24% in Q4, 23% full year). <a href="https://www.thefashionlaw.com/kering-revenue-fell-in-2024-thanks-to-declines-at-gucci-ysl/" target="_blank" rel="noopener noreferrer">thefashionlaw.com</a></li>
+            <li>Kering, FY2024 Annual Results, 11 February 2025 (Gucci revenue down 24% in Q4, 23% full year). <a href="https://www.globenewswire.com/news-release/2025/02/11/3023901/0/en/Kering-Press-release-2024-Annual-Results.html" target="_blank" rel="noopener noreferrer">Kering press release</a></li>
             <li>EveryWatch, 2025 Secondary Market Report (Rolex Certified Pre-Owned). <a href="https://everywatch.com/magazine/market/the-rolex-cpo-shock-204-growth-and-what-it-means-for-the-secondary-market-in-2025" target="_blank" rel="noopener noreferrer">everywatch.com</a></li>
             <li>WatchCharts, Rolex Certified Pre-Owned pricing analysis, 2025. <a href="https://watchcharts.com/rolexcpo" target="_blank" rel="noopener noreferrer">watchcharts.com</a></li>
           </ol>

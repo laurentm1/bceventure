@@ -66,7 +66,7 @@ export default function Insights() {
     <section className="section" id="insights">
       <div className="container">
         <SectionHeader
-          num="04. Insights"
+          num="04. Field notes"
           eyebrow="Musings"
           title="Field notes from"
           italic="the practice."

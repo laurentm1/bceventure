@@ -112,7 +112,7 @@ export default function TwoHousesPost() {
                   <p className="fw-proof-anchor-eye">The pivotal stretch</p>
                   <p className="fw-proof-anchor-name">2024 to 2025</p>
                   <p className="fw-proof-anchor-body">
-                    Gucci was the best-selling brand on Vestiaire in Q1 2025, even as Kering reported Gucci revenue <strong>down 24% in Q4 2024 and 23% for the full year</strong>. The lifecycle value of Gucci objects was large and accelerating. The standard governing that value sat almost entirely off the brand.
+                    Gucci was the best-selling brand on Vestiaire in Q1 2025, even as Kering reported Gucci revenue <strong>down 22% for the full year 2025</strong>. The lifecycle value of Gucci objects was large and accelerating. The standard governing that value sat almost entirely off the brand.
                   </p>
                 </div>
 
@@ -263,7 +263,7 @@ export default function TwoHousesPost() {
             <li>Bain &amp; Company / Altagamma, <em>Luxury Goods Worldwide Market Study</em>, November 2025, and 2026 market update. <a href="https://www.bain.com/insights/finding-a-new-longevity-for-luxury/" target="_blank" rel="noopener noreferrer">bain.com</a> · <a href="https://www.bain.com/about/media-center/press-releases/2026/global-luxury-stabilizes-amid-compounding-disruptions-as-brands-race-to-amplify-meaning-and-rebuild-relevance/" target="_blank" rel="noopener noreferrer">2026 release</a></li>
             <li>BCG &amp; Vestiaire Collective, resale market report, 2025 (survey of 7,800 users). <a href="https://www.bcg.com/press/9october2025-new-report-from-bcg-and-vestiaire-collective-reveals-global-trends-reshaping-the-resale-market" target="_blank" rel="noopener noreferrer">bcg.com</a></li>
             <li>Gucci Preloved with Vestiaire Collective, program launch, process, and resale performance. <a href="https://www.theindustry.fashion/gucci-makes-the-move-into-pre-loved-with-vestiaire-collective/" target="_blank" rel="noopener noreferrer">theindustry.fashion</a> · <a href="https://fashionunited.uk/news/business/the-gucci-paradox-while-new-sales-collapse-second-hand-sales-explode/2025041481064" target="_blank" rel="noopener noreferrer">fashionunited.uk</a></li>
-            <li>Kering, FY2024 Annual Results, 11 February 2025 (Gucci revenue down 24% in Q4, 23% full year). <a href="https://www.globenewswire.com/news-release/2025/02/11/3023901/0/en/Kering-Press-release-2024-Annual-Results.html" target="_blank" rel="noopener noreferrer">Kering press release</a></li>
+            <li>Kering, 2025 Annual Results, 10 February 2026 (Gucci revenue €6.0B, down 22% as reported for the full year). <a href="https://www.globenewswire.com/news-release/2026/02/10/3235000/0/en/Kering-2025-results-Sequential-improvement-unlocking-the-next-phase-of-sustainable-profitable-growth.html" target="_blank" rel="noopener noreferrer">Kering press release</a></li>
             <li>EveryWatch, 2025 Secondary Market Report (Rolex Certified Pre-Owned). <a href="https://everywatch.com/magazine/market/the-rolex-cpo-shock-204-growth-and-what-it-means-for-the-secondary-market-in-2025" target="_blank" rel="noopener noreferrer">everywatch.com</a></li>
             <li>WatchCharts, Rolex Certified Pre-Owned pricing analysis, 2025. <a href="https://watchcharts.com/rolexcpo" target="_blank" rel="noopener noreferrer">watchcharts.com</a></li>
           </ol>

@@ -45,8 +45,8 @@ export default function TwoHousesPost() {
         <div className="fw-topbar">
           <a href="/#insights" className="fw-back">← Insights</a>
           <span className="fw-confidential">
-            <span className="fw-confidential-full">Field note · Markets · June 2026</span>
-            <span className="fw-confidential-short" aria-hidden="true">Field note</span>
+            <span className="fw-confidential-full">Case study · Markets · June 2026</span>
+            <span className="fw-confidential-short" aria-hidden="true">Case study</span>
           </span>
         </div>
 

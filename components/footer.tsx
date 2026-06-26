@@ -15,7 +15,7 @@ export default function Footer() {
             <li><a href="/#about">About</a></li>
             <li><a href="/#practice">Practice</a></li>
             <li><a href="/#engagements">Engagements</a></li>
-            <li><a href="/#insights">Insights</a></li>
+            <li><a href="/#insights">Field notes</a></li>
           </ul>
         </div>
         <div className="footer-col">

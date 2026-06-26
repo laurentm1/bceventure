@@ -200,22 +200,21 @@ export default function TwoHousesPost() {
                 <div className="fw-gov-ledger-row" key={row.lever}>
                   <span className="fw-gov-ledger-name">{row.lever}</span>
                   <span className="fw-gov-ledger-col">
-                    {row.owner === 'shared' && <span className="fw-gov-dot fw-gov-dot--shared" aria-label="shared" />}
+                    {row.owner === 'shared' && <span className="fw-gov-dot" aria-label="co-governed" />}
                   </span>
                   <span className="fw-gov-ledger-col">
-                    {row.owner === 'maison' && <span className="fw-gov-dot" aria-label="maison owns" />}
-                    {row.owner === 'shared' && <span className="fw-gov-dot fw-gov-dot--shared" aria-label="shared" />}
+                    {(row.owner === 'maison' || row.owner === 'shared') && <span className="fw-gov-dot" aria-label="maison governs" />}
                   </span>
                 </div>
               ))}
               <div className="fw-gov-ledger-foot">
                 <span className="fw-gov-ledger-name"><em>Authorship of the lifecycle</em></span>
-                <span className="fw-gov-ledger-tally fw-gov-ledger-tally--muted">1 shared</span>
-                <span className="fw-gov-ledger-tally">5 of 6</span>
+                <span className="fw-gov-ledger-tally fw-gov-ledger-tally--muted">1 of 6</span>
+                <span className="fw-gov-ledger-tally">6 of 6</span>
               </div>
             </div>
             <figcaption className="fw-gov-caption">
-              Rolex made the object and the first sale, and authored the standard for everything after. <span className="serif italic">The same grid, inverted.</span>
+              Rolex made the object and the first sale, and authored the standard for everything after. <span className="serif italic">Almost the same grid, inverted.</span>
             </figcaption>
           </figure>
 

@@ -120,7 +120,7 @@ export default function TwoHousesPost() {
                   <span className="fw-proof-implication-label">Implication&nbsp;·&nbsp;</span>
                   When the brand does not certify, someone else does. The fight is not over counterfeit. It is over who certifies, who prices, and who owns the customer once the object changes hands. Gucci participates in all three, and controls none.
                 </p>
-                <p className="fw-proof-sources">Vestiaire Collective, 2025<sup className="fw-fn">3</sup> · Kering FY2024 Annual Results<sup className="fw-fn">4</sup></p>
+                <p className="fw-proof-sources">Vestiaire Collective, 2025<sup className="fw-fn">3</sup> · Kering 2025 Annual Results<sup className="fw-fn">4</sup></p>
               </div>
             </article>
           </div>

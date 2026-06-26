@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   title: 'Two houses, the same resale market, opposite outcomes — BCE Ventures',
   description:
     'Gucci and Rolex faced the same resale market and reached opposite outcomes. The difference was authorship: who governs what an object is worth after the first sale.',
-  alternates: { canonical: 'https://bce.ventures/insights/two-houses' },
+  alternates: { canonical: 'https://bce.ventures/field-notes/two-houses' },
   openGraph: {
     type: 'article',
     siteName: 'BCE Ventures',
     title: 'Two houses, the same resale market, opposite outcomes',
     description:
       'Gucci and Rolex faced the same resale market and reached opposite outcomes. The difference was authorship.',
-    url: 'https://bce.ventures/insights/two-houses',
+    url: 'https://bce.ventures/field-notes/two-houses',
   },
 }
 

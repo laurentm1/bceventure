@@ -7,7 +7,7 @@ const ITEMS = [
     title: 'Two houses, the same resale market, opposite outcomes',
     kicker: 'Gucci and Rolex faced the same resale market and reached opposite outcomes. The difference was authorship: who governs what an object is worth after the first sale.',
     tag: ['Markets', 'Frameworks'],
-    href: '/insights/two-houses',
+    href: '/field-notes/two-houses',
     internal: true,
   },
   {

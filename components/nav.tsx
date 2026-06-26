@@ -60,7 +60,7 @@ export default function Nav() {
               </button>
             </div>
           </div>
-          <button className="nav-link" onClick={scrollTo('insights')}>Insights</button>
+          <button className="nav-link" onClick={scrollTo('insights')}>Field notes</button>
           <a href="/clients" className="nav-link">Clients</a>
           <button className="nav-link" onClick={scrollTo('contact')}>Contact</button>
         </div>
@@ -102,7 +102,7 @@ export default function Nav() {
             </button>
           </div>
 
-          <button className="nav-sheet-item" onClick={() => navClick('insights')}>Insights</button>
+          <button className="nav-sheet-item" onClick={() => navClick('insights')}>Field notes</button>
           <a href="/clients" className="nav-sheet-item" onClick={() => setMenuOpen(false)}>Clients</a>
           <button className="nav-sheet-item" onClick={() => navClick('contact')}>Contact</button>
 

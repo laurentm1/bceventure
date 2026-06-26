@@ -43,7 +43,7 @@ export default function TwoHousesPost() {
     <main className="fw-page fwg-page">
       <div className="fw-shell">
         <div className="fw-topbar">
-          <a href="/#insights" className="fw-back">← Insights</a>
+          <a href="/#insights" className="fw-back">← Field notes</a>
           <span className="fw-confidential">
             <span className="fw-confidential-full">Case study · Markets · June 2026</span>
             <span className="fw-confidential-short" aria-hidden="true">Case study</span>
